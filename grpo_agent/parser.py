@@ -2,7 +2,20 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 import json
+import re
 from typing import Any
+
+_FENCE = re.compile(r"^\s*```[a-zA-Z0-9]*\s*(.*?)\s*```\s*$", re.DOTALL)
+
+
+def strip_code_fence(text: str) -> tuple[str, bool]:
+    """Remove a surrounding markdown fence. Only used for scoring, never for execution."""
+    if not isinstance(text, str):
+        return "", False
+    match = _FENCE.match(text)
+    if match:
+        return match.group(1).strip(), True
+    return text.strip(), False
 
 
 @dataclass(frozen=True)

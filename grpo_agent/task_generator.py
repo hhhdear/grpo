@@ -28,28 +28,40 @@ class Task:
         return asdict(self)
 
 
-def generate_task(seed: int, index: int = 0) -> Task:
+def generate_task(seed: int, index: int = 0, wide: bool = False) -> Task:
+    """Build one task. `wide` widens the parameter space so that thousands of tasks can
+    still be pairwise disjoint on their parameter combination; the default keeps the
+    original narrow ranges that the unit tests pin down.
+    """
     rng = random.Random(seed)
     scenario = SCENARIOS[index % len(SCENARIOS)]
     actual_order_id = f"ORD-{seed % 1000000:06d}"
     requested_order_id = actual_order_id
     product_id = f"SKU-{rng.randint(100, 999)}"
-    initial = rng.randint(1, 4)
-    requested = rng.randint(initial + 1, initial + 5)
-    stock = requested + rng.randint(0, 5)
+    if wide:
+        initial = rng.randint(1, 12)
+        requested = initial + rng.randint(1, 12)
+        surplus = rng.randint(0, 12)
+        shortage = rng.randint(1, 6)
+    else:
+        initial = rng.randint(1, 4)
+        requested = rng.randint(initial + 1, initial + 5)
+        surplus = rng.randint(0, 5)
+        shortage = 1
+    stock = requested + surplus
     status = "pending"
     expected = "modified"
     failures: dict[str, int] = {}
     if scenario == "shipped":
         status, expected = "shipped", "rejected"
     elif scenario == "insufficient_stock":
-        stock, expected = max(0, requested - 1), "rejected"
+        stock, expected = max(0, requested - shortage), "rejected"
     elif scenario == "invalid_order":
         requested_order_id, expected = f"BAD-{seed}", "rejected"
     elif scenario == "transient_failure":
         failures = {"query_order": 1}
     elif scenario == "combined":
-        status, stock, expected = "shipped", max(0, requested - 2), "rejected"
+        status, stock, expected = "shipped", max(0, requested - shortage), "rejected"
     variants = [
         "Please change order {oid} to quantity {qty}. Check everything needed and verify the result.",
         "For {oid}, set the item count to {qty} only if policy and stock allow it; confirm the actual outcome.",
@@ -60,10 +72,22 @@ def generate_task(seed: int, index: int = 0) -> Task:
                 initial, stock, requested, expected, seed, failures)
 
 
-def generate_tasks(count: int, seed: int) -> list[Task]:
+def generate_tasks(count: int, seed: int, wide: bool = False) -> list[Task]:
     if isinstance(count, bool) or not isinstance(count, int) or count < 0:
         raise ValueError("count must be a non-negative integer")
-    return [generate_task(seed + i * 104729, i) for i in range(count)]
+    return [generate_task(seed + i * 104729, i, wide=wide) for i in range(count)]
+
+
+def combination_signature(task: Task) -> tuple:
+    """The parameter combination a task instantiates.
+
+    Splitting train and test on this signature is what keeps the test set from being a
+    re-run of training combinations; it is the programmatic split the design promises.
+    """
+    return (task.scenario, task.initial_order_status, task.initial_quantity,
+            task.requested_quantity - task.initial_quantity,
+            task.available_stock - task.requested_quantity,
+            int(bool(task.transient_failures)))
 
 
 def write_jsonl(tasks: Iterable[Task], path: str | Path) -> None:

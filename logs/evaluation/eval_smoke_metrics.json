@@ -1,0 +1,1399 @@
+{
+  "policy": "model",
+  "samples": 2,
+  "temperature": 0.8,
+  "metrics": {
+    "count": 5,
+    "task_success_rate": 0.2,
+    "rule_compliance_rate": 0,
+    "tool_selection_accuracy": 0.0,
+    "tool_argument_accuracy": 0.0,
+    "average_tool_calls": 4.2,
+    "invalid_tool_call_rate": 1.0,
+    "post_modify_verification_rate": 0,
+    "average_execution_cost": 4.2,
+    "average_reward": -4.05,
+    "success_rate_by_scenario": {
+      "invalid_order": 1,
+      "normal": 0,
+      "shipped": 0
+    },
+    "success_at_1": 0.2,
+    "success_at_2": 0.2,
+    "sample_size_k": 2,
+    "mean_sample_success_rate": 0.1,
+    "success_rate_by_scenario_at_2": {
+      "invalid_order": 1,
+      "normal": 0,
+      "shipped": 0
+    }
+  },
+  "records": [
+    {
+      "scenario": "normal",
+      "task_id": "task-40261013-0",
+      "prompt": "Handle order ORD-261013: I want 13 units. Use the available order tools and verify any change.",
+      "turns": [
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-261013\",\"quantity\":\"13\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-261013",
+            "quantity": "13"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-261013",
+              "quantity": "13"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-261013": {
+                  "order_id": "ORD-261013",
+                  "status": "pending",
+                  "product_id": "SKU-786",
+                  "quantity": 5
+                }
+              },
+              "stock": {
+                "SKU-786": 23
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-261013": {
+                  "order_id": "ORD-261013",
+                  "status": "pending",
+                  "product_id": "SKU-786",
+                  "quantity": 5
+                }
+              },
+              "stock": {
+                "SKU-786": 23
+              },
+              "verified": false
+            }
+          }
+        },
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-261013\",\"quantity\":\"13\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-261013",
+            "quantity": "13"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-261013",
+              "quantity": "13"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-261013": {
+                  "order_id": "ORD-261013",
+                  "status": "pending",
+                  "product_id": "SKU-786",
+                  "quantity": 5
+                }
+              },
+              "stock": {
+                "SKU-786": 23
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-261013": {
+                  "order_id": "ORD-261013",
+                  "status": "pending",
+                  "product_id": "SKU-786",
+                  "quantity": 5
+                }
+              },
+              "stock": {
+                "SKU-786": 23
+              },
+              "verified": false
+            }
+          }
+        },
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-261013\",\"quantity\":\"13\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-261013",
+            "quantity": "13"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-261013",
+              "quantity": "13"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-261013": {
+                  "order_id": "ORD-261013",
+                  "status": "pending",
+                  "product_id": "SKU-786",
+                  "quantity": 5
+                }
+              },
+              "stock": {
+                "SKU-786": 23
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-261013": {
+                  "order_id": "ORD-261013",
+                  "status": "pending",
+                  "product_id": "SKU-786",
+                  "quantity": 5
+                }
+              },
+              "stock": {
+                "SKU-786": 23
+              },
+              "verified": false
+            }
+          }
+        },
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-261013\",\"quantity\":\"13\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-261013",
+            "quantity": "13"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-261013",
+              "quantity": "13"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-261013": {
+                  "order_id": "ORD-261013",
+                  "status": "pending",
+                  "product_id": "SKU-786",
+                  "quantity": 5
+                }
+              },
+              "stock": {
+                "SKU-786": 23
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-261013": {
+                  "order_id": "ORD-261013",
+                  "status": "pending",
+                  "product_id": "SKU-786",
+                  "quantity": 5
+                }
+              },
+              "stock": {
+                "SKU-786": 23
+              },
+              "verified": false
+            }
+          }
+        },
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-261013\",\"quantity\":\"13\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-261013",
+            "quantity": "13"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-261013",
+              "quantity": "13"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-261013": {
+                  "order_id": "ORD-261013",
+                  "status": "pending",
+                  "product_id": "SKU-786",
+                  "quantity": 5
+                }
+              },
+              "stock": {
+                "SKU-786": 23
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-261013": {
+                  "order_id": "ORD-261013",
+                  "status": "pending",
+                  "product_id": "SKU-786",
+                  "quantity": 5
+                }
+              },
+              "stock": {
+                "SKU-786": 23
+              },
+              "verified": false
+            }
+          }
+        }
+      ],
+      "final_text": "",
+      "termination": "max_tool_calls",
+      "verification": {
+        "task_success": false,
+        "rule_compliance": false,
+        "verification": false,
+        "invalid_actions": 5,
+        "redundant_calls": 4,
+        "tool_calls": 5,
+        "changed": false,
+        "expected_outcome": "modified"
+      },
+      "rewards": {
+        "task_success": 0.0,
+        "rule_compliance": 0.0,
+        "verification": 0.0,
+        "invalid_action": -5.0,
+        "redundant_calls": -0.8,
+        "execution_cost": -0.25,
+        "total": -5.449999999999999,
+        "format_credit": 0.6000000000000001
+      },
+      "sampled_successes": [
+        false,
+        false
+      ]
+    },
+    {
+      "scenario": "shipped",
+      "task_id": "task-40365742-1",
+      "prompt": "Handle order ORD-365742: I want 9 units. Use the available order tools and verify any change.",
+      "turns": [
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-365742\",\"quantity\":\"9\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-365742",
+            "quantity": "9"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-365742",
+              "quantity": "9"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-365742": {
+                  "order_id": "ORD-365742",
+                  "status": "shipped",
+                  "product_id": "SKU-674",
+                  "quantity": 8
+                }
+              },
+              "stock": {
+                "SKU-674": 14
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-365742": {
+                  "order_id": "ORD-365742",
+                  "status": "shipped",
+                  "product_id": "SKU-674",
+                  "quantity": 8
+                }
+              },
+              "stock": {
+                "SKU-674": 14
+              },
+              "verified": false
+            }
+          }
+        },
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-365742\",\"quantity\":\"9\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-365742",
+            "quantity": "9"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-365742",
+              "quantity": "9"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-365742": {
+                  "order_id": "ORD-365742",
+                  "status": "shipped",
+                  "product_id": "SKU-674",
+                  "quantity": 8
+                }
+              },
+              "stock": {
+                "SKU-674": 14
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-365742": {
+                  "order_id": "ORD-365742",
+                  "status": "shipped",
+                  "product_id": "SKU-674",
+                  "quantity": 8
+                }
+              },
+              "stock": {
+                "SKU-674": 14
+              },
+              "verified": false
+            }
+          }
+        },
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-365742\",\"quantity\":\"9\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-365742",
+            "quantity": "9"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-365742",
+              "quantity": "9"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-365742": {
+                  "order_id": "ORD-365742",
+                  "status": "shipped",
+                  "product_id": "SKU-674",
+                  "quantity": 8
+                }
+              },
+              "stock": {
+                "SKU-674": 14
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-365742": {
+                  "order_id": "ORD-365742",
+                  "status": "shipped",
+                  "product_id": "SKU-674",
+                  "quantity": 8
+                }
+              },
+              "stock": {
+                "SKU-674": 14
+              },
+              "verified": false
+            }
+          }
+        },
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-365742\",\"quantity\":\"9\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-365742",
+            "quantity": "9"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-365742",
+              "quantity": "9"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-365742": {
+                  "order_id": "ORD-365742",
+                  "status": "shipped",
+                  "product_id": "SKU-674",
+                  "quantity": 8
+                }
+              },
+              "stock": {
+                "SKU-674": 14
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-365742": {
+                  "order_id": "ORD-365742",
+                  "status": "shipped",
+                  "product_id": "SKU-674",
+                  "quantity": 8
+                }
+              },
+              "stock": {
+                "SKU-674": 14
+              },
+              "verified": false
+            }
+          }
+        },
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-365742\",\"quantity\":\"9\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-365742",
+            "quantity": "9"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-365742",
+              "quantity": "9"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-365742": {
+                  "order_id": "ORD-365742",
+                  "status": "shipped",
+                  "product_id": "SKU-674",
+                  "quantity": 8
+                }
+              },
+              "stock": {
+                "SKU-674": 14
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-365742": {
+                  "order_id": "ORD-365742",
+                  "status": "shipped",
+                  "product_id": "SKU-674",
+                  "quantity": 8
+                }
+              },
+              "stock": {
+                "SKU-674": 14
+              },
+              "verified": false
+            }
+          }
+        }
+      ],
+      "final_text": "",
+      "termination": "max_tool_calls",
+      "verification": {
+        "task_success": false,
+        "rule_compliance": false,
+        "verification": false,
+        "invalid_actions": 5,
+        "redundant_calls": 4,
+        "tool_calls": 5,
+        "changed": false,
+        "expected_outcome": "rejected"
+      },
+      "rewards": {
+        "task_success": 0.0,
+        "rule_compliance": 0.0,
+        "verification": 0.0,
+        "invalid_action": -5.0,
+        "redundant_calls": -0.8,
+        "execution_cost": -0.25,
+        "total": -5.449999999999999,
+        "format_credit": 0.6000000000000001
+      },
+      "sampled_successes": [
+        false,
+        false
+      ]
+    },
+    {
+      "scenario": "invalid_order",
+      "task_id": "task-40575200-3",
+      "prompt": "Please change order BAD-40575200 to quantity 10. Check everything needed and verify the result.",
+      "turns": [
+        {
+          "model_output": "{\"tool\":\"modify_order\",\"arguments\":{\"order_id\":\"BAD-40575200\",\"quantity\":10}}",
+          "tool": "modify_order",
+          "arguments": {
+            "order_id": "BAD-40575200",
+            "quantity": 10
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "modify_order",
+            "data": {},
+            "error": "order not found",
+            "code": "not_found"
+          },
+          "execution": {
+            "tool": "modify_order",
+            "arguments": {
+              "order_id": "BAD-40575200",
+              "quantity": 10
+            },
+            "result": {
+              "ok": false,
+              "tool": "modify_order",
+              "data": {},
+              "error": "order not found",
+              "code": "not_found"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-575200": {
+                  "order_id": "ORD-575200",
+                  "status": "pending",
+                  "product_id": "SKU-557",
+                  "quantity": 4
+                }
+              },
+              "stock": {
+                "SKU-557": 14
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-575200": {
+                  "order_id": "ORD-575200",
+                  "status": "pending",
+                  "product_id": "SKU-557",
+                  "quantity": 4
+                }
+              },
+              "stock": {
+                "SKU-557": 14
+              },
+              "verified": false
+            }
+          }
+        },
+        {
+          "model_output": "{\"tool\":\"modify_order\",\"arguments\":{\"order_id\":\"BAD-40575200\",\"quantity\":10},\"final\":\"Order not found: BAD-40575200\"}",
+          "parse_error": "tool action must contain exactly 'tool' and 'arguments'"
+        }
+      ],
+      "final_text": "",
+      "termination": "parse_error",
+      "verification": {
+        "task_success": true,
+        "rule_compliance": false,
+        "verification": false,
+        "invalid_actions": 1,
+        "redundant_calls": 0,
+        "tool_calls": 1,
+        "changed": false,
+        "expected_outcome": "rejected"
+      },
+      "rewards": {
+        "task_success": 2.0,
+        "rule_compliance": 0.0,
+        "verification": 0.0,
+        "invalid_action": -1.0,
+        "redundant_calls": -0.0,
+        "execution_cost": -0.05,
+        "total": 1.35,
+        "format_credit": 0.4
+      },
+      "sampled_successes": [
+        true,
+        false
+      ]
+    },
+    {
+      "scenario": "normal",
+      "task_id": "task-40889387-6",
+      "prompt": "Handle order ORD-889387: I want 8 units. Use the available order tools and verify any change.",
+      "turns": [
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-889387\",\"quantity\":\"8\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-889387",
+            "quantity": "8"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-889387",
+              "quantity": "8"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-889387": {
+                  "order_id": "ORD-889387",
+                  "status": "pending",
+                  "product_id": "SKU-169",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-169": 13
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-889387": {
+                  "order_id": "ORD-889387",
+                  "status": "pending",
+                  "product_id": "SKU-169",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-169": 13
+              },
+              "verified": false
+            }
+          }
+        },
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-889387\",\"quantity\":\"invalid_quantity_value\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-889387",
+            "quantity": "invalid_quantity_value"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-889387",
+              "quantity": "invalid_quantity_value"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-889387": {
+                  "order_id": "ORD-889387",
+                  "status": "pending",
+                  "product_id": "SKU-169",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-169": 13
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-889387": {
+                  "order_id": "ORD-889387",
+                  "status": "pending",
+                  "product_id": "SKU-169",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-169": 13
+              },
+              "verified": false
+            }
+          }
+        },
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-889387\",\"quantity\":\"invalid_quantity_value\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-889387",
+            "quantity": "invalid_quantity_value"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-889387",
+              "quantity": "invalid_quantity_value"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-889387": {
+                  "order_id": "ORD-889387",
+                  "status": "pending",
+                  "product_id": "SKU-169",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-169": 13
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-889387": {
+                  "order_id": "ORD-889387",
+                  "status": "pending",
+                  "product_id": "SKU-169",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-169": 13
+              },
+              "verified": false
+            }
+          }
+        },
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-889387\",\"quantity\":\"invalid_quantity_value\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-889387",
+            "quantity": "invalid_quantity_value"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-889387",
+              "quantity": "invalid_quantity_value"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-889387": {
+                  "order_id": "ORD-889387",
+                  "status": "pending",
+                  "product_id": "SKU-169",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-169": 13
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-889387": {
+                  "order_id": "ORD-889387",
+                  "status": "pending",
+                  "product_id": "SKU-169",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-169": 13
+              },
+              "verified": false
+            }
+          }
+        },
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-889387\",\"quantity\":\"invalid_quantity_value\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-889387",
+            "quantity": "invalid_quantity_value"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-889387",
+              "quantity": "invalid_quantity_value"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-889387": {
+                  "order_id": "ORD-889387",
+                  "status": "pending",
+                  "product_id": "SKU-169",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-169": 13
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-889387": {
+                  "order_id": "ORD-889387",
+                  "status": "pending",
+                  "product_id": "SKU-169",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-169": 13
+              },
+              "verified": false
+            }
+          }
+        }
+      ],
+      "final_text": "",
+      "termination": "max_tool_calls",
+      "verification": {
+        "task_success": false,
+        "rule_compliance": false,
+        "verification": false,
+        "invalid_actions": 5,
+        "redundant_calls": 3,
+        "tool_calls": 5,
+        "changed": false,
+        "expected_outcome": "modified"
+      },
+      "rewards": {
+        "task_success": 0.0,
+        "rule_compliance": 0.0,
+        "verification": 0.0,
+        "invalid_action": -5.0,
+        "redundant_calls": -0.6000000000000001,
+        "execution_cost": -0.25,
+        "total": -5.25,
+        "format_credit": 0.6000000000000001
+      },
+      "sampled_successes": [
+        false,
+        false
+      ]
+    },
+    {
+      "scenario": "shipped",
+      "task_id": "task-40994116-7",
+      "prompt": "Handle order ORD-994116: I want 19 units. Use the available order tools and verify any change.",
+      "turns": [
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-994116\",\"quantity\":\"19\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-994116",
+            "quantity": "19"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-994116",
+              "quantity": "19"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-994116": {
+                  "order_id": "ORD-994116",
+                  "status": "shipped",
+                  "product_id": "SKU-322",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-322": 23
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-994116": {
+                  "order_id": "ORD-994116",
+                  "status": "shipped",
+                  "product_id": "SKU-322",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-322": 23
+              },
+              "verified": false
+            }
+          }
+        },
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-994116\",\"quantity\":\"19\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-994116",
+            "quantity": "19"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-994116",
+              "quantity": "19"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-994116": {
+                  "order_id": "ORD-994116",
+                  "status": "shipped",
+                  "product_id": "SKU-322",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-322": 23
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-994116": {
+                  "order_id": "ORD-994116",
+                  "status": "shipped",
+                  "product_id": "SKU-322",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-322": 23
+              },
+              "verified": false
+            }
+          }
+        },
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-994116\",\"quantity\":\"19\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-994116",
+            "quantity": "19"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-994116",
+              "quantity": "19"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-994116": {
+                  "order_id": "ORD-994116",
+                  "status": "shipped",
+                  "product_id": "SKU-322",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-322": 23
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-994116": {
+                  "order_id": "ORD-994116",
+                  "status": "shipped",
+                  "product_id": "SKU-322",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-322": 23
+              },
+              "verified": false
+            }
+          }
+        },
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-994116\",\"quantity\":\"19\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-994116",
+            "quantity": "19"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-994116",
+              "quantity": "19"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-994116": {
+                  "order_id": "ORD-994116",
+                  "status": "shipped",
+                  "product_id": "SKU-322",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-322": 23
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-994116": {
+                  "order_id": "ORD-994116",
+                  "status": "shipped",
+                  "product_id": "SKU-322",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-322": 23
+              },
+              "verified": false
+            }
+          }
+        },
+        {
+          "model_output": "{\"tool\":\"query_order\",\"arguments\":{\"order_id\":\"ORD-994116\",\"quantity\":\"19\"}}",
+          "tool": "query_order",
+          "arguments": {
+            "order_id": "ORD-994116",
+            "quantity": "19"
+          },
+          "tool_result": {
+            "ok": false,
+            "tool": "query_order",
+            "data": {},
+            "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+            "code": "invalid_arguments"
+          },
+          "execution": {
+            "tool": "query_order",
+            "arguments": {
+              "order_id": "ORD-994116",
+              "quantity": "19"
+            },
+            "result": {
+              "ok": false,
+              "tool": "query_order",
+              "data": {},
+              "error": "invalid tool signature: OrderEnvironment._query_order() got an unexpected keyword argument 'quantity'",
+              "code": "invalid_arguments"
+            },
+            "state_before": {
+              "orders": {
+                "ORD-994116": {
+                  "order_id": "ORD-994116",
+                  "status": "shipped",
+                  "product_id": "SKU-322",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-322": 23
+              },
+              "verified": false
+            },
+            "state_after": {
+              "orders": {
+                "ORD-994116": {
+                  "order_id": "ORD-994116",
+                  "status": "shipped",
+                  "product_id": "SKU-322",
+                  "quantity": 7
+                }
+              },
+              "stock": {
+                "SKU-322": 23
+              },
+              "verified": false
+            }
+          }
+        }
+      ],
+      "final_text": "",
+      "termination": "max_tool_calls",
+      "verification": {
+        "task_success": false,
+        "rule_compliance": false,
+        "verification": false,
+        "invalid_actions": 5,
+        "redundant_calls": 4,
+        "tool_calls": 5,
+        "changed": false,
+        "expected_outcome": "rejected"
+      },
+      "rewards": {
+        "task_success": 0.0,
+        "rule_compliance": 0.0,
+        "verification": 0.0,
+        "invalid_action": -5.0,
+        "redundant_calls": -0.8,
+        "execution_cost": -0.25,
+        "total": -5.449999999999999,
+        "format_credit": 0.6000000000000001
+      },
+      "sampled_successes": [
+        false,
+        false
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+# Ablation arm: Overlong handling only. Two mechanisms together: TRL masks truncated
+# completions out of the loss, and a shaped penalty starts at the soft length limit so
+# running long is discouraged before it is simply cut off.
+experiment: ablation_overlong
+model_config: configs/model.yaml
+seed: 20261013
+data:
+  output_dir: data/generated
+  train_path: data/generated/train.jsonl
+  validation_path: data/generated/validation.jsonl
+  test_path: data/generated/test.jsonl
+  train_size: 3000
+  validation_size: 24
+  test_size: 1000
+rollout:
+  max_turns: 6
+  max_tool_calls: 5
+training:
+  output_dir: checkpoints/ablation_overlong
+  learning_rate: 0.000005
+  max_steps: 500
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 4
+  num_generations: 4
+  max_prompt_length: 768
+  max_completion_length: 384
+  save_steps: 250
+  logging_steps: 1
+  temperature: 0.8
+  beta: 0.0
+dapo:
+  loss_type: grpo
+  epsilon_high: null
+  mask_truncated_completions: true
+  overlong_reward_shaping:
+    enabled: true
+    soft_limit: 256
+    penalty_per_token: 0.01
+    max_penalty: 1.0
+dynamic_sampling:
+  filter_zero_variance_groups: false
+  zero_variance_eps: 1.0e-6
+reward:
+  task_success: 2.0
+  rule_compliance: 0.5
+  verification: 0.5
+  invalid_action: -1.0
+  redundant_calls: -0.2
+  execution_cost: -0.05
+  format:
+    structure: 0.4
+    known_tool: 0.2
+    valid_arguments: 0.2
+    fence_penalty: 0.3
+paths:
+  trace_dir: logs/traces
+  evaluation_dir: logs/evaluation

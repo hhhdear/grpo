@@ -13,22 +13,54 @@
 - 严格 JSON 工具协议、多轮 rollout、环境状态验证和完整轨迹。
 - 基于真实环境状态的六分项奖励；模型仅声称“成功”不能获得成功奖励。
 - Oracle smoke policy、基础评估指标和标准 TRL `GRPOTrainer` 入口。
+- Oracle 轨迹冷启动数据构造：同一条轨迹的 plan 视图与单步视图。
+- 格式部分信用与 markdown 代码围栏诊断；只参与打分，不改变执行的严格解析。
+- 含 `adapter_config.json` 的目录自动按 LoRA adapter 加载。
 - Clip-Higher、token-level loss、零方差组过滤和 overlong shaping 的纯 PyTorch 数值参考。
 - 独立的最小 GRPO 参考公式及反向传播测试。
 
-尚未在当前机器完成的部分：
+已在 GPU 环境实际运行通过的部分：
 
-- 当前环境缺少 Transformers、TRL、PEFT、Datasets、Accelerate 和模型权重，因此尚未完成真实 Qwen 推理、GRPO 参数更新或训练后评估。
+- 真实 Qwen2.5-0.5B-Instruct 推理、冷启动 SFT、GRPO 参数更新和训练后评估。
+- LoRA adapter 保存与重新加载（`model_loader` 自动识别 adapter 目录）。
+- 格式部分信用与 few-shot 协议示例，用于把组内奖励方差从 0 变为非 0。
+
+尚未完成的部分：
+
 - 当前 `dynamic_sampling()` 是零方差组过滤原语，不是带重采样预算的完整 Dynamic Sampling 训练循环。
 - 尚未完成六组正式消融、三随机种子实验和 DAPO 相对 Vanilla GRPO 的研究结论。
+- 现有 GRPO 结果只有 10 个优化步，属于冒烟规模，不足以判断算法有效性。
+
+## 实测记录
+
+环境：NVIDIA A10（23 GB）、`torch 2.10.0+cu128`、`transformers 5.1.0`、`trl 1.15.0`、
+`peft 0.21.2`、`datasets 5.1.0`、`accelerate 1.15.0`。配置为 `configs/baseline.yaml`，
+固定种子 20261013，测试集 32 条。
+
+| 阶段 | task_success_rate | average_reward | average_tool_calls | invalid_tool_call_rate |
+|---|---|---|---|---|
+| 基座模型（零样本） | 0 | -1.0 | 0.0 | — |
+| 冷启动 SFT 后 | 0.625 | 1.216 | 2.438 | 0.282 |
+| GRPO 10 步后 | 0.625 | 1.292 | 2.656 | 0.235 |
+
+冷启动 SFT：276 条样本（64 条 plan 视图 + 212 条单步视图），3 个 epoch，`train_loss` 0.2086。
+GRPO：`train_loss` 0.3173，`reward_std` 最高 2.125（不再是全组 0），
+`parameter_update_verified: true`，336 个可训练张量，`global_step` 10。
+
+两点必须说明：基座模型的失败原因是输出被 markdown 代码围栏包裹且字段名不符合协议，
+所有候选奖励因此恒等于 `invalid_action`；GRPO 阶段成功率与冷启动持平，只有奖励和无效调用率
+小幅改善，10 步不足以支撑任何算法结论。这些数字仅证明链路可跑通。
+
+口径说明：冷启动与 GRPO 两行为全量 32 条测试集；基座模型一行为 5 条样本，其全部解析失败、
+零工具调用，扩大样本量不会改变该结论。
 
 详细审计见 [实现审计](docs/implementation_audit.md)。任何未运行实验都不得填写虚构数字。
 
 ## 项目结构
 
 ```text
-grpo_agent/             订单环境、Agent、奖励、DAPO 数值核心
-training/               TRL GRPO 训练入口和扩展接口
+grpo_agent/             订单环境、Agent、奖励、格式信用、DAPO 数值核心
+training/               TRL GRPO 训练入口、冷启动 SFT 和扩展接口
 evaluation/             固定测试集评估与指标
 scripts/                数据生成和 CPU smoke test
 configs/                模型、训练、奖励和路径配置
@@ -79,6 +111,15 @@ python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda
 
 不要在未确认 CUDA 兼容性时盲目替换平台的 PyTorch。应在目标 AI Studio 镜像验证 TRL API 后，再保存精确依赖快照。
 
+在 A10 / CUDA 12.8 镜像上实际验证通过的组合：`torch 2.10.0+cu128`、`transformers 5.1.0`、
+`trl 1.15.0`、`peft 0.21.2`、`datasets 5.1.0`、`accelerate 1.15.0`。
+`requirements-aistudio.txt` 里的 `transformers<5` 与 `trl<0.30` 上界对应的是旧版本组合，
+新环境下以"不覆盖平台 PyTorch"为前提按 pip 实际解析结果安装即可，装完用下面的命令确认版本。
+
+TRL 1.15 的 `GRPOConfig` 已移除 `max_prompt_length`。`training/train_grpo.py` 会先探测该字段是否
+存在：存在则原样传入，不存在则改用 tokenizer 在构建数据集前截断，并把实际生效方式写进
+`run_manifest.json` 的 `prompt_length_control`，不会静默丢弃配置。`--dry-run` 会打印当前生效的模式。
+
 ## 配置与云端路径覆盖
 
 业务参数保存在 YAML 中；机器相关路径可通过环境变量覆盖。因此上传云端后不需要修改 Python 文件：
@@ -100,6 +141,44 @@ export ALLOW_MODEL_DOWNLOAD=0
 ```
 
 如果平台持久化目录不同，只需修改环境变量。相对数据路径默认以项目根目录为工作目录。
+
+## 端到端运行顺序
+
+以下命令均在项目根目录执行。首次运行时建议保留 `GRPO_OUTPUT_ROOT` 之外的所有默认值。
+
+```bash
+# 0) 确认 GPU 与 CUDA 版 PyTorch 没被替换
+python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
+
+# 1) 生成固定数据集，跑 CPU 闭环（不需要 GPU、不需要模型权重）
+python scripts/generate_data.py --config configs/baseline.yaml
+python -m unittest discover -s tests
+python scripts/smoke_test.py --config configs/baseline.yaml
+
+# 2) 冷启动 SFT：用 Oracle 轨迹教会模型工具协议（详见下一节）
+python training/sft_coldstart.py --config configs/baseline.yaml --dry-run
+python training/sft_coldstart.py --config configs/baseline.yaml
+# 记下它打印的输出目录，例如 checkpoints/sft_coldstart
+
+# 3) 以冷启动模型为起点做 GRPO
+export MODEL_PATH=checkpoints/sft_coldstart
+python training/train_grpo.py --config configs/baseline.yaml --dry-run
+python training/train_grpo.py --config configs/baseline.yaml
+# 产物目录见 configs/baseline.yaml 的 training.output_dir，例如 checkpoints/baseline
+
+# 4) 训练后评估（MODEL_PATH 指向第 3 步的 adapter 目录）
+export MODEL_PATH=checkpoints/baseline
+python evaluation/evaluate.py --config configs/baseline.yaml --policy model
+```
+
+只想验证管线而不训练，可以跳过 3、4，用 Oracle 策略跑一次评估：
+
+```bash
+python evaluation/evaluate.py --config configs/baseline.yaml --policy oracle
+```
+
+每一步都会做硬校验：数据为空、Oracle 轨迹失败、参数没有真实变化、global step 小于 1
+都会直接抛错退出，不会产出看似成功的结果。
 
 ## CPU 最小闭环
 
@@ -133,6 +212,34 @@ python evaluation/evaluate.py --config configs/baseline.yaml --policy model --li
 ```
 
 非法 JSON、未知工具、错误参数和超过交互上限都会被记录，不会被静默修复。
+
+## 冷启动 SFT
+
+`Qwen2.5-0.5B-Instruct` 在零样本下几乎不会输出合法工具协议，组内奖励恒等于
+`invalid_action`，GRPO 因零方差而没有任何优势信号，训练脚本会主动以
+`Trainer ran but no trainable parameter value changed` 失败。先用确定性 Oracle
+轨迹做一轮监督微调，把协议格式教会模型，再进入 GRPO：
+
+```bash
+python training/sft_coldstart.py --config configs/baseline.yaml --dry-run
+python training/sft_coldstart.py --config configs/baseline.yaml
+```
+
+脚本会在隐藏环境中回放 Oracle，并把同一条轨迹序列化成两种视图：完整 plan 数组
+（GRPO 优化的对象）与逐步单条动作（评估器要求的形式），避免训练与评估的模态错配。
+只有 Oracle 成功的轨迹才会进入训练集，参数未变化时同样会失败退出。
+
+训练结束后用该目录作为 GRPO 的起点：
+
+```bash
+export MODEL_PATH=<上一步输出目录>
+python training/train_grpo.py --config configs/baseline.yaml
+```
+
+`grpo_agent/format_reward.py` 提供格式部分信用：按结构合法率、工具名合法率、参数
+合法率给出连续分值，并对 markdown 代码围栏扣分。它只参与打分，不改变执行的严格解析，
+因此"围栏但结构正确"的候选会高于"完全乱写"的候选，从而打破组内零方差，同时梯度方向
+仍然指向"去掉围栏"。权重位于 `configs/baseline.yaml` 的 `reward.format` 段，可整体关闭以做消融。
 
 ## 标准 GRPO 训练
 
@@ -168,14 +275,34 @@ python training/train_grpo.py --config configs/baseline.yaml
 python -c "import inspect; from trl import GRPOConfig, GRPOTrainer; print(inspect.signature(GRPOConfig.__init__)); print(inspect.signature(GRPOTrainer.__init__))"
 ```
 
-## 输出文件
+## 产物存放位置
 
-- `data/generated/*.jsonl`：固定合成数据集；
-- `logs/traces/*.jsonl`：模型输出、工具调用、状态变化和奖励分项；
-- `logs/evaluation/*.json`：聚合指标及逐任务记录；
-- `checkpoints/<run>/`：模型/adapter、tokenizer、trainer state 和运行清单。
+未设置 `GRPO_OUTPUT_ROOT` 时，一切写在项目目录内；设置后 checkpoint、轨迹和评估结果改写到
+该根目录，数据集路径不受影响（仍由 YAML 控制）。
 
-设置 `GRPO_OUTPUT_ROOT` 后，checkpoint、轨迹和评估结果会写入指定持久化目录；数据集路径仍由 YAML 控制。
+| 产物 | 默认位置 | 设置 `GRPO_OUTPUT_ROOT=<root>` 后 |
+|---|---|---|
+| 数据集 | `data/generated/{train,validation,test}.jsonl` | 不变 |
+| 冷启动模型 | `checkpoints/sft_coldstart/` | `<root>/checkpoints/sft_coldstart/` |
+| 冷启动清单 | 上述目录下的 `sft_manifest.json` | 同左 |
+| GRPO 模型/adapter | `checkpoints/baseline/`（YAML 的 `training.output_dir`） | `<root>/checkpoints/standard_grpo_baseline/`（YAML 的 `experiment`） |
+| 中间 checkpoint | 上述目录下的 `checkpoint-<step>/` | 同左 |
+| GRPO 清单 | 上述目录下的 `run_manifest.json` | 同左 |
+| 评估轨迹 | `logs/traces/evaluate_<policy>.jsonl` | `<root>/logs/traces/` |
+| 评估指标 | `logs/evaluation/<policy>_metrics.json` | `<root>/logs/evaluation/` |
+
+`run_manifest.json` 记录 `global_step`、`parameter_update_verified`、`trainable_parameter_tensors`、
+`prompt_length_control`、实际使用的 TRL 接口清单和训练指标；`sft_manifest.json` 记录样本构成、
+学习率、轮数和参数变化验证。这两份文件是判断"是否真的训练过"的依据。
+
+注意：`GRPO_OUTPUT_ROOT` 只在**设置它的那条命令**里生效。评估时同样要带上，否则指标会写回项目
+目录而不是持久化目录。
+
+评估时若 `MODEL_PATH` 指向含 `adapter_config.json` 的目录，加载器会自动按 LoRA adapter
+处理，并从 `base_model_name_or_path` 取回基座模型，因此第 3 步的 adapter 目录可以直接用于评估。
+
+轨迹文件每行一条任务，字段为 `task_id`、`prompt`、`turns`、`final_text`、`termination`、
+`verification`、`rewards`；模型解析失败时对应 turn 会带 `parse_error`。
 
 ## 上传百度 AI Studio
 
@@ -198,7 +325,11 @@ python -c "import inspect; from trl import GRPOConfig, GRPOTrainer; print(inspec
 - **缺少可选依赖**：在隔离环境安装训练依赖。
 - **CUDA OOM**：减少候选数、batch 和生成长度，增加梯度累积，并启用 LoRA/gradient checkpointing。
 - **离线模型加载失败**：检查 `MODEL_PATH` 是否包含完整 Transformers 模型文件。
-- **所有组奖励相同**：该组没有 GRPO 相对优势信号，需要检查任务和生成多样性。
+- **所有组奖励相同**：该组没有 GRPO 相对优势信号。先确认模型是否能输出合法协议（跑一次
+  `--policy model` 评估并查看 `logs/traces`，输出被 markdown 围栏包裹即为此类问题），再依次
+  启用冷启动 SFT 和 `reward.format` 部分信用。
+- **`Trainer ran but no trainable parameter value changed`**：训练跑完但梯度为零，通常是上一条
+  导致的零方差，也可能是学习率被 scheduler 归零，先检查日志里的 `reward_std` 与 `learning_rate`。
 - **解析失败**：检查 JSONL 轨迹，确认模型每轮只输出一个合法 JSON 对象。
 - **TRL 参数不存在**：目标版本与配置不兼容；记录实际版本，不要静默忽略配置项。
 
