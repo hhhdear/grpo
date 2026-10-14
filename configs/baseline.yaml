@@ -1,0 +1,36 @@
+experiment: standard_grpo_baseline
+model_config: configs/model.yaml
+seed: 20261013
+data:
+  output_dir: data/generated
+  train_path: data/generated/train.jsonl
+  validation_path: data/generated/validation.jsonl
+  test_path: data/generated/test.jsonl
+  train_size: 64
+  validation_size: 24
+  test_size: 32
+rollout:
+  max_turns: 6
+  max_tool_calls: 5
+training:
+  output_dir: checkpoints/baseline
+  learning_rate: 0.000005
+  max_steps: 10
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 4
+  num_generations: 4
+  max_prompt_length: 768
+  max_completion_length: 384
+  save_steps: 5
+  logging_steps: 1
+  temperature: 0.8
+reward:
+  task_success: 2.0
+  rule_compliance: 0.5
+  verification: 0.5
+  invalid_action: -1.0
+  redundant_calls: -0.2
+  execution_cost: -0.05
+paths:
+  trace_dir: logs/traces
+  evaluation_dir: logs/evaluation

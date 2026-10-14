@@ -1,0 +1,3 @@
+experiment: extension_scaffold_no_algorithm_claim
+base_config: configs/baseline.yaml
+notes: Define and validate an explicit credit-assignment method before using this config.

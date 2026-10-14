@@ -1,0 +1,14 @@
+model:
+  name: Qwen/Qwen2.5-0.5B-Instruct
+  local_path: null
+  tokenizer_path: null
+  allow_download: false
+  device_map: auto
+  dtype: bfloat16
+  trust_remote_code: false
+  use_lora: true
+  lora:
+    r: 16
+    alpha: 32
+    dropout: 0.05
+    target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
