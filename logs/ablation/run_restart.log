@@ -1,0 +1,3 @@
+nohup: ignoring input
+>>> /root/.pyenv/versions/3.11.1/bin/python training/train_grpo.py --config configs/ablations/vanilla.yaml (log: /workspace/logs/ablation/train_vanilla.log)
+>>> /root/.pyenv/versions/3.11.1/bin/python evaluation/evaluate.py --config configs/ablations/vanilla.yaml --samples 8 --tag ablation_vanilla --limit 200 (log: /workspace/logs/ablation/eval_vanilla.log)

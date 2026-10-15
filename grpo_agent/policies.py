@@ -29,7 +29,7 @@ def oracle_policy(messages: list[dict[str, str]], env: OrderEnvironment) -> str:
 
 
 def make_batch_model_policy(model_config_path: str, temperature: float = 0.0, top_p: float = 1.0,
-                            max_new_tokens: int = 192):
+                            max_new_tokens: int = 192, model_dir: str | None = None):
     """Same policy, but scores a list of message sets in one forward pass per turn.
 
     Used to run the k sampled trajectories of success@k as one batch: the trajectories stay
@@ -37,7 +37,7 @@ def make_batch_model_policy(model_config_path: str, temperature: float = 0.0, to
     generated together.
     """
     from .model_loader import load_model_and_tokenizer
-    model, tokenizer = load_model_and_tokenizer(model_config_path)
+    model, tokenizer = load_model_and_tokenizer(model_config_path, model_dir)
     tokenizer.padding_side = "left"
 
     def policy(batch_messages):
@@ -59,10 +59,15 @@ def make_batch_model_policy(model_config_path: str, temperature: float = 0.0, to
     return policy
 
 
-def make_model_policy(model_config_path: str, temperature: float = 0.0, top_p: float = 1.0, max_new_tokens: int = 192):
-    """Greedy by default. `temperature > 0` switches to sampling, which is what success@k needs."""
+def make_model_policy(model_config_path: str, temperature: float = 0.0, top_p: float = 1.0, max_new_tokens: int = 192,
+                      model_dir: str | None = None):
+    """Greedy by default. `temperature > 0` switches to sampling, which is what success@k needs.
+
+    `model_dir` points at the trained artifact (a LoRA adapter directory). Leaving it out
+    silently evaluates the base model, which is not a measurement of the run.
+    """
     from .model_loader import load_model_and_tokenizer
-    model, tokenizer = load_model_and_tokenizer(model_config_path)
+    model, tokenizer = load_model_and_tokenizer(model_config_path, model_dir)
 
     def policy(messages, env):
         import torch

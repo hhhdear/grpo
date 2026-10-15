@@ -34,8 +34,8 @@ CANONICAL_FIELDS = ("step", "loss", "grad_norm", "learning_rate", "reward", "rew
                     "frac_reward_zero_std", "frac_zero_var_filtered", "entropy", "kl",
                     "clip_ratio_low", "clip_ratio_high", "clip_ratio_region",
                     "completion_mean_length", "clipped_ratio", "completion_terminated_length",
-                    "trajectory_tool_calls", "trajectory_turns", "num_tokens", "step_time",
-                    "tokens_per_second")
+                    "trajectory_tool_calls", "trajectory_turns", "trajectory_invalid_actions",
+                    "invalid_action_rate", "num_tokens", "step_time", "tokens_per_second")
 
 
 class RewardLedger:
@@ -52,8 +52,13 @@ class RewardLedger:
     def add(self, breakdown: dict[str, float], verification: dict[str, Any]) -> None:
         row = {key: float(breakdown.get(key, 0.0)) for key in REWARD_TERM_KEYS}
         row["total"] = float(breakdown.get("total", 0.0))
-        row["tool_calls"] = float(verification.get("tool_calls", 0))
-        row["invalid_actions"] = float(verification.get("invalid_actions", 0))
+        calls = float(verification.get("tool_calls", 0) or 0)
+        invalid = float(verification.get("invalid_actions", 0) or 0)
+        row["tool_calls"] = calls
+        row["invalid_actions"] = invalid
+        # Watched whenever the invalid-action penalty is loosened: a cheap penalty can
+        # invite the model to spam calls instead of learning to call correctly.
+        row["invalid_action_rate"] = invalid / calls if calls else 0.0
         self._pending.append(row)
 
     def close_batch(self) -> None:
@@ -64,6 +69,7 @@ class RewardLedger:
         batch["group_size"] = float(size)
         self.batches.append(batch)
         self._pending = []
+
 
     def step(self, index: int) -> dict[str, float]:
         if 0 <= index < len(self.batches):
@@ -91,6 +97,8 @@ def build_step_rows(log_history: Iterable[dict[str, Any]], ledger: RewardLedger)
             # In plan mode one tool call is one trajectory turn.
             row["trajectory_tool_calls"] = ledger_row.get("tool_calls")
             row["trajectory_turns"] = ledger_row.get("tool_calls")
+            row["trajectory_invalid_actions"] = ledger_row.get("invalid_actions")
+            row["invalid_action_rate"] = ledger_row.get("invalid_action_rate")
             row["group_size"] = ledger_row.get("group_size")
         tokens = row.get("num_tokens")
         elapsed = row.get("step_time")

@@ -108,7 +108,10 @@ class OrderEnvironment:
         changed = bool(order and order["quantity"] != self.task["initial_quantity"])
         if expected == "modified":
             success = bool(order and order["quantity"] == self.task["requested_quantity"] and self.verified)
-            compliant = self.invalid_actions == 0
+            # Doing nothing cannot violate a rule, so a no-op must not collect compliance
+            # credit: the agent has to actually attempt the modification it was asked for.
+            compliant = (self.invalid_actions == 0
+                         and any(item["tool"] == "modify_order" for item in self.history))
         else:
             # A no-op is not automatically a correct refusal. The agent must
             # gather environment evidence for the particular rejection reason.

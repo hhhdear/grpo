@@ -11,7 +11,7 @@ def _is_adapter_directory(path: str | Path) -> bool:
     return (Path(path) / "adapter_config.json").is_file()
 
 
-def load_model_and_tokenizer(config_path: str):
+def load_model_and_tokenizer(config_path: str, model_dir: str | None = None):
     try:
         import torch
         from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -19,6 +19,9 @@ def load_model_and_tokenizer(config_path: str):
         raise RuntimeError("Missing optional dependency: install transformers and accelerate") from exc
     cfg = load_yaml(config_path)["model"]
     source, tokenizer_source, allow_download = model_source(cfg)
+    if model_dir:
+        # Evaluate the artifact that was actually trained, not the base model it started from.
+        source = tokenizer_source = model_dir
     if (cfg.get("local_path") or os.environ.get("MODEL_PATH")) and not Path(source).is_dir():
         raise FileNotFoundError(f"Configured local model directory does not exist: {source}")
     local_only = not allow_download

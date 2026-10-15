@@ -28,7 +28,13 @@ def main() -> None:
     tasks = read_jsonl(cfg["data"]["test_path"])
     if args.limit is not None:
         tasks = tasks[:args.limit]
-    policy = oracle_policy if args.policy == "oracle" else make_model_policy(cfg["model_config"])
+    checkpoint = Path(cfg["training"]["output_dir"])
+    # Evaluate the trained adapter. Falling back to the base model here would silently
+    # report an untrained policy's numbers as if they belonged to the run.
+    model_dir = str(checkpoint) if (checkpoint / "adapter_config.json").is_file() else None
+    if model_dir is None:
+        print(f"WARNING: no trained adapter in {checkpoint}; evaluating the base model", file=sys.stderr)
+    policy = oracle_policy if args.policy == "oracle" else make_model_policy(cfg["model_config"], model_dir=model_dir)
     output_dir = Path(cfg["paths"]["evaluation_dir"])
     output_dir.mkdir(parents=True, exist_ok=True)
     tag = args.tag or args.policy
@@ -40,7 +46,7 @@ def main() -> None:
     # Sampling runs as a batched rollout: one generation per turn for all k trajectories.
     sampler = None
     if args.policy == "model" and args.samples > 1:
-        sampler = make_batch_model_policy(cfg["model_config"], temperature=args.temperature)
+        sampler = make_batch_model_policy(cfg["model_config"], temperature=args.temperature, model_dir=model_dir)
     rows = []
     for task in tasks:
         result = run_rollout(task, policy, cfg["reward"], format_weights=format_weights, **cfg["rollout"])
