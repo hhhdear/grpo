@@ -13,7 +13,8 @@ from grpo_agent.rollout import run_rollout
 from grpo_agent.task_generator import generate_task, generate_tasks, read_jsonl, write_jsonl
 
 WEIGHTS = {"task_success": 2.0, "rule_compliance": 0.5, "verification": 0.5,
-           "invalid_action": -1.0, "redundant_calls": -0.2, "execution_cost": -0.05}
+           "invalid_action": -1.0, "redundant_calls": -0.2, "execution_cost": -0.05,
+           "progress_credit": 0.5}
 
 
 class EnvironmentTests(unittest.TestCase):

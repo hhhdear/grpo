@@ -1,8 +1,7 @@
-# Reward-fix smoke test: 150 steps on the vanilla arm, which is the arm that collapsed
-# before. Only released to the real 500-step arms if task_success lifts off zero, the
-# zero-variance share drops well below 92%, entropy stops pinning at 0.01, and the loosened
-# invalid-action penalty has not turned into call spam.
-experiment: smoke_reward
+# Smoke test for the progress-credit reward: 150 steps on the vanilla arm, the one that
+# collapsed into a single-step policy. Only released to the real 500-step arms if
+# scripts/check_smoke.py passes on all checks.
+experiment: smoke_progress
 model_config: configs/model.yaml
 seed: 20261013
 data:
@@ -17,17 +16,18 @@ rollout:
   max_turns: 6
   max_tool_calls: 5
 training:
-  output_dir: checkpoints/smoke_reward
+  output_dir: checkpoints/smoke_progress
   learning_rate: 0.000005
   max_steps: 150
-  per_device_train_batch_size: 1
+  per_device_train_batch_size: 2
   gradient_accumulation_steps: 4
-  num_generations: 4
+  num_generations: 8
   max_prompt_length: 768
   max_completion_length: 384
   save_steps: 150
   logging_steps: 1
-  temperature: 0.8
+  temperature: 1.0
+  vllm_gpu_memory_utilization: 0.15
   beta: 0.0
 dapo:
   loss_type: grpo
@@ -45,6 +45,7 @@ reward:
   invalid_action: -0.2
   redundant_calls: -0.2
   execution_cost: -0.05
+  progress_credit: 0.5
   format:
     structure: 0.1
     known_tool: 0.05

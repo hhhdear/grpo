@@ -1,0 +1,1547 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+validated 3000 tasks and grounded reward replay (sample=0.000)
+installed TRL API is compatible with the baseline constructor
+prompt length control: mode=tokenizer_truncation limit=768
+truncated 0/3000 prompts to 768 tokens
+trainer=GRPOTrainer zero_variance_filter=False beta=0.0
+
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/290 [00:00<00:00, 13842.59it/s, Materializing param=model.embed_tokens.weight]
+Loading weights:   0%|          | 1/290 [00:00<00:00, 6442.86it/s, Materializing param=model.embed_tokens.weight] 
+Loading weights:   1%|          | 2/290 [00:00<00:07, 37.61it/s, Materializing param=model.layers.0.input_layernorm.weight]
+Loading weights:   1%|          | 2/290 [00:00<00:07, 37.49it/s, Materializing param=model.layers.0.input_layernorm.weight]
+Loading weights:   1%|          | 3/290 [00:00<00:05, 56.04it/s, Materializing param=model.layers.0.mlp.down_proj.weight]  
+Loading weights:   1%|          | 3/290 [00:00<00:05, 55.97it/s, Materializing param=model.layers.0.mlp.down_proj.weight]
+Loading weights:   1%|▏         | 4/290 [00:00<00:03, 74.40it/s, Materializing param=model.layers.0.mlp.gate_proj.weight]
+Loading weights:   1%|▏         | 4/290 [00:00<00:03, 74.28it/s, Materializing param=model.layers.0.mlp.gate_proj.weight]
+Loading weights:   2%|▏         | 5/290 [00:00<00:03, 92.62it/s, Materializing param=model.layers.0.mlp.up_proj.weight]  
+Loading weights:   2%|▏         | 5/290 [00:00<00:03, 92.37it/s, Materializing param=model.layers.0.mlp.up_proj.weight]
+Loading weights:   2%|▏         | 6/290 [00:00<00:02, 110.58it/s, Materializing param=model.layers.0.post_attention_layernorm.weight]
+Loading weights:   2%|▏         | 6/290 [00:00<00:02, 110.46it/s, Materializing param=model.layers.0.post_attention_layernorm.weight]
+Loading weights:   2%|▏         | 7/290 [00:00<00:02, 128.59it/s, Materializing param=model.layers.0.self_attn.k_proj.bias]          
+Loading weights:   2%|▏         | 7/290 [00:00<00:02, 128.45it/s, Materializing param=model.layers.0.self_attn.k_proj.bias]
+Loading weights:   3%|▎         | 8/290 [00:00<00:01, 146.48it/s, Materializing param=model.layers.0.self_attn.k_proj.weight]
+Loading weights:   3%|▎         | 8/290 [00:00<00:01, 146.28it/s, Materializing param=model.layers.0.self_attn.k_proj.weight]
+Loading weights:   3%|▎         | 9/290 [00:00<00:01, 163.19it/s, Materializing param=model.layers.0.self_attn.o_proj.weight]
+Loading weights:   3%|▎         | 9/290 [00:00<00:01, 162.76it/s, Materializing param=model.layers.0.self_attn.o_proj.weight]
+Loading weights:   3%|▎         | 10/290 [00:00<00:01, 179.91it/s, Materializing param=model.layers.0.self_attn.q_proj.bias] 
+Loading weights:   3%|▎         | 10/290 [00:00<00:01, 179.35it/s, Materializing param=model.layers.0.self_attn.q_proj.bias]
+Loading weights:   4%|▍         | 11/290 [00:00<00:01, 196.83it/s, Materializing param=model.layers.0.self_attn.q_proj.weight]
+Loading weights:   4%|▍         | 11/290 [00:00<00:01, 196.63it/s, Materializing param=model.layers.0.self_attn.q_proj.weight]
+Loading weights:   4%|▍         | 12/290 [00:00<00:01, 214.08it/s, Materializing param=model.layers.0.self_attn.v_proj.bias]  
+Loading weights:   4%|▍         | 12/290 [00:00<00:01, 213.88it/s, Materializing param=model.layers.0.self_attn.v_proj.bias]
+Loading weights:   4%|▍         | 13/290 [00:00<00:01, 229.79it/s, Materializing param=model.layers.0.self_attn.v_proj.weight]
+Loading weights:   4%|▍         | 13/290 [00:00<00:01, 229.19it/s, Materializing param=model.layers.0.self_attn.v_proj.weight]
+Loading weights:   5%|▍         | 14/290 [00:00<00:01, 245.89it/s, Materializing param=model.layers.1.input_layernorm.weight] 
+Loading weights:   5%|▍         | 14/290 [00:00<00:01, 245.49it/s, Materializing param=model.layers.1.input_layernorm.weight]
+Loading weights:   5%|▌         | 15/290 [00:00<00:01, 262.13it/s, Materializing param=model.layers.1.mlp.down_proj.weight]  
+Loading weights:   5%|▌         | 15/290 [00:00<00:01, 261.66it/s, Materializing param=model.layers.1.mlp.down_proj.weight]
+Loading weights:   6%|▌         | 16/290 [00:00<00:01, 264.18it/s, Materializing param=model.layers.1.mlp.gate_proj.weight]
+Loading weights:   6%|▌         | 16/290 [00:00<00:01, 263.48it/s, Materializing param=model.layers.1.mlp.gate_proj.weight]
+Loading weights:   6%|▌         | 17/290 [00:00<00:00, 279.26it/s, Materializing param=model.layers.1.mlp.up_proj.weight]  
+Loading weights:   6%|▌         | 17/290 [00:00<00:00, 278.99it/s, Materializing param=model.layers.1.mlp.up_proj.weight]
+Loading weights:   6%|▌         | 18/290 [00:00<00:00, 292.22it/s, Materializing param=model.layers.1.post_attention_layernorm.weight]
+Loading weights:   6%|▌         | 18/290 [00:00<00:00, 291.37it/s, Materializing param=model.layers.1.post_attention_layernorm.weight]
+Loading weights:   7%|▋         | 19/290 [00:00<00:00, 306.93it/s, Materializing param=model.layers.1.self_attn.k_proj.bias]          
+Loading weights:   7%|▋         | 19/290 [00:00<00:00, 306.64it/s, Materializing param=model.layers.1.self_attn.k_proj.bias]
+Loading weights:   7%|▋         | 20/290 [00:00<00:00, 322.20it/s, Materializing param=model.layers.1.self_attn.k_proj.weight]
+Loading weights:   7%|▋         | 20/290 [00:00<00:00, 321.84it/s, Materializing param=model.layers.1.self_attn.k_proj.weight]
+Loading weights:   7%|▋         | 21/290 [00:00<00:00, 337.31it/s, Materializing param=model.layers.1.self_attn.o_proj.weight]
+Loading weights:   7%|▋         | 21/290 [00:00<00:00, 337.02it/s, Materializing param=model.layers.1.self_attn.o_proj.weight]
+Loading weights:   8%|▊         | 22/290 [00:00<00:00, 350.60it/s, Materializing param=model.layers.1.self_attn.q_proj.bias]  
+Loading weights:   8%|▊         | 22/290 [00:00<00:00, 349.67it/s, Materializing param=model.layers.1.self_attn.q_proj.bias]
+Loading weights:   8%|▊         | 23/290 [00:00<00:00, 364.81it/s, Materializing param=model.layers.1.self_attn.q_proj.weight]
+Loading weights:   8%|▊         | 23/290 [00:00<00:00, 363.10it/s, Materializing param=model.layers.1.self_attn.q_proj.weight]
+Loading weights:   8%|▊         | 24/290 [00:00<00:00, 378.15it/s, Materializing param=model.layers.1.self_attn.v_proj.bias]  
+Loading weights:   8%|▊         | 24/290 [00:00<00:00, 377.82it/s, Materializing param=model.layers.1.self_attn.v_proj.bias]
+Loading weights:   9%|▊         | 25/290 [00:00<00:00, 392.90it/s, Materializing param=model.layers.1.self_attn.v_proj.weight]
+Loading weights:   9%|▊         | 25/290 [00:00<00:00, 392.45it/s, Materializing param=model.layers.1.self_attn.v_proj.weight]
+Loading weights:   9%|▉         | 26/290 [00:00<00:00, 404.04it/s, Materializing param=model.layers.2.input_layernorm.weight] 
+Loading weights:   9%|▉         | 26/290 [00:00<00:00, 402.43it/s, Materializing param=model.layers.2.input_layernorm.weight]
+Loading weights:   9%|▉         | 27/290 [00:00<00:00, 413.50it/s, Materializing param=model.layers.2.mlp.down_proj.weight]  
+Loading weights:   9%|▉         | 27/290 [00:00<00:00, 412.82it/s, Materializing param=model.layers.2.mlp.down_proj.weight]
+Loading weights:  10%|▉         | 28/290 [00:00<00:00, 420.89it/s, Materializing param=model.layers.2.mlp.gate_proj.weight]
+Loading weights:  10%|▉         | 28/290 [00:00<00:00, 420.35it/s, Materializing param=model.layers.2.mlp.gate_proj.weight]
+Loading weights:  10%|█         | 29/290 [00:00<00:00, 422.29it/s, Materializing param=model.layers.2.mlp.up_proj.weight]  
+Loading weights:  10%|█         | 29/290 [00:00<00:00, 421.80it/s, Materializing param=model.layers.2.mlp.up_proj.weight]
+Loading weights:  10%|█         | 30/290 [00:00<00:00, 433.96it/s, Materializing param=model.layers.2.post_attention_layernorm.weight]
+Loading weights:  10%|█         | 30/290 [00:00<00:00, 432.26it/s, Materializing param=model.layers.2.post_attention_layernorm.weight]
+Loading weights:  11%|█         | 31/290 [00:00<00:00, 445.30it/s, Materializing param=model.layers.2.self_attn.k_proj.bias]          
+Loading weights:  11%|█         | 31/290 [00:00<00:00, 444.68it/s, Materializing param=model.layers.2.self_attn.k_proj.bias]
+Loading weights:  11%|█         | 32/290 [00:00<00:00, 458.11it/s, Materializing param=model.layers.2.self_attn.k_proj.weight]
+Loading weights:  11%|█         | 32/290 [00:00<00:00, 457.63it/s, Materializing param=model.layers.2.self_attn.k_proj.weight]
+Loading weights:  11%|█▏        | 33/290 [00:00<00:00, 470.91it/s, Materializing param=model.layers.2.self_attn.o_proj.weight]
+Loading weights:  11%|█▏        | 33/290 [00:00<00:00, 470.44it/s, Materializing param=model.layers.2.self_attn.o_proj.weight]
+Loading weights:  12%|█▏        | 34/290 [00:00<00:00, 480.45it/s, Materializing param=model.layers.2.self_attn.q_proj.bias]  
+Loading weights:  12%|█▏        | 34/290 [00:00<00:00, 478.05it/s, Materializing param=model.layers.2.self_attn.q_proj.bias]
+Loading weights:  12%|█▏        | 35/290 [00:00<00:00, 490.91it/s, Materializing param=model.layers.2.self_attn.q_proj.weight]
+Loading weights:  12%|█▏        | 35/290 [00:00<00:00, 490.40it/s, Materializing param=model.layers.2.self_attn.q_proj.weight]
+Loading weights:  12%|█▏        | 36/290 [00:00<00:00, 499.32it/s, Materializing param=model.layers.2.self_attn.v_proj.bias]  
+Loading weights:  12%|█▏        | 36/290 [00:00<00:00, 498.36it/s, Materializing param=model.layers.2.self_attn.v_proj.bias]
+Loading weights:  13%|█▎        | 37/290 [00:00<00:00, 510.06it/s, Materializing param=model.layers.2.self_attn.v_proj.weight]
+Loading weights:  13%|█▎        | 37/290 [00:00<00:00, 509.11it/s, Materializing param=model.layers.2.self_attn.v_proj.weight]
+Loading weights:  13%|█▎        | 38/290 [00:00<00:00, 521.74it/s, Materializing param=model.layers.3.input_layernorm.weight] 
+Loading weights:  13%|█▎        | 38/290 [00:00<00:00, 521.33it/s, Materializing param=model.layers.3.input_layernorm.weight]
+Loading weights:  13%|█▎        | 39/290 [00:00<00:00, 534.03it/s, Materializing param=model.layers.3.mlp.down_proj.weight]  
+Loading weights:  13%|█▎        | 39/290 [00:00<00:00, 533.55it/s, Materializing param=model.layers.3.mlp.down_proj.weight]
+Loading weights:  14%|█▍        | 40/290 [00:00<00:00, 538.01it/s, Materializing param=model.layers.3.mlp.gate_proj.weight]
+Loading weights:  14%|█▍        | 40/290 [00:00<00:00, 537.24it/s, Materializing param=model.layers.3.mlp.gate_proj.weight]
+Loading weights:  14%|█▍        | 41/290 [00:00<00:00, 542.65it/s, Materializing param=model.layers.3.mlp.up_proj.weight]  
+Loading weights:  14%|█▍        | 41/290 [00:00<00:00, 542.11it/s, Materializing param=model.layers.3.mlp.up_proj.weight]
+Loading weights:  14%|█▍        | 42/290 [00:00<00:00, 547.41it/s, Materializing param=model.layers.3.post_attention_layernorm.weight]
+Loading weights:  14%|█▍        | 42/290 [00:00<00:00, 546.84it/s, Materializing param=model.layers.3.post_attention_layernorm.weight]
+Loading weights:  15%|█▍        | 43/290 [00:00<00:00, 558.98it/s, Materializing param=model.layers.3.self_attn.k_proj.bias]          
+Loading weights:  15%|█▍        | 43/290 [00:00<00:00, 558.50it/s, Materializing param=model.layers.3.self_attn.k_proj.bias]
+Loading weights:  15%|█▌        | 44/290 [00:00<00:00, 566.96it/s, Materializing param=model.layers.3.self_attn.k_proj.weight]
+Loading weights:  15%|█▌        | 44/290 [00:00<00:00, 565.31it/s, Materializing param=model.layers.3.self_attn.k_proj.weight]
+Loading weights:  16%|█▌        | 45/290 [00:00<00:00, 577.09it/s, Materializing param=model.layers.3.self_attn.o_proj.weight]
+Loading weights:  16%|█▌        | 45/290 [00:00<00:00, 576.65it/s, Materializing param=model.layers.3.self_attn.o_proj.weight]
+Loading weights:  16%|█▌        | 46/290 [00:00<00:00, 588.57it/s, Materializing param=model.layers.3.self_attn.q_proj.bias]  
+Loading weights:  16%|█▌        | 46/290 [00:00<00:00, 588.15it/s, Materializing param=model.layers.3.self_attn.q_proj.bias]
+Loading weights:  16%|█▌        | 47/290 [00:00<00:00, 595.88it/s, Materializing param=model.layers.3.self_attn.q_proj.weight]
+Loading weights:  16%|█▌        | 47/290 [00:00<00:00, 593.64it/s, Materializing param=model.layers.3.self_attn.q_proj.weight]
+Loading weights:  17%|█▋        | 48/290 [00:00<00:00, 600.41it/s, Materializing param=model.layers.3.self_attn.v_proj.bias]  
+Loading weights:  17%|█▋        | 48/290 [00:00<00:00, 599.14it/s, Materializing param=model.layers.3.self_attn.v_proj.bias]
+Loading weights:  17%|█▋        | 49/290 [00:00<00:00, 609.60it/s, Materializing param=model.layers.3.self_attn.v_proj.weight]
+Loading weights:  17%|█▋        | 49/290 [00:00<00:00, 609.05it/s, Materializing param=model.layers.3.self_attn.v_proj.weight]
+Loading weights:  17%|█▋        | 50/290 [00:00<00:00, 620.18it/s, Materializing param=model.layers.4.input_layernorm.weight] 
+Loading weights:  17%|█▋        | 50/290 [00:00<00:00, 619.56it/s, Materializing param=model.layers.4.input_layernorm.weight]
+Loading weights:  18%|█▊        | 51/290 [00:00<00:00, 630.96it/s, Materializing param=model.layers.4.mlp.down_proj.weight]  
+Loading weights:  18%|█▊        | 51/290 [00:00<00:00, 630.52it/s, Materializing param=model.layers.4.mlp.down_proj.weight]
+Loading weights:  18%|█▊        | 52/290 [00:00<00:00, 636.65it/s, Materializing param=model.layers.4.mlp.gate_proj.weight]
+Loading weights:  18%|█▊        | 52/290 [00:00<00:00, 636.16it/s, Materializing param=model.layers.4.mlp.gate_proj.weight]
+Loading weights:  18%|█▊        | 53/290 [00:00<00:00, 637.84it/s, Materializing param=model.layers.4.mlp.up_proj.weight]  
+Loading weights:  18%|█▊        | 53/290 [00:00<00:00, 637.06it/s, Materializing param=model.layers.4.mlp.up_proj.weight]
+Loading weights:  19%|█▊        | 54/290 [00:00<00:00, 639.02it/s, Materializing param=model.layers.4.post_attention_layernorm.weight]
+Loading weights:  19%|█▊        | 54/290 [00:00<00:00, 637.65it/s, Materializing param=model.layers.4.post_attention_layernorm.weight]
+Loading weights:  19%|█▉        | 55/290 [00:00<00:00, 648.21it/s, Materializing param=model.layers.4.self_attn.k_proj.bias]          
+Loading weights:  19%|█▉        | 55/290 [00:00<00:00, 647.73it/s, Materializing param=model.layers.4.self_attn.k_proj.bias]
+Loading weights:  19%|█▉        | 56/290 [00:00<00:00, 656.68it/s, Materializing param=model.layers.4.self_attn.k_proj.weight]
+Loading weights:  19%|█▉        | 56/290 [00:00<00:00, 656.06it/s, Materializing param=model.layers.4.self_attn.k_proj.weight]
+Loading weights:  20%|█▉        | 57/290 [00:00<00:00, 664.77it/s, Materializing param=model.layers.4.self_attn.o_proj.weight]
+Loading weights:  20%|█▉        | 57/290 [00:00<00:00, 663.82it/s, Materializing param=model.layers.4.self_attn.o_proj.weight]
+Loading weights:  20%|██        | 58/290 [00:00<00:00, 672.69it/s, Materializing param=model.layers.4.self_attn.q_proj.bias]  
+Loading weights:  20%|██        | 58/290 [00:00<00:00, 672.13it/s, Materializing param=model.layers.4.self_attn.q_proj.bias]
+Loading weights:  20%|██        | 59/290 [00:00<00:00, 681.46it/s, Materializing param=model.layers.4.self_attn.q_proj.weight]
+Loading weights:  20%|██        | 59/290 [00:00<00:00, 680.75it/s, Materializing param=model.layers.4.self_attn.q_proj.weight]
+Loading weights:  21%|██        | 60/290 [00:00<00:00, 690.33it/s, Materializing param=model.layers.4.self_attn.v_proj.bias]  
+Loading weights:  21%|██        | 60/290 [00:00<00:00, 689.86it/s, Materializing param=model.layers.4.self_attn.v_proj.bias]
+Loading weights:  21%|██        | 61/290 [00:00<00:00, 696.85it/s, Materializing param=model.layers.4.self_attn.v_proj.weight]
+Loading weights:  21%|██        | 61/290 [00:00<00:00, 696.24it/s, Materializing param=model.layers.4.self_attn.v_proj.weight]
+Loading weights:  21%|██▏       | 62/290 [00:00<00:00, 705.32it/s, Materializing param=model.layers.5.input_layernorm.weight] 
+Loading weights:  21%|██▏       | 62/290 [00:00<00:00, 704.54it/s, Materializing param=model.layers.5.input_layernorm.weight]
+Loading weights:  22%|██▏       | 63/290 [00:00<00:00, 713.81it/s, Materializing param=model.layers.5.mlp.down_proj.weight]  
+Loading weights:  22%|██▏       | 63/290 [00:00<00:00, 713.21it/s, Materializing param=model.layers.5.mlp.down_proj.weight]
+Loading weights:  22%|██▏       | 64/290 [00:00<00:00, 710.51it/s, Materializing param=model.layers.5.mlp.gate_proj.weight]
+Loading weights:  22%|██▏       | 64/290 [00:00<00:00, 709.44it/s, Materializing param=model.layers.5.mlp.gate_proj.weight]
+Loading weights:  22%|██▏       | 65/290 [00:00<00:00, 710.74it/s, Materializing param=model.layers.5.mlp.up_proj.weight]  
+Loading weights:  22%|██▏       | 65/290 [00:00<00:00, 709.78it/s, Materializing param=model.layers.5.mlp.up_proj.weight]
+Loading weights:  23%|██▎       | 66/290 [00:00<00:00, 711.36it/s, Materializing param=model.layers.5.post_attention_layernorm.weight]
+Loading weights:  23%|██▎       | 66/290 [00:00<00:00, 710.03it/s, Materializing param=model.layers.5.post_attention_layernorm.weight]
+Loading weights:  23%|██▎       | 67/290 [00:00<00:00, 719.52it/s, Materializing param=model.layers.5.self_attn.k_proj.bias]          
+Loading weights:  23%|██▎       | 67/290 [00:00<00:00, 718.98it/s, Materializing param=model.layers.5.self_attn.k_proj.bias]
+Loading weights:  23%|██▎       | 68/290 [00:00<00:00, 726.62it/s, Materializing param=model.layers.5.self_attn.k_proj.weight]
+Loading weights:  23%|██▎       | 68/290 [00:00<00:00, 725.94it/s, Materializing param=model.layers.5.self_attn.k_proj.weight]
+Loading weights:  24%|██▍       | 69/290 [00:00<00:00, 735.50it/s, Materializing param=model.layers.5.self_attn.o_proj.weight]
+Loading weights:  24%|██▍       | 69/290 [00:00<00:00, 734.86it/s, Materializing param=model.layers.5.self_attn.o_proj.weight]
+Loading weights:  24%|██▍       | 70/290 [00:00<00:00, 743.58it/s, Materializing param=model.layers.5.self_attn.q_proj.bias]  
+Loading weights:  24%|██▍       | 70/290 [00:00<00:00, 742.63it/s, Materializing param=model.layers.5.self_attn.q_proj.bias]
+Loading weights:  24%|██▍       | 71/290 [00:00<00:00, 752.05it/s, Materializing param=model.layers.5.self_attn.q_proj.weight]
+Loading weights:  24%|██▍       | 71/290 [00:00<00:00, 751.53it/s, Materializing param=model.layers.5.self_attn.q_proj.weight]
+Loading weights:  25%|██▍       | 72/290 [00:00<00:00, 759.22it/s, Materializing param=model.layers.5.self_attn.v_proj.bias]  
+Loading weights:  25%|██▍       | 72/290 [00:00<00:00, 757.27it/s, Materializing param=model.layers.5.self_attn.v_proj.bias]
+Loading weights:  25%|██▌       | 73/290 [00:00<00:00, 758.82it/s, Materializing param=model.layers.5.self_attn.v_proj.weight]
+Loading weights:  25%|██▌       | 73/290 [00:00<00:00, 757.53it/s, Materializing param=model.layers.5.self_attn.v_proj.weight]
+Loading weights:  26%|██▌       | 74/290 [00:00<00:00, 766.15it/s, Materializing param=model.layers.6.input_layernorm.weight] 
+Loading weights:  26%|██▌       | 74/290 [00:00<00:00, 765.22it/s, Materializing param=model.layers.6.input_layernorm.weight]
+Loading weights:  26%|██▌       | 75/290 [00:00<00:00, 773.95it/s, Materializing param=model.layers.6.mlp.down_proj.weight]  
+Loading weights:  26%|██▌       | 75/290 [00:00<00:00, 773.19it/s, Materializing param=model.layers.6.mlp.down_proj.weight]
+Loading weights:  26%|██▌       | 76/290 [00:00<00:00, 766.23it/s, Materializing param=model.layers.6.mlp.gate_proj.weight]
+Loading weights:  26%|██▌       | 76/290 [00:00<00:00, 765.68it/s, Materializing param=model.layers.6.mlp.gate_proj.weight]
+Loading weights:  27%|██▋       | 77/290 [00:00<00:00, 774.83it/s, Materializing param=model.layers.6.mlp.up_proj.weight]  
+Loading weights:  27%|██▋       | 77/290 [00:00<00:00, 774.22it/s, Materializing param=model.layers.6.mlp.up_proj.weight]
+Loading weights:  27%|██▋       | 78/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.6.mlp.up_proj.weight]
+Loading weights:  27%|██▋       | 78/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.6.post_attention_layernorm.weight]
+Loading weights:  27%|██▋       | 78/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.6.post_attention_layernorm.weight]
+Loading weights:  27%|██▋       | 79/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.6.self_attn.k_proj.bias]          
+Loading weights:  27%|██▋       | 79/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.6.self_attn.k_proj.bias]
+Loading weights:  28%|██▊       | 80/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.6.self_attn.k_proj.weight]
+Loading weights:  28%|██▊       | 80/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.6.self_attn.k_proj.weight]
+Loading weights:  28%|██▊       | 81/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.6.self_attn.o_proj.weight]
+Loading weights:  28%|██▊       | 81/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.6.self_attn.o_proj.weight]
+Loading weights:  28%|██▊       | 82/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.6.self_attn.q_proj.bias]  
+Loading weights:  28%|██▊       | 82/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.6.self_attn.q_proj.bias]
+Loading weights:  29%|██▊       | 83/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.6.self_attn.q_proj.weight]
+Loading weights:  29%|██▊       | 83/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.6.self_attn.q_proj.weight]
+Loading weights:  29%|██▉       | 84/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.6.self_attn.v_proj.bias]  
+Loading weights:  29%|██▉       | 84/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.6.self_attn.v_proj.bias]
+Loading weights:  29%|██▉       | 85/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.6.self_attn.v_proj.weight]
+Loading weights:  29%|██▉       | 85/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.6.self_attn.v_proj.weight]
+Loading weights:  30%|██▉       | 86/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.input_layernorm.weight] 
+Loading weights:  30%|██▉       | 86/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.input_layernorm.weight]
+Loading weights:  30%|███       | 87/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.mlp.down_proj.weight]  
+Loading weights:  30%|███       | 87/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.mlp.down_proj.weight]
+Loading weights:  30%|███       | 88/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.mlp.gate_proj.weight]
+Loading weights:  30%|███       | 88/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.mlp.gate_proj.weight]
+Loading weights:  31%|███       | 89/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.mlp.up_proj.weight]  
+Loading weights:  31%|███       | 89/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.mlp.up_proj.weight]
+Loading weights:  31%|███       | 90/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.post_attention_layernorm.weight]
+Loading weights:  31%|███       | 90/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.post_attention_layernorm.weight]
+Loading weights:  31%|███▏      | 91/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.self_attn.k_proj.bias]          
+Loading weights:  31%|███▏      | 91/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.self_attn.k_proj.bias]
+Loading weights:  32%|███▏      | 92/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.self_attn.k_proj.weight]
+Loading weights:  32%|███▏      | 92/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.self_attn.k_proj.weight]
+Loading weights:  32%|███▏      | 93/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.self_attn.o_proj.weight]
+Loading weights:  32%|███▏      | 93/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.self_attn.o_proj.weight]
+Loading weights:  32%|███▏      | 94/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.self_attn.q_proj.bias]  
+Loading weights:  32%|███▏      | 94/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.self_attn.q_proj.bias]
+Loading weights:  33%|███▎      | 95/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.self_attn.q_proj.weight]
+Loading weights:  33%|███▎      | 95/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.self_attn.q_proj.weight]
+Loading weights:  33%|███▎      | 96/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.self_attn.v_proj.bias]  
+Loading weights:  33%|███▎      | 96/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.self_attn.v_proj.bias]
+Loading weights:  33%|███▎      | 97/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.self_attn.v_proj.weight]
+Loading weights:  33%|███▎      | 97/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.7.self_attn.v_proj.weight]
+Loading weights:  34%|███▍      | 98/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.input_layernorm.weight] 
+Loading weights:  34%|███▍      | 98/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.input_layernorm.weight]
+Loading weights:  34%|███▍      | 99/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.mlp.down_proj.weight]  
+Loading weights:  34%|███▍      | 99/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.mlp.down_proj.weight]
+Loading weights:  34%|███▍      | 100/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.mlp.gate_proj.weight]
+Loading weights:  34%|███▍      | 100/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.mlp.gate_proj.weight]
+Loading weights:  35%|███▍      | 101/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.mlp.up_proj.weight]  
+Loading weights:  35%|███▍      | 101/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.mlp.up_proj.weight]
+Loading weights:  35%|███▌      | 102/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.post_attention_layernorm.weight]
+Loading weights:  35%|███▌      | 102/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.post_attention_layernorm.weight]
+Loading weights:  36%|███▌      | 103/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.self_attn.k_proj.bias]          
+Loading weights:  36%|███▌      | 103/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.self_attn.k_proj.bias]
+Loading weights:  36%|███▌      | 104/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.self_attn.k_proj.weight]
+Loading weights:  36%|███▌      | 104/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.self_attn.k_proj.weight]
+Loading weights:  36%|███▌      | 105/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.self_attn.o_proj.weight]
+Loading weights:  36%|███▌      | 105/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.self_attn.o_proj.weight]
+Loading weights:  37%|███▋      | 106/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.self_attn.q_proj.bias]  
+Loading weights:  37%|███▋      | 106/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.self_attn.q_proj.bias]
+Loading weights:  37%|███▋      | 107/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.self_attn.q_proj.weight]
+Loading weights:  37%|███▋      | 107/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.self_attn.q_proj.weight]
+Loading weights:  37%|███▋      | 108/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.self_attn.v_proj.bias]  
+Loading weights:  37%|███▋      | 108/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.self_attn.v_proj.bias]
+Loading weights:  38%|███▊      | 109/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.self_attn.v_proj.weight]
+Loading weights:  38%|███▊      | 109/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.8.self_attn.v_proj.weight]
+Loading weights:  38%|███▊      | 110/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.input_layernorm.weight] 
+Loading weights:  38%|███▊      | 110/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.input_layernorm.weight]
+Loading weights:  38%|███▊      | 111/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.mlp.down_proj.weight]  
+Loading weights:  38%|███▊      | 111/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.mlp.down_proj.weight]
+Loading weights:  39%|███▊      | 112/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.mlp.gate_proj.weight]
+Loading weights:  39%|███▊      | 112/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.mlp.gate_proj.weight]
+Loading weights:  39%|███▉      | 113/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.mlp.up_proj.weight]  
+Loading weights:  39%|███▉      | 113/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.mlp.up_proj.weight]
+Loading weights:  39%|███▉      | 114/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.post_attention_layernorm.weight]
+Loading weights:  39%|███▉      | 114/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.post_attention_layernorm.weight]
+Loading weights:  40%|███▉      | 115/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.self_attn.k_proj.bias]          
+Loading weights:  40%|███▉      | 115/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.self_attn.k_proj.bias]
+Loading weights:  40%|████      | 116/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.self_attn.k_proj.weight]
+Loading weights:  40%|████      | 116/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.self_attn.k_proj.weight]
+Loading weights:  40%|████      | 117/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.self_attn.o_proj.weight]
+Loading weights:  40%|████      | 117/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.self_attn.o_proj.weight]
+Loading weights:  41%|████      | 118/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.self_attn.q_proj.bias]  
+Loading weights:  41%|████      | 118/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.self_attn.q_proj.bias]
+Loading weights:  41%|████      | 119/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.self_attn.q_proj.weight]
+Loading weights:  41%|████      | 119/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.self_attn.q_proj.weight]
+Loading weights:  41%|████▏     | 120/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.self_attn.v_proj.bias]  
+Loading weights:  41%|████▏     | 120/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.self_attn.v_proj.bias]
+Loading weights:  42%|████▏     | 121/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.self_attn.v_proj.weight]
+Loading weights:  42%|████▏     | 121/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.9.self_attn.v_proj.weight]
+Loading weights:  42%|████▏     | 122/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.input_layernorm.weight]
+Loading weights:  42%|████▏     | 122/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.input_layernorm.weight]
+Loading weights:  42%|████▏     | 123/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.mlp.down_proj.weight]  
+Loading weights:  42%|████▏     | 123/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.mlp.down_proj.weight]
+Loading weights:  43%|████▎     | 124/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.mlp.gate_proj.weight]
+Loading weights:  43%|████▎     | 124/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.mlp.gate_proj.weight]
+Loading weights:  43%|████▎     | 125/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.mlp.up_proj.weight]  
+Loading weights:  43%|████▎     | 125/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.mlp.up_proj.weight]
+Loading weights:  43%|████▎     | 126/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.post_attention_layernorm.weight]
+Loading weights:  43%|████▎     | 126/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.post_attention_layernorm.weight]
+Loading weights:  44%|████▍     | 127/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.self_attn.k_proj.bias]          
+Loading weights:  44%|████▍     | 127/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.self_attn.k_proj.bias]
+Loading weights:  44%|████▍     | 128/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.self_attn.k_proj.weight]
+Loading weights:  44%|████▍     | 128/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.self_attn.k_proj.weight]
+Loading weights:  44%|████▍     | 129/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.self_attn.o_proj.weight]
+Loading weights:  44%|████▍     | 129/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.self_attn.o_proj.weight]
+Loading weights:  45%|████▍     | 130/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.self_attn.q_proj.bias]  
+Loading weights:  45%|████▍     | 130/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.self_attn.q_proj.bias]
+Loading weights:  45%|████▌     | 131/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.self_attn.q_proj.weight]
+Loading weights:  45%|████▌     | 131/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.self_attn.q_proj.weight]
+Loading weights:  46%|████▌     | 132/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.self_attn.v_proj.bias]  
+Loading weights:  46%|████▌     | 132/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.self_attn.v_proj.bias]
+Loading weights:  46%|████▌     | 133/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.self_attn.v_proj.weight]
+Loading weights:  46%|████▌     | 133/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.10.self_attn.v_proj.weight]
+Loading weights:  46%|████▌     | 134/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.input_layernorm.weight] 
+Loading weights:  46%|████▌     | 134/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.input_layernorm.weight]
+Loading weights:  47%|████▋     | 135/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.mlp.down_proj.weight]  
+Loading weights:  47%|████▋     | 135/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.mlp.down_proj.weight]
+Loading weights:  47%|████▋     | 136/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.mlp.gate_proj.weight]
+Loading weights:  47%|████▋     | 136/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.mlp.gate_proj.weight]
+Loading weights:  47%|████▋     | 137/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.mlp.up_proj.weight]  
+Loading weights:  47%|████▋     | 137/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.mlp.up_proj.weight]
+Loading weights:  48%|████▊     | 138/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.post_attention_layernorm.weight]
+Loading weights:  48%|████▊     | 138/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.post_attention_layernorm.weight]
+Loading weights:  48%|████▊     | 139/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.self_attn.k_proj.bias]          
+Loading weights:  48%|████▊     | 139/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.self_attn.k_proj.bias]
+Loading weights:  48%|████▊     | 140/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.self_attn.k_proj.weight]
+Loading weights:  48%|████▊     | 140/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.self_attn.k_proj.weight]
+Loading weights:  49%|████▊     | 141/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.self_attn.o_proj.weight]
+Loading weights:  49%|████▊     | 141/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.self_attn.o_proj.weight]
+Loading weights:  49%|████▉     | 142/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.self_attn.q_proj.bias]  
+Loading weights:  49%|████▉     | 142/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.self_attn.q_proj.bias]
+Loading weights:  49%|████▉     | 143/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.self_attn.q_proj.weight]
+Loading weights:  49%|████▉     | 143/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.self_attn.q_proj.weight]
+Loading weights:  50%|████▉     | 144/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.self_attn.v_proj.bias]  
+Loading weights:  50%|████▉     | 144/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.self_attn.v_proj.bias]
+Loading weights:  50%|█████     | 145/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.self_attn.v_proj.weight]
+Loading weights:  50%|█████     | 145/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.11.self_attn.v_proj.weight]
+Loading weights:  50%|█████     | 146/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.input_layernorm.weight] 
+Loading weights:  50%|█████     | 146/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.input_layernorm.weight]
+Loading weights:  51%|█████     | 147/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.mlp.down_proj.weight]  
+Loading weights:  51%|█████     | 147/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.mlp.down_proj.weight]
+Loading weights:  51%|█████     | 148/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.mlp.gate_proj.weight]
+Loading weights:  51%|█████     | 148/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.mlp.gate_proj.weight]
+Loading weights:  51%|█████▏    | 149/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.mlp.up_proj.weight]  
+Loading weights:  51%|█████▏    | 149/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.mlp.up_proj.weight]
+Loading weights:  52%|█████▏    | 150/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.post_attention_layernorm.weight]
+Loading weights:  52%|█████▏    | 150/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.post_attention_layernorm.weight]
+Loading weights:  52%|█████▏    | 151/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.self_attn.k_proj.bias]          
+Loading weights:  52%|█████▏    | 151/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.self_attn.k_proj.bias]
+Loading weights:  52%|█████▏    | 152/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.self_attn.k_proj.weight]
+Loading weights:  52%|█████▏    | 152/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.self_attn.k_proj.weight]
+Loading weights:  53%|█████▎    | 153/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.self_attn.o_proj.weight]
+Loading weights:  53%|█████▎    | 153/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.self_attn.o_proj.weight]
+Loading weights:  53%|█████▎    | 154/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.self_attn.q_proj.bias]  
+Loading weights:  53%|█████▎    | 154/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.self_attn.q_proj.bias]
+Loading weights:  53%|█████▎    | 155/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.self_attn.q_proj.weight]
+Loading weights:  53%|█████▎    | 155/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.self_attn.q_proj.weight]
+Loading weights:  54%|█████▍    | 156/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.self_attn.v_proj.bias]  
+Loading weights:  54%|█████▍    | 156/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.self_attn.v_proj.bias]
+Loading weights:  54%|█████▍    | 157/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.self_attn.v_proj.weight]
+Loading weights:  54%|█████▍    | 157/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.12.self_attn.v_proj.weight]
+Loading weights:  54%|█████▍    | 158/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.input_layernorm.weight] 
+Loading weights:  54%|█████▍    | 158/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.input_layernorm.weight]
+Loading weights:  55%|█████▍    | 159/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.mlp.down_proj.weight]  
+Loading weights:  55%|█████▍    | 159/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.mlp.down_proj.weight]
+Loading weights:  55%|█████▌    | 160/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.mlp.gate_proj.weight]
+Loading weights:  55%|█████▌    | 160/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.mlp.gate_proj.weight]
+Loading weights:  56%|█████▌    | 161/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.mlp.up_proj.weight]  
+Loading weights:  56%|█████▌    | 161/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.mlp.up_proj.weight]
+Loading weights:  56%|█████▌    | 162/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.post_attention_layernorm.weight]
+Loading weights:  56%|█████▌    | 162/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.post_attention_layernorm.weight]
+Loading weights:  56%|█████▌    | 163/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.self_attn.k_proj.bias]          
+Loading weights:  56%|█████▌    | 163/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.self_attn.k_proj.bias]
+Loading weights:  57%|█████▋    | 164/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.self_attn.k_proj.weight]
+Loading weights:  57%|█████▋    | 164/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.self_attn.k_proj.weight]
+Loading weights:  57%|█████▋    | 165/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.self_attn.o_proj.weight]
+Loading weights:  57%|█████▋    | 165/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.self_attn.o_proj.weight]
+Loading weights:  57%|█████▋    | 166/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.self_attn.q_proj.bias]  
+Loading weights:  57%|█████▋    | 166/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.self_attn.q_proj.bias]
+Loading weights:  58%|█████▊    | 167/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.self_attn.q_proj.weight]
+Loading weights:  58%|█████▊    | 167/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.self_attn.q_proj.weight]
+Loading weights:  58%|█████▊    | 168/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.self_attn.v_proj.bias]  
+Loading weights:  58%|█████▊    | 168/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.self_attn.v_proj.bias]
+Loading weights:  58%|█████▊    | 169/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.self_attn.v_proj.weight]
+Loading weights:  58%|█████▊    | 169/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.13.self_attn.v_proj.weight]
+Loading weights:  59%|█████▊    | 170/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.input_layernorm.weight] 
+Loading weights:  59%|█████▊    | 170/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.input_layernorm.weight]
+Loading weights:  59%|█████▉    | 171/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.mlp.down_proj.weight]  
+Loading weights:  59%|█████▉    | 171/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.mlp.down_proj.weight]
+Loading weights:  59%|█████▉    | 172/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.mlp.gate_proj.weight]
+Loading weights:  59%|█████▉    | 172/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.mlp.gate_proj.weight]
+Loading weights:  60%|█████▉    | 173/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.mlp.up_proj.weight]  
+Loading weights:  60%|█████▉    | 173/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.mlp.up_proj.weight]
+Loading weights:  60%|██████    | 174/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.post_attention_layernorm.weight]
+Loading weights:  60%|██████    | 174/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.post_attention_layernorm.weight]
+Loading weights:  60%|██████    | 175/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.self_attn.k_proj.bias]          
+Loading weights:  60%|██████    | 175/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.self_attn.k_proj.bias]
+Loading weights:  61%|██████    | 176/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.self_attn.k_proj.weight]
+Loading weights:  61%|██████    | 176/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.self_attn.k_proj.weight]
+Loading weights:  61%|██████    | 177/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.self_attn.o_proj.weight]
+Loading weights:  61%|██████    | 177/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.self_attn.o_proj.weight]
+Loading weights:  61%|██████▏   | 178/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.self_attn.q_proj.bias]  
+Loading weights:  61%|██████▏   | 178/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.self_attn.q_proj.bias]
+Loading weights:  62%|██████▏   | 179/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.self_attn.q_proj.weight]
+Loading weights:  62%|██████▏   | 179/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.self_attn.q_proj.weight]
+Loading weights:  62%|██████▏   | 180/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.self_attn.v_proj.bias]  
+Loading weights:  62%|██████▏   | 180/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.self_attn.v_proj.bias]
+Loading weights:  62%|██████▏   | 181/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.self_attn.v_proj.weight]
+Loading weights:  62%|██████▏   | 181/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.14.self_attn.v_proj.weight]
+Loading weights:  63%|██████▎   | 182/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.input_layernorm.weight] 
+Loading weights:  63%|██████▎   | 182/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.input_layernorm.weight]
+Loading weights:  63%|██████▎   | 183/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.mlp.down_proj.weight]  
+Loading weights:  63%|██████▎   | 183/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.mlp.down_proj.weight]
+Loading weights:  63%|██████▎   | 184/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.mlp.gate_proj.weight]
+Loading weights:  63%|██████▎   | 184/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.mlp.gate_proj.weight]
+Loading weights:  64%|██████▍   | 185/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.mlp.up_proj.weight]  
+Loading weights:  64%|██████▍   | 185/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.mlp.up_proj.weight]
+Loading weights:  64%|██████▍   | 186/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.post_attention_layernorm.weight]
+Loading weights:  64%|██████▍   | 186/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.post_attention_layernorm.weight]
+Loading weights:  64%|██████▍   | 187/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.self_attn.k_proj.bias]          
+Loading weights:  64%|██████▍   | 187/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.self_attn.k_proj.bias]
+Loading weights:  65%|██████▍   | 188/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.self_attn.k_proj.weight]
+Loading weights:  65%|██████▍   | 188/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.self_attn.k_proj.weight]
+Loading weights:  65%|██████▌   | 189/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.self_attn.o_proj.weight]
+Loading weights:  65%|██████▌   | 189/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.self_attn.o_proj.weight]
+Loading weights:  66%|██████▌   | 190/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.self_attn.q_proj.bias]  
+Loading weights:  66%|██████▌   | 190/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.self_attn.q_proj.bias]
+Loading weights:  66%|██████▌   | 191/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.self_attn.q_proj.weight]
+Loading weights:  66%|██████▌   | 191/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.self_attn.q_proj.weight]
+Loading weights:  66%|██████▌   | 192/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.self_attn.v_proj.bias]  
+Loading weights:  66%|██████▌   | 192/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.self_attn.v_proj.bias]
+Loading weights:  67%|██████▋   | 193/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.self_attn.v_proj.weight]
+Loading weights:  67%|██████▋   | 193/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.15.self_attn.v_proj.weight]
+Loading weights:  67%|██████▋   | 194/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.input_layernorm.weight] 
+Loading weights:  67%|██████▋   | 194/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.input_layernorm.weight]
+Loading weights:  67%|██████▋   | 195/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.mlp.down_proj.weight]  
+Loading weights:  67%|██████▋   | 195/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.mlp.down_proj.weight]
+Loading weights:  68%|██████▊   | 196/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.mlp.gate_proj.weight]
+Loading weights:  68%|██████▊   | 196/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.mlp.gate_proj.weight]
+Loading weights:  68%|██████▊   | 197/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.mlp.up_proj.weight]  
+Loading weights:  68%|██████▊   | 197/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.mlp.up_proj.weight]
+Loading weights:  68%|██████▊   | 198/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.post_attention_layernorm.weight]
+Loading weights:  68%|██████▊   | 198/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.post_attention_layernorm.weight]
+Loading weights:  69%|██████▊   | 199/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.self_attn.k_proj.bias]          
+Loading weights:  69%|██████▊   | 199/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.self_attn.k_proj.bias]
+Loading weights:  69%|██████▉   | 200/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.self_attn.k_proj.weight]
+Loading weights:  69%|██████▉   | 200/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.self_attn.k_proj.weight]
+Loading weights:  69%|██████▉   | 201/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.self_attn.o_proj.weight]
+Loading weights:  69%|██████▉   | 201/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.self_attn.o_proj.weight]
+Loading weights:  70%|██████▉   | 202/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.self_attn.q_proj.bias]  
+Loading weights:  70%|██████▉   | 202/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.self_attn.q_proj.bias]
+Loading weights:  70%|███████   | 203/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.self_attn.q_proj.weight]
+Loading weights:  70%|███████   | 203/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.self_attn.q_proj.weight]
+Loading weights:  70%|███████   | 204/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.self_attn.v_proj.bias]  
+Loading weights:  70%|███████   | 204/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.self_attn.v_proj.bias]
+Loading weights:  71%|███████   | 205/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.self_attn.v_proj.weight]
+Loading weights:  71%|███████   | 205/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.16.self_attn.v_proj.weight]
+Loading weights:  71%|███████   | 206/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.input_layernorm.weight] 
+Loading weights:  71%|███████   | 206/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.input_layernorm.weight]
+Loading weights:  71%|███████▏  | 207/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.mlp.down_proj.weight]  
+Loading weights:  71%|███████▏  | 207/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.mlp.down_proj.weight]
+Loading weights:  72%|███████▏  | 208/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.mlp.gate_proj.weight]
+Loading weights:  72%|███████▏  | 208/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.mlp.gate_proj.weight]
+Loading weights:  72%|███████▏  | 209/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.mlp.up_proj.weight]  
+Loading weights:  72%|███████▏  | 209/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.mlp.up_proj.weight]
+Loading weights:  72%|███████▏  | 210/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.post_attention_layernorm.weight]
+Loading weights:  72%|███████▏  | 210/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.post_attention_layernorm.weight]
+Loading weights:  73%|███████▎  | 211/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.self_attn.k_proj.bias]          
+Loading weights:  73%|███████▎  | 211/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.self_attn.k_proj.bias]
+Loading weights:  73%|███████▎  | 212/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.self_attn.k_proj.weight]
+Loading weights:  73%|███████▎  | 212/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.self_attn.k_proj.weight]
+Loading weights:  73%|███████▎  | 213/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.self_attn.o_proj.weight]
+Loading weights:  73%|███████▎  | 213/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.self_attn.o_proj.weight]
+Loading weights:  74%|███████▍  | 214/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.self_attn.q_proj.bias]  
+Loading weights:  74%|███████▍  | 214/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.self_attn.q_proj.bias]
+Loading weights:  74%|███████▍  | 215/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.self_attn.q_proj.weight]
+Loading weights:  74%|███████▍  | 215/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.self_attn.q_proj.weight]
+Loading weights:  74%|███████▍  | 216/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.self_attn.v_proj.bias]  
+Loading weights:  74%|███████▍  | 216/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.self_attn.v_proj.bias]
+Loading weights:  75%|███████▍  | 217/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.self_attn.v_proj.weight]
+Loading weights:  75%|███████▍  | 217/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.17.self_attn.v_proj.weight]
+Loading weights:  75%|███████▌  | 218/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.input_layernorm.weight] 
+Loading weights:  75%|███████▌  | 218/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.input_layernorm.weight]
+Loading weights:  76%|███████▌  | 219/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.mlp.down_proj.weight]  
+Loading weights:  76%|███████▌  | 219/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.mlp.down_proj.weight]
+Loading weights:  76%|███████▌  | 220/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.mlp.gate_proj.weight]
+Loading weights:  76%|███████▌  | 220/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.mlp.gate_proj.weight]
+Loading weights:  76%|███████▌  | 221/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.mlp.up_proj.weight]  
+Loading weights:  76%|███████▌  | 221/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.mlp.up_proj.weight]
+Loading weights:  77%|███████▋  | 222/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.post_attention_layernorm.weight]
+Loading weights:  77%|███████▋  | 222/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.post_attention_layernorm.weight]
+Loading weights:  77%|███████▋  | 223/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.self_attn.k_proj.bias]          
+Loading weights:  77%|███████▋  | 223/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.self_attn.k_proj.bias]
+Loading weights:  77%|███████▋  | 224/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.self_attn.k_proj.weight]
+Loading weights:  77%|███████▋  | 224/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.self_attn.k_proj.weight]
+Loading weights:  78%|███████▊  | 225/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.self_attn.o_proj.weight]
+Loading weights:  78%|███████▊  | 225/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.self_attn.o_proj.weight]
+Loading weights:  78%|███████▊  | 226/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.self_attn.q_proj.bias]  
+Loading weights:  78%|███████▊  | 226/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.self_attn.q_proj.bias]
+Loading weights:  78%|███████▊  | 227/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.self_attn.q_proj.weight]
+Loading weights:  78%|███████▊  | 227/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.self_attn.q_proj.weight]
+Loading weights:  79%|███████▊  | 228/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.self_attn.v_proj.bias]  
+Loading weights:  79%|███████▊  | 228/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.self_attn.v_proj.bias]
+Loading weights:  79%|███████▉  | 229/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.self_attn.v_proj.weight]
+Loading weights:  79%|███████▉  | 229/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.18.self_attn.v_proj.weight]
+Loading weights:  79%|███████▉  | 230/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.input_layernorm.weight] 
+Loading weights:  79%|███████▉  | 230/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.input_layernorm.weight]
+Loading weights:  80%|███████▉  | 231/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.mlp.down_proj.weight]  
+Loading weights:  80%|███████▉  | 231/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.mlp.down_proj.weight]
+Loading weights:  80%|████████  | 232/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.mlp.gate_proj.weight]
+Loading weights:  80%|████████  | 232/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.mlp.gate_proj.weight]
+Loading weights:  80%|████████  | 233/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.mlp.up_proj.weight]  
+Loading weights:  80%|████████  | 233/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.mlp.up_proj.weight]
+Loading weights:  81%|████████  | 234/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.post_attention_layernorm.weight]
+Loading weights:  81%|████████  | 234/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.post_attention_layernorm.weight]
+Loading weights:  81%|████████  | 235/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.self_attn.k_proj.bias]          
+Loading weights:  81%|████████  | 235/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.self_attn.k_proj.bias]
+Loading weights:  81%|████████▏ | 236/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.self_attn.k_proj.weight]
+Loading weights:  81%|████████▏ | 236/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.self_attn.k_proj.weight]
+Loading weights:  82%|████████▏ | 237/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.self_attn.o_proj.weight]
+Loading weights:  82%|████████▏ | 237/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.self_attn.o_proj.weight]
+Loading weights:  82%|████████▏ | 238/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.self_attn.q_proj.bias]  
+Loading weights:  82%|████████▏ | 238/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.self_attn.q_proj.bias]
+Loading weights:  82%|████████▏ | 239/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.self_attn.q_proj.weight]
+Loading weights:  82%|████████▏ | 239/290 [00:00<00:00, 776.13it/s, Materializing param=model.layers.19.self_attn.q_proj.weight]
+Loading weights:  83%|████████▎ | 240/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.19.self_attn.q_proj.weight]
+Loading weights:  83%|████████▎ | 240/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.19.self_attn.v_proj.bias]  
+Loading weights:  83%|████████▎ | 240/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.19.self_attn.v_proj.bias]
+Loading weights:  83%|████████▎ | 241/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.19.self_attn.v_proj.weight]
+Loading weights:  83%|████████▎ | 241/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.19.self_attn.v_proj.weight]
+Loading weights:  83%|████████▎ | 242/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.input_layernorm.weight] 
+Loading weights:  83%|████████▎ | 242/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.input_layernorm.weight]
+Loading weights:  84%|████████▍ | 243/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.mlp.down_proj.weight]  
+Loading weights:  84%|████████▍ | 243/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.mlp.down_proj.weight]
+Loading weights:  84%|████████▍ | 244/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.mlp.gate_proj.weight]
+Loading weights:  84%|████████▍ | 244/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.mlp.gate_proj.weight]
+Loading weights:  84%|████████▍ | 245/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.mlp.up_proj.weight]  
+Loading weights:  84%|████████▍ | 245/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.mlp.up_proj.weight]
+Loading weights:  85%|████████▍ | 246/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.post_attention_layernorm.weight]
+Loading weights:  85%|████████▍ | 246/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.post_attention_layernorm.weight]
+Loading weights:  85%|████████▌ | 247/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.self_attn.k_proj.bias]          
+Loading weights:  85%|████████▌ | 247/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.self_attn.k_proj.bias]
+Loading weights:  86%|████████▌ | 248/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.self_attn.k_proj.weight]
+Loading weights:  86%|████████▌ | 248/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.self_attn.k_proj.weight]
+Loading weights:  86%|████████▌ | 249/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.self_attn.o_proj.weight]
+Loading weights:  86%|████████▌ | 249/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.self_attn.o_proj.weight]
+Loading weights:  86%|████████▌ | 250/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.self_attn.q_proj.bias]  
+Loading weights:  86%|████████▌ | 250/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.self_attn.q_proj.bias]
+Loading weights:  87%|████████▋ | 251/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.self_attn.q_proj.weight]
+Loading weights:  87%|████████▋ | 251/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.self_attn.q_proj.weight]
+Loading weights:  87%|████████▋ | 252/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.self_attn.v_proj.bias]  
+Loading weights:  87%|████████▋ | 252/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.self_attn.v_proj.bias]
+Loading weights:  87%|████████▋ | 253/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.self_attn.v_proj.weight]
+Loading weights:  87%|████████▋ | 253/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.20.self_attn.v_proj.weight]
+Loading weights:  88%|████████▊ | 254/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.input_layernorm.weight] 
+Loading weights:  88%|████████▊ | 254/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.input_layernorm.weight]
+Loading weights:  88%|████████▊ | 255/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.mlp.down_proj.weight]  
+Loading weights:  88%|████████▊ | 255/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.mlp.down_proj.weight]
+Loading weights:  88%|████████▊ | 256/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.mlp.gate_proj.weight]
+Loading weights:  88%|████████▊ | 256/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.mlp.gate_proj.weight]
+Loading weights:  89%|████████▊ | 257/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.mlp.up_proj.weight]  
+Loading weights:  89%|████████▊ | 257/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.mlp.up_proj.weight]
+Loading weights:  89%|████████▉ | 258/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.post_attention_layernorm.weight]
+Loading weights:  89%|████████▉ | 258/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.post_attention_layernorm.weight]
+Loading weights:  89%|████████▉ | 259/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.self_attn.k_proj.bias]          
+Loading weights:  89%|████████▉ | 259/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.self_attn.k_proj.bias]
+Loading weights:  90%|████████▉ | 260/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.self_attn.k_proj.weight]
+Loading weights:  90%|████████▉ | 260/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.self_attn.k_proj.weight]
+Loading weights:  90%|█████████ | 261/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.self_attn.o_proj.weight]
+Loading weights:  90%|█████████ | 261/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.self_attn.o_proj.weight]
+Loading weights:  90%|█████████ | 262/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.self_attn.q_proj.bias]  
+Loading weights:  90%|█████████ | 262/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.self_attn.q_proj.bias]
+Loading weights:  91%|█████████ | 263/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.self_attn.q_proj.weight]
+Loading weights:  91%|█████████ | 263/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.self_attn.q_proj.weight]
+Loading weights:  91%|█████████ | 264/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.self_attn.v_proj.bias]  
+Loading weights:  91%|█████████ | 264/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.self_attn.v_proj.bias]
+Loading weights:  91%|█████████▏| 265/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.self_attn.v_proj.weight]
+Loading weights:  91%|█████████▏| 265/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.21.self_attn.v_proj.weight]
+Loading weights:  92%|█████████▏| 266/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.input_layernorm.weight] 
+Loading weights:  92%|█████████▏| 266/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.input_layernorm.weight]
+Loading weights:  92%|█████████▏| 267/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.mlp.down_proj.weight]  
+Loading weights:  92%|█████████▏| 267/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.mlp.down_proj.weight]
+Loading weights:  92%|█████████▏| 268/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.mlp.gate_proj.weight]
+Loading weights:  92%|█████████▏| 268/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.mlp.gate_proj.weight]
+Loading weights:  93%|█████████▎| 269/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.mlp.up_proj.weight]  
+Loading weights:  93%|█████████▎| 269/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.mlp.up_proj.weight]
+Loading weights:  93%|█████████▎| 270/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.post_attention_layernorm.weight]
+Loading weights:  93%|█████████▎| 270/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.post_attention_layernorm.weight]
+Loading weights:  93%|█████████▎| 271/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.self_attn.k_proj.bias]          
+Loading weights:  93%|█████████▎| 271/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.self_attn.k_proj.bias]
+Loading weights:  94%|█████████▍| 272/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.self_attn.k_proj.weight]
+Loading weights:  94%|█████████▍| 272/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.self_attn.k_proj.weight]
+Loading weights:  94%|█████████▍| 273/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.self_attn.o_proj.weight]
+Loading weights:  94%|█████████▍| 273/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.self_attn.o_proj.weight]
+Loading weights:  94%|█████████▍| 274/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.self_attn.q_proj.bias]  
+Loading weights:  94%|█████████▍| 274/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.self_attn.q_proj.bias]
+Loading weights:  95%|█████████▍| 275/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.self_attn.q_proj.weight]
+Loading weights:  95%|█████████▍| 275/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.self_attn.q_proj.weight]
+Loading weights:  95%|█████████▌| 276/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.self_attn.v_proj.bias]  
+Loading weights:  95%|█████████▌| 276/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.self_attn.v_proj.bias]
+Loading weights:  96%|█████████▌| 277/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.self_attn.v_proj.weight]
+Loading weights:  96%|█████████▌| 277/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.22.self_attn.v_proj.weight]
+Loading weights:  96%|█████████▌| 278/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.input_layernorm.weight] 
+Loading weights:  96%|█████████▌| 278/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.input_layernorm.weight]
+Loading weights:  96%|█████████▌| 279/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.mlp.down_proj.weight]  
+Loading weights:  96%|█████████▌| 279/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.mlp.down_proj.weight]
+Loading weights:  97%|█████████▋| 280/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.mlp.gate_proj.weight]
+Loading weights:  97%|█████████▋| 280/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.mlp.gate_proj.weight]
+Loading weights:  97%|█████████▋| 281/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.mlp.up_proj.weight]  
+Loading weights:  97%|█████████▋| 281/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.mlp.up_proj.weight]
+Loading weights:  97%|█████████▋| 282/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.post_attention_layernorm.weight]
+Loading weights:  97%|█████████▋| 282/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.post_attention_layernorm.weight]
+Loading weights:  98%|█████████▊| 283/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.self_attn.k_proj.bias]          
+Loading weights:  98%|█████████▊| 283/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.self_attn.k_proj.bias]
+Loading weights:  98%|█████████▊| 284/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.self_attn.k_proj.weight]
+Loading weights:  98%|█████████▊| 284/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.self_attn.k_proj.weight]
+Loading weights:  98%|█████████▊| 285/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.self_attn.o_proj.weight]
+Loading weights:  98%|█████████▊| 285/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.self_attn.o_proj.weight]
+Loading weights:  99%|█████████▊| 286/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.self_attn.q_proj.bias]  
+Loading weights:  99%|█████████▊| 286/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.self_attn.q_proj.bias]
+Loading weights:  99%|█████████▉| 287/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.self_attn.q_proj.weight]
+Loading weights:  99%|█████████▉| 287/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.self_attn.q_proj.weight]
+Loading weights:  99%|█████████▉| 288/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.self_attn.v_proj.bias]  
+Loading weights:  99%|█████████▉| 288/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.self_attn.v_proj.bias]
+Loading weights: 100%|█████████▉| 289/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.self_attn.v_proj.weight]
+Loading weights: 100%|█████████▉| 289/290 [00:00<00:00, 1263.54it/s, Materializing param=model.layers.23.self_attn.v_proj.weight]
+Loading weights: 100%|██████████| 290/290 [00:00<00:00, 1263.54it/s, Materializing param=model.norm.weight]                      
+Loading weights: 100%|██████████| 290/290 [00:00<00:00, 1263.54it/s, Materializing param=model.norm.weight]
+Loading weights: 100%|██████████| 290/290 [00:00<00:00, 1264.07it/s, Materializing param=model.norm.weight]
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None}.
+
+  0%|          | 0/500 [00:00<?, ?it/s]
+  0%|          | 1/500 [00:24<3:23:36, 24.48s/it]
+  0%|          | 2/500 [00:37<2:29:32, 18.02s/it]
+  1%|          | 3/500 [01:04<3:00:03, 21.74s/it]
+  1%|          | 4/500 [01:14<2:22:41, 17.26s/it]
+  1%|          | 5/500 [01:39<2:46:03, 20.13s/it][step    5] reward= +0.336 succ= 0.75 calls= 1.38 inv= 0.67 zero= 0.00 ent= 0.635 len=  105 102s
+
+                                                 
+
+  1%|          | 5/500 [01:39<2:46:03, 20.13s/it]
+  1%|          | 6/500 [02:05<3:01:39, 22.06s/it]
+  1%|▏         | 7/500 [02:14<2:27:16, 17.92s/it]
+  2%|▏         | 8/500 [02:39<2:44:12, 20.03s/it]
+  2%|▏         | 9/500 [03:04<2:55:23, 21.43s/it]
+  2%|▏         | 10/500 [03:12<2:22:37, 17.47s/it]{'loss': '2.682e-08', 'grad_norm': '2.203', 'learning_rate': '4.96e-06', 'num_tokens': '1.808e+04', 'completions/mean_length': '105.3', 'completions/min_length': '28', 'completions/max_length': '297.4', 'completions/clipped_ratio': '0.125', 'completions/mean_terminated_length': '64.58', 'completions/min_terminated_length': '28', 'completions/max_terminated_length': '131', 'rewards/reward_func/mean': '0.3362', 'rewards/reward_func/std': '0.8042', 'reward': '0.3362', 'reward_std': '0.8042', 'frac_reward_zero_std': '0', 'entropy': '0.6355', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '19.82', 'epoch': '0.001667'}
+[step   10] reward= +0.219 succ= 0.25 calls= 1.62 inv= 0.19 zero= 0.00 ent= 0.567 len=  109 195s
+
+                                                  
+
+  2%|▏         | 10/500 [03:12<2:22:37, 17.47s/it]
+  2%|▏         | 11/500 [03:31<2:25:22, 17.84s/it]
+  2%|▏         | 12/500 [03:43<2:11:41, 16.19s/it]
+  3%|▎         | 13/500 [03:55<1:59:29, 14.72s/it]
+  3%|▎         | 14/500 [04:11<2:02:58, 15.18s/it]
+  3%|▎         | 15/500 [04:18<1:43:32, 12.81s/it]{'loss': '-2.086e-08', 'grad_norm': '1.297', 'learning_rate': '4.91e-06', 'num_tokens': '3.636e+04', 'completions/mean_length': '109', 'completions/min_length': '49.4', 'completions/max_length': '276', 'completions/clipped_ratio': '0.1', 'completions/mean_terminated_length': '78.1', 'completions/min_terminated_length': '49.4', 'completions/max_terminated_length': '117.4', 'rewards/reward_func/mean': '0.2193', 'rewards/reward_func/std': '0.5868', 'reward': '0.2193', 'reward_std': '0.5868', 'frac_reward_zero_std': '0', 'entropy': '0.5667', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '18.44', 'epoch': '0.003333'}
+[step   15] reward= +0.903 succ= 0.25 calls= 1.75 inv= 0.29 zero= 0.00 ent= 0.491 len=   78 261s
+
+                                                  
+
+  3%|▎         | 15/500 [04:18<1:43:32, 12.81s/it]
+  3%|▎         | 16/500 [04:24<1:27:32, 10.85s/it]
+  3%|▎         | 17/500 [04:32<1:18:28,  9.75s/it]
+  4%|▎         | 18/500 [04:38<1:11:23,  8.89s/it]
+  4%|▍         | 19/500 [04:47<1:09:41,  8.69s/it]
+  4%|▍         | 20/500 [04:53<1:03:25,  7.93s/it]{'loss': '2.384e-08', 'grad_norm': '1.13', 'learning_rate': '4.86e-06', 'num_tokens': '5.347e+04', 'completions/mean_length': '78.3', 'completions/min_length': '44.2', 'completions/max_length': '189.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '78.3', 'completions/min_terminated_length': '44.2', 'completions/max_terminated_length': '189.6', 'rewards/reward_func/mean': '0.9034', 'rewards/reward_func/std': '0.8633', 'reward': '0.9034', 'reward_std': '0.8633', 'frac_reward_zero_std': '0', 'entropy': '0.4912', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '13.15', 'epoch': '0.005'}
+[step   20] reward= +0.794 succ= 0.00 calls= 1.00 inv= 0.25 zero= 0.00 ent= 0.375 len=   62 296s
+
+                                                  
+
+  4%|▍         | 20/500 [04:53<1:03:25,  7.93s/it]
+  4%|▍         | 21/500 [04:59<59:12,  7.42s/it]  
+  4%|▍         | 22/500 [05:08<1:01:36,  7.73s/it]
+  5%|▍         | 23/500 [05:16<1:02:24,  7.85s/it]
+  5%|▍         | 24/500 [05:25<1:04:42,  8.16s/it]
+  5%|▌         | 25/500 [05:31<1:01:36,  7.78s/it]{'loss': '-7.451e-09', 'grad_norm': '2.294', 'learning_rate': '4.81e-06', 'num_tokens': '6.988e+04', 'completions/mean_length': '61.83', 'completions/min_length': '39.2', 'completions/max_length': '86.2', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '61.83', 'completions/min_terminated_length': '39.2', 'completions/max_terminated_length': '86.2', 'rewards/reward_func/mean': '0.7945', 'rewards/reward_func/std': '0.5', 'reward': '0.7945', 'reward_std': '0.5', 'frac_reward_zero_std': '0', 'entropy': '0.3749', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.933', 'epoch': '0.006667'}
+[step   25] reward= +1.207 succ= 0.00 calls= 1.62 inv= 0.40 zero= 0.00 ent= 0.361 len=   68 335s
+
+                                                  
+
+  5%|▌         | 25/500 [05:31<1:01:36,  7.78s/it]
+  5%|▌         | 26/500 [05:38<58:14,  7.37s/it]  
+  5%|▌         | 27/500 [05:46<58:50,  7.46s/it]
+  6%|▌         | 28/500 [05:53<57:55,  7.36s/it]
+  6%|▌         | 29/500 [06:01<59:48,  7.62s/it]
+  6%|▌         | 30/500 [06:09<1:00:33,  7.73s/it]{'loss': '0', 'grad_norm': '1.798', 'learning_rate': '4.76e-06', 'num_tokens': '8.648e+04', 'completions/mean_length': '67.55', 'completions/min_length': '44.4', 'completions/max_length': '100.4', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '67.55', 'completions/min_terminated_length': '44.4', 'completions/max_terminated_length': '100.4', 'rewards/reward_func/mean': '1.207', 'rewards/reward_func/std': '0.6533', 'reward': '1.207', 'reward_std': '0.6533', 'frac_reward_zero_std': '0', 'entropy': '0.361', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '7.701', 'epoch': '0.008333'}
+[step   30] reward= +0.980 succ= 0.00 calls= 1.62 inv= 0.22 zero= 0.00 ent= 0.392 len=   57 372s
+
+                                                  
+
+  6%|▌         | 30/500 [06:09<1:00:33,  7.73s/it]
+  6%|▌         | 31/500 [06:19<1:05:05,  8.33s/it]
+  6%|▋         | 32/500 [06:25<1:01:16,  7.85s/it]
+  7%|▋         | 33/500 [06:31<56:22,  7.24s/it]  
+  7%|▋         | 34/500 [06:37<54:00,  6.95s/it]
+  7%|▋         | 35/500 [06:45<54:23,  7.02s/it]{'loss': '4.768e-08', 'grad_norm': '1.819', 'learning_rate': '4.71e-06', 'num_tokens': '1.026e+05', 'completions/mean_length': '56.7', 'completions/min_length': '33.2', 'completions/max_length': '97', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '56.7', 'completions/min_terminated_length': '33.2', 'completions/max_terminated_length': '97', 'rewards/reward_func/mean': '0.9801', 'rewards/reward_func/std': '0.6286', 'reward': '0.9801', 'reward_std': '0.6286', 'frac_reward_zero_std': '0', 'entropy': '0.3918', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '7.452', 'epoch': '0.01'}
+[step   35] reward= +1.011 succ= 0.00 calls= 1.25 inv= 0.04 zero= 0.00 ent= 0.399 len=   53 408s
+
+                                                
+
+  7%|▋         | 35/500 [06:45<54:23,  7.02s/it]
+  7%|▋         | 36/500 [06:55<1:02:42,  8.11s/it]
+  7%|▋         | 37/500 [07:02<58:27,  7.57s/it]  
+  8%|▊         | 38/500 [07:11<1:02:14,  8.08s/it]
+  8%|▊         | 39/500 [07:35<1:38:35, 12.83s/it]
+  8%|▊         | 40/500 [07:43<1:27:07, 11.36s/it]{'loss': '4.172e-08', 'grad_norm': '1.691', 'learning_rate': '4.66e-06', 'num_tokens': '1.186e+05', 'completions/mean_length': '52.92', 'completions/min_length': '37.2', 'completions/max_length': '92.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '52.92', 'completions/min_terminated_length': '37.2', 'completions/max_terminated_length': '92.8', 'rewards/reward_func/mean': '1.011', 'rewards/reward_func/std': '0.5366', 'reward': '1.011', 'reward_std': '0.5366', 'frac_reward_zero_std': '0', 'entropy': '0.3993', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '7.111', 'epoch': '0.01167'}
+[step   40] reward= +1.536 succ= 0.50 calls= 2.25 inv= 0.06 zero= 0.00 ent= 0.468 len=   68 466s
+
+                                                  
+
+  8%|▊         | 40/500 [07:43<1:27:07, 11.36s/it]
+  8%|▊         | 41/500 [07:50<1:16:34, 10.01s/it]
+  8%|▊         | 42/500 [08:00<1:17:26, 10.14s/it]
+  9%|▊         | 43/500 [08:06<1:08:44,  9.02s/it]
+  9%|▉         | 44/500 [08:16<1:09:34,  9.15s/it]
+  9%|▉         | 45/500 [08:21<1:00:45,  8.01s/it]{'loss': '-3.874e-08', 'grad_norm': '1.596', 'learning_rate': '4.61e-06', 'num_tokens': '1.352e+05', 'completions/mean_length': '67.62', 'completions/min_length': '39', 'completions/max_length': '170.8', 'completions/clipped_ratio': '0.025', 'completions/mean_terminated_length': '59.52', 'completions/min_terminated_length': '39', 'completions/max_terminated_length': '111.2', 'rewards/reward_func/mean': '1.536', 'rewards/reward_func/std': '0.99', 'reward': '1.536', 'reward_std': '0.99', 'frac_reward_zero_std': '0', 'entropy': '0.4678', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '11.55', 'epoch': '0.01333'}
+[step   45] reward= +1.265 succ= 1.75 calls= 1.12 inv= 0.00 zero= 0.00 ent= 0.353 len=   59 504s
+
+                                                  
+
+  9%|▉         | 45/500 [08:21<1:00:45,  8.01s/it]
+  9%|▉         | 46/500 [08:30<1:01:37,  8.14s/it]
+  9%|▉         | 47/500 [08:35<53:56,  7.14s/it]  
+ 10%|▉         | 48/500 [08:42<53:54,  7.16s/it]
+ 10%|▉         | 49/500 [08:49<53:19,  7.09s/it]
+ 10%|█         | 50/500 [08:54<48:48,  6.51s/it]{'loss': '-9.373e-07', 'grad_norm': '2.213', 'learning_rate': '4.56e-06', 'num_tokens': '1.515e+05', 'completions/mean_length': '59.2', 'completions/min_length': '40.2', 'completions/max_length': '102.4', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '59.2', 'completions/min_terminated_length': '40.2', 'completions/max_terminated_length': '102.4', 'rewards/reward_func/mean': '1.265', 'rewards/reward_func/std': '0.4396', 'reward': '1.265', 'reward_std': '0.4396', 'frac_reward_zero_std': '0', 'entropy': '0.353', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '7.678', 'epoch': '0.015'}
+[step   50] reward= +2.045 succ= 1.75 calls= 0.88 inv= 0.00 zero= 0.00 ent= 0.397 len=   51 537s
+
+                                                
+
+ 10%|█         | 50/500 [08:54<48:48,  6.51s/it]
+ 10%|█         | 51/500 [09:02<52:30,  7.02s/it]
+ 10%|█         | 52/500 [09:06<46:25,  6.22s/it]
+ 11%|█         | 53/500 [09:11<42:10,  5.66s/it]
+ 11%|█         | 54/500 [09:18<45:30,  6.12s/it]
+ 11%|█         | 55/500 [09:22<41:38,  5.62s/it]{'loss': '1.132e-07', 'grad_norm': '2.426', 'learning_rate': '4.51e-06', 'num_tokens': '1.676e+05', 'completions/mean_length': '51.48', 'completions/min_length': '32.2', 'completions/max_length': '80.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '51.48', 'completions/min_terminated_length': '32.2', 'completions/max_terminated_length': '80.6', 'rewards/reward_func/mean': '2.045', 'rewards/reward_func/std': '0.5632', 'reward': '2.045', 'reward_std': '0.5632', 'frac_reward_zero_std': '0', 'entropy': '0.3967', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.475', 'epoch': '0.01667'}
+[step   55] reward= +1.841 succ= 0.00 calls= 1.00 inv= 0.00 zero= 0.60 ent= 0.376 len=   49 566s
+
+                                                
+
+ 11%|█         | 55/500 [09:22<41:38,  5.62s/it]
+ 11%|█         | 56/500 [09:27<39:05,  5.28s/it]
+ 11%|█▏        | 57/500 [09:32<38:06,  5.16s/it]
+ 12%|█▏        | 58/500 [09:42<49:48,  6.76s/it]
+ 12%|█▏        | 59/500 [09:48<46:51,  6.38s/it]
+ 12%|█▏        | 60/500 [09:52<42:47,  5.83s/it]{'loss': '7.451e-09', 'grad_norm': '0', 'learning_rate': '4.46e-06', 'num_tokens': '1.834e+05', 'completions/mean_length': '49.4', 'completions/min_length': '40.4', 'completions/max_length': '66.4', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '49.4', 'completions/min_terminated_length': '40.4', 'completions/max_terminated_length': '66.4', 'rewards/reward_func/mean': '1.841', 'rewards/reward_func/std': '0.2168', 'reward': '1.841', 'reward_std': '0.2168', 'frac_reward_zero_std': '0.6', 'entropy': '0.3764', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '5.693', 'epoch': '0.01833'}
+[step   60] reward= +0.835 succ= 0.00 calls= 1.00 inv= 0.00 zero= 0.60 ent= 0.363 len=   48 596s
+
+                                                
+
+ 12%|█▏        | 60/500 [09:52<42:47,  5.83s/it]
+ 12%|█▏        | 61/500 [10:05<58:07,  7.94s/it]
+ 12%|█▏        | 62/500 [10:13<58:02,  7.95s/it]
+ 13%|█▎        | 63/500 [10:18<50:38,  6.95s/it]
+ 13%|█▎        | 64/500 [10:23<45:47,  6.30s/it]
+ 13%|█▎        | 65/500 [10:27<41:54,  5.78s/it]{'loss': '1.192e-08', 'grad_norm': '0', 'learning_rate': '4.41e-06', 'num_tokens': '1.992e+05', 'completions/mean_length': '48.08', 'completions/min_length': '40', 'completions/max_length': '70.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '48.08', 'completions/min_terminated_length': '40', 'completions/max_terminated_length': '70.6', 'rewards/reward_func/mean': '0.8346', 'rewards/reward_func/std': '0.117', 'reward': '0.8346', 'reward_std': '0.117', 'frac_reward_zero_std': '0.6', 'entropy': '0.3631', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '5.948', 'epoch': '0.02'}
+[step   65] reward= +1.038 succ= 0.00 calls= 1.00 inv= 0.00 zero= 0.40 ent= 0.403 len=   53 630s
+
+                                                
+
+ 13%|█▎        | 65/500 [10:27<41:54,  5.78s/it]
+ 13%|█▎        | 66/500 [10:33<41:11,  5.70s/it]
+ 13%|█▎        | 67/500 [10:37<39:14,  5.44s/it]
+ 14%|█▎        | 68/500 [10:43<38:53,  5.40s/it]
+ 14%|█▍        | 69/500 [10:48<37:52,  5.27s/it]
+ 14%|█▍        | 70/500 [10:52<36:16,  5.06s/it]{'loss': '5.96e-09', 'grad_norm': '0', 'learning_rate': '4.36e-06', 'num_tokens': '2.153e+05', 'completions/mean_length': '53.33', 'completions/min_length': '41', 'completions/max_length': '87.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '53.33', 'completions/min_terminated_length': '41', 'completions/max_terminated_length': '87.6', 'rewards/reward_func/mean': '1.038', 'rewards/reward_func/std': '0.3408', 'reward': '1.038', 'reward_std': '0.3408', 'frac_reward_zero_std': '0.4', 'entropy': '0.4031', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.923', 'epoch': '0.02167'}
+[step   70] reward= +1.188 succ= 0.00 calls= 1.00 inv= 0.00 zero= 0.40 ent= 0.398 len=   45 656s
+
+                                                
+
+ 14%|█▍        | 70/500 [10:52<36:16,  5.06s/it]
+ 14%|█▍        | 71/500 [10:58<38:29,  5.38s/it]
+ 14%|█▍        | 72/500 [11:05<41:23,  5.80s/it]
+ 15%|█▍        | 73/500 [11:10<38:09,  5.36s/it]
+ 15%|█▍        | 74/500 [11:15<39:10,  5.52s/it]
+ 15%|█▌        | 75/500 [11:20<37:42,  5.32s/it]{'loss': '-1.192e-08', 'grad_norm': '0', 'learning_rate': '4.31e-06', 'num_tokens': '2.311e+05', 'completions/mean_length': '44.65', 'completions/min_length': '38.6', 'completions/max_length': '54.4', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '44.65', 'completions/min_terminated_length': '38.6', 'completions/max_terminated_length': '54.4', 'rewards/reward_func/mean': '1.188', 'rewards/reward_func/std': '0.4154', 'reward': '1.188', 'reward_std': '0.4154', 'frac_reward_zero_std': '0.4', 'entropy': '0.3984', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '5.02', 'epoch': '0.02333'}
+[step   75] reward= +2.218 succ= 2.00 calls= 1.00 inv= 0.00 zero= 0.40 ent= 0.421 len=   45 684s
+
+                                                
+
+ 15%|█▌        | 75/500 [11:20<37:42,  5.32s/it]
+ 15%|█▌        | 76/500 [11:25<35:42,  5.05s/it]
+ 15%|█▌        | 77/500 [11:29<34:27,  4.89s/it]
+ 16%|█▌        | 78/500 [11:34<33:48,  4.81s/it]
+ 16%|█▌        | 79/500 [11:38<33:10,  4.73s/it]
+ 16%|█▌        | 80/500 [11:44<34:53,  4.98s/it]{'loss': '4.172e-08', 'grad_norm': '0', 'learning_rate': '4.26e-06', 'num_tokens': '2.468e+05', 'completions/mean_length': '45.48', 'completions/min_length': '36.8', 'completions/max_length': '64.4', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '45.48', 'completions/min_terminated_length': '36.8', 'completions/max_terminated_length': '64.4', 'rewards/reward_func/mean': '2.218', 'rewards/reward_func/std': '0.3182', 'reward': '2.218', 'reward_std': '0.3182', 'frac_reward_zero_std': '0.4', 'entropy': '0.4209', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '5.574', 'epoch': '0.025'}
+[step   80] reward= +1.138 succ= 1.75 calls= 0.88 inv= 0.00 zero= 0.80 ent= 0.314 len=   42 707s
+
+                                                
+
+ 16%|█▌        | 80/500 [11:44<34:53,  4.98s/it]
+ 16%|█▌        | 81/500 [11:49<34:08,  4.89s/it]
+ 16%|█▋        | 82/500 [11:56<39:37,  5.69s/it]
+ 17%|█▋        | 83/500 [12:01<37:52,  5.45s/it]
+ 17%|█▋        | 84/500 [12:15<56:02,  8.08s/it]
+ 17%|█▋        | 85/500 [12:20<49:13,  7.12s/it]{'loss': '2.98e-08', 'grad_norm': '1.986', 'learning_rate': '4.21e-06', 'num_tokens': '2.624e+05', 'completions/mean_length': '42.48', 'completions/min_length': '37.6', 'completions/max_length': '48.4', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.48', 'completions/min_terminated_length': '37.6', 'completions/max_terminated_length': '48.4', 'rewards/reward_func/mean': '1.138', 'rewards/reward_func/std': '0.2029', 'reward': '1.138', 'reward_std': '0.2029', 'frac_reward_zero_std': '0.8', 'entropy': '0.3138', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '4.717', 'epoch': '0.02667'}
+[step   85] reward= +1.108 succ= 0.00 calls= 1.00 inv= 0.00 zero= 0.60 ent= 0.371 len=   50 743s
+
+                                                
+
+ 17%|█▋        | 85/500 [12:20<49:13,  7.12s/it]
+ 17%|█▋        | 86/500 [12:27<48:53,  7.09s/it]
+ 17%|█▋        | 87/500 [12:35<49:57,  7.26s/it]
+ 18%|█▊        | 88/500 [12:47<1:00:43,  8.84s/it]
+ 18%|█▊        | 89/500 [12:55<58:22,  8.52s/it]  
+ 18%|█▊        | 90/500 [13:03<56:31,  8.27s/it]{'loss': '-1.788e-08', 'grad_norm': '0', 'learning_rate': '4.16e-06', 'num_tokens': '2.784e+05', 'completions/mean_length': '50.25', 'completions/min_length': '38.8', 'completions/max_length': '88', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '50.25', 'completions/min_terminated_length': '38.8', 'completions/max_terminated_length': '88', 'rewards/reward_func/mean': '1.108', 'rewards/reward_func/std': '0.2254', 'reward': '1.108', 'reward_std': '0.2254', 'frac_reward_zero_std': '0.6', 'entropy': '0.371', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '7.206', 'epoch': '0.02833'}
+[step   90] reward= +1.595 succ= 2.00 calls= 1.00 inv= 0.00 zero= 0.40 ent= 0.340 len=   47 786s
+
+                                                
+
+ 18%|█▊        | 90/500 [13:03<56:31,  8.27s/it]
+ 18%|█▊        | 91/500 [13:10<53:59,  7.92s/it]
+ 18%|█▊        | 92/500 [13:22<1:02:26,  9.18s/it]
+ 19%|█▊        | 93/500 [13:30<59:18,  8.74s/it]  
+ 19%|█▉        | 94/500 [13:38<57:53,  8.56s/it]
+ 19%|█▉        | 95/500 [13:46<57:24,  8.50s/it]{'loss': '-2.98e-09', 'grad_norm': '0', 'learning_rate': '4.11e-06', 'num_tokens': '2.943e+05', 'completions/mean_length': '47.45', 'completions/min_length': '39.2', 'completions/max_length': '62.4', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '47.45', 'completions/min_terminated_length': '39.2', 'completions/max_terminated_length': '62.4', 'rewards/reward_func/mean': '1.595', 'rewards/reward_func/std': '0.3558', 'reward': '1.595', 'reward_std': '0.3558', 'frac_reward_zero_std': '0.4', 'entropy': '0.3397', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.316', 'epoch': '0.03'}
+[step   95] reward= +1.613 succ= 1.75 calls= 1.00 inv= 0.12 zero= 0.40 ent= 0.383 len=   46 830s
+
+                                                
+
+ 19%|█▉        | 95/500 [13:46<57:24,  8.50s/it]
+ 19%|█▉        | 96/500 [13:54<55:04,  8.18s/it]
+ 19%|█▉        | 97/500 [14:01<53:24,  7.95s/it]
+ 20%|█▉        | 98/500 [14:09<53:44,  8.02s/it]
+ 20%|█▉        | 99/500 [14:19<56:19,  8.43s/it]
+ 20%|██        | 100/500 [14:26<53:08,  7.97s/it]{'loss': '-1.788e-08', 'grad_norm': '1.515', 'learning_rate': '4.06e-06', 'num_tokens': '3.1e+05', 'completions/mean_length': '45.98', 'completions/min_length': '40', 'completions/max_length': '61.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '45.98', 'completions/min_terminated_length': '40', 'completions/max_terminated_length': '61.8', 'rewards/reward_func/mean': '1.613', 'rewards/reward_func/std': '0.2569', 'reward': '1.613', 'reward_std': '0.2569', 'frac_reward_zero_std': '0.4', 'entropy': '0.3835', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.452', 'epoch': '0.03167'}
+[step  100] reward= +2.494 succ= 2.00 calls= 1.00 inv= 0.00 zero= 0.40 ent= 0.334 len=   45 869s
+
+                                                 
+
+ 20%|██        | 100/500 [14:26<53:08,  7.97s/it]
+ 20%|██        | 101/500 [14:33<51:59,  7.82s/it]
+ 20%|██        | 102/500 [14:41<51:14,  7.73s/it]
+ 21%|██        | 103/500 [14:48<51:00,  7.71s/it]
+ 21%|██        | 104/500 [14:56<50:04,  7.59s/it]
+ 21%|██        | 105/500 [15:07<56:58,  8.65s/it]{'loss': '-3.576e-08', 'grad_norm': '0', 'learning_rate': '4.01e-06', 'num_tokens': '3.258e+05', 'completions/mean_length': '45.2', 'completions/min_length': '39.8', 'completions/max_length': '53.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '45.2', 'completions/min_terminated_length': '39.8', 'completions/max_terminated_length': '53.8', 'rewards/reward_func/mean': '2.494', 'rewards/reward_func/std': '0.6116', 'reward': '2.494', 'reward_std': '0.6116', 'frac_reward_zero_std': '0.4', 'entropy': '0.3336', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '7.639', 'epoch': '0.03333'}
+[step  105] reward= +1.752 succ= 0.00 calls= 0.62 inv= 0.00 zero= 0.60 ent= 0.266 len=   45 910s
+
+                                                 
+
+ 21%|██        | 105/500 [15:07<56:58,  8.65s/it]
+ 21%|██        | 106/500 [15:14<55:09,  8.40s/it]
+ 21%|██▏       | 107/500 [15:22<52:22,  8.00s/it]
+ 22%|██▏       | 108/500 [15:27<46:28,  7.11s/it]
+ 22%|██▏       | 109/500 [15:32<42:21,  6.50s/it]
+ 22%|██▏       | 110/500 [15:37<39:09,  6.02s/it]{'loss': '1.49e-08', 'grad_norm': '1.701', 'learning_rate': '3.96e-06', 'num_tokens': '3.415e+05', 'completions/mean_length': '44.55', 'completions/min_length': '38', 'completions/max_length': '56.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '44.55', 'completions/min_terminated_length': '38', 'completions/max_terminated_length': '56.6', 'rewards/reward_func/mean': '1.752', 'rewards/reward_func/std': '0.1246', 'reward': '1.752', 'reward_std': '0.1246', 'frac_reward_zero_std': '0.6', 'entropy': '0.2658', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.005', 'epoch': '0.035'}
+[step  110] reward= +1.652 succ= 2.00 calls= 1.00 inv= 0.00 zero= 0.60 ent= 0.274 len=   43 940s
+
+                                                 
+
+ 22%|██▏       | 110/500 [15:37<39:09,  6.02s/it]
+ 22%|██▏       | 111/500 [15:42<37:32,  5.79s/it]
+ 22%|██▏       | 112/500 [15:46<35:14,  5.45s/it]
+ 23%|██▎       | 113/500 [15:51<34:09,  5.30s/it]
+ 23%|██▎       | 114/500 [15:56<33:08,  5.15s/it]
+ 23%|██▎       | 115/500 [16:04<38:32,  6.01s/it]{'loss': '-1.49e-08', 'grad_norm': '0', 'learning_rate': '3.91e-06', 'num_tokens': '3.57e+05', 'completions/mean_length': '42.7', 'completions/min_length': '36.8', 'completions/max_length': '49.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.7', 'completions/min_terminated_length': '36.8', 'completions/max_terminated_length': '49.8', 'rewards/reward_func/mean': '1.652', 'rewards/reward_func/std': '0.2192', 'reward': '1.652', 'reward_std': '0.2192', 'frac_reward_zero_std': '0.6', 'entropy': '0.2744', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '5.916', 'epoch': '0.03667'}
+[step  115] reward= +1.075 succ= 1.50 calls= 0.88 inv= 0.00 zero= 0.60 ent= 0.311 len=   45 967s
+
+                                                 
+
+ 23%|██▎       | 115/500 [16:04<38:32,  6.01s/it]
+ 23%|██▎       | 116/500 [16:09<36:55,  5.77s/it]
+ 23%|██▎       | 117/500 [16:15<36:59,  5.80s/it]
+ 24%|██▎       | 118/500 [16:21<36:33,  5.74s/it]
+ 24%|██▍       | 119/500 [16:27<36:22,  5.73s/it]
+ 24%|██▍       | 120/500 [16:35<42:08,  6.65s/it]{'loss': '-2.682e-08', 'grad_norm': '2.112', 'learning_rate': '3.86e-06', 'num_tokens': '3.728e+05', 'completions/mean_length': '45.2', 'completions/min_length': '37.4', 'completions/max_length': '57.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '45.2', 'completions/min_terminated_length': '37.4', 'completions/max_terminated_length': '57.8', 'rewards/reward_func/mean': '1.075', 'rewards/reward_func/std': '0.2635', 'reward': '1.075', 'reward_std': '0.2635', 'frac_reward_zero_std': '0.6', 'entropy': '0.3109', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '5.475', 'epoch': '0.03833'}
+[step  120] reward= +1.136 succ= 0.00 calls= 1.00 inv= 0.00 zero= 0.60 ent= 0.309 len=   45 999s
+
+                                                 
+
+ 24%|██▍       | 120/500 [16:35<42:08,  6.65s/it]
+ 24%|██▍       | 121/500 [16:41<40:06,  6.35s/it]
+ 24%|██▍       | 122/500 [16:47<39:51,  6.33s/it]
+ 25%|██▍       | 123/500 [16:53<37:53,  6.03s/it]
+ 25%|██▍       | 124/500 [16:59<37:48,  6.03s/it]
+ 25%|██▌       | 125/500 [17:04<37:17,  5.97s/it]{'loss': '-1.49e-08', 'grad_norm': '1.818', 'learning_rate': '3.81e-06', 'num_tokens': '3.885e+05', 'completions/mean_length': '45.08', 'completions/min_length': '38.2', 'completions/max_length': '58.4', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '45.08', 'completions/min_terminated_length': '38.2', 'completions/max_terminated_length': '58.4', 'rewards/reward_func/mean': '1.136', 'rewards/reward_func/std': '0.251', 'reward': '1.136', 'reward_std': '0.251', 'frac_reward_zero_std': '0.6', 'entropy': '0.309', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.111', 'epoch': '0.04'}
+[step  125] reward= +1.650 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.307 len=   45 1028s
+
+                                                 
+
+ 25%|██▌       | 125/500 [17:05<37:17,  5.97s/it]
+ 25%|██▌       | 126/500 [17:10<36:24,  5.84s/it]
+ 25%|██▌       | 127/500 [17:16<36:31,  5.87s/it]
+ 26%|██▌       | 128/500 [17:22<36:04,  5.82s/it]
+ 26%|██▌       | 129/500 [17:28<36:05,  5.84s/it]
+ 26%|██▌       | 130/500 [17:33<35:30,  5.76s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '3.76e-06', 'num_tokens': '4.042e+05', 'completions/mean_length': '44.62', 'completions/min_length': '36.4', 'completions/max_length': '50.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '44.62', 'completions/min_terminated_length': '36.4', 'completions/max_terminated_length': '50.8', 'rewards/reward_func/mean': '1.65', 'rewards/reward_func/std': '0', 'reward': '1.65', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.3072', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '5.713', 'epoch': '0.04167'}
+[step  130] reward= +1.754 succ= 2.00 calls= 1.00 inv= 0.00 zero= 0.60 ent= 0.307 len=   42 1056s
+
+                                                 
+
+ 26%|██▌       | 130/500 [17:33<35:30,  5.76s/it]
+ 26%|██▌       | 131/500 [17:40<37:00,  6.02s/it]
+ 26%|██▋       | 132/500 [17:47<39:29,  6.44s/it]
+ 27%|██▋       | 133/500 [17:55<41:13,  6.74s/it]
+ 27%|██▋       | 134/500 [18:02<42:15,  6.93s/it]
+ 27%|██▋       | 135/500 [18:10<43:16,  7.11s/it]{'loss': '6.557e-08', 'grad_norm': '0', 'learning_rate': '3.71e-06', 'num_tokens': '4.198e+05', 'completions/mean_length': '42.38', 'completions/min_length': '37.6', 'completions/max_length': '47.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.38', 'completions/min_terminated_length': '37.6', 'completions/max_terminated_length': '47.8', 'rewards/reward_func/mean': '1.754', 'rewards/reward_func/std': '0.2157', 'reward': '1.754', 'reward_std': '0.2157', 'frac_reward_zero_std': '0.6', 'entropy': '0.3073', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '5.603', 'epoch': '0.04333'}
+[step  135] reward= +1.306 succ= 2.00 calls= 1.00 inv= 0.00 zero= 0.80 ent= 0.289 len=   42 1093s
+
+                                                 
+
+ 27%|██▋       | 135/500 [18:10<43:16,  7.11s/it]
+ 27%|██▋       | 136/500 [18:18<45:48,  7.55s/it]
+ 27%|██▋       | 137/500 [18:25<45:09,  7.47s/it]
+ 28%|██▊       | 138/500 [18:33<45:29,  7.54s/it]
+ 28%|██▊       | 139/500 [18:41<46:08,  7.67s/it]
+ 28%|██▊       | 140/500 [18:48<44:58,  7.50s/it]{'loss': '2.086e-08', 'grad_norm': '0', 'learning_rate': '3.66e-06', 'num_tokens': '4.353e+05', 'completions/mean_length': '42.1', 'completions/min_length': '37', 'completions/max_length': '47.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.1', 'completions/min_terminated_length': '37', 'completions/max_terminated_length': '47.8', 'rewards/reward_func/mean': '1.306', 'rewards/reward_func/std': '0.06718', 'reward': '1.306', 'reward_std': '0.06718', 'frac_reward_zero_std': '0.8', 'entropy': '0.2891', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '7.053', 'epoch': '0.045'}
+[step  140] reward= +0.770 succ= 0.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.295 len=   43 1131s
+
+                                                 
+
+ 28%|██▊       | 140/500 [18:48<44:58,  7.50s/it]
+ 28%|██▊       | 141/500 [18:55<44:33,  7.45s/it]
+ 28%|██▊       | 142/500 [19:03<43:57,  7.37s/it]
+ 29%|██▊       | 143/500 [19:10<43:27,  7.30s/it]
+ 29%|██▉       | 144/500 [19:17<43:46,  7.38s/it]
+ 29%|██▉       | 145/500 [19:25<44:05,  7.45s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '3.61e-06', 'num_tokens': '4.51e+05', 'completions/mean_length': '43.27', 'completions/min_length': '36.6', 'completions/max_length': '49.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.27', 'completions/min_terminated_length': '36.6', 'completions/max_terminated_length': '49.6', 'rewards/reward_func/mean': '0.77', 'rewards/reward_func/std': '0', 'reward': '0.77', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2947', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '7.494', 'epoch': '0.04667'}
+[step  145] reward= +1.359 succ= 2.00 calls= 1.00 inv= 0.00 zero= 0.80 ent= 0.280 len=   42 1168s
+
+                                                 
+
+ 29%|██▉       | 145/500 [19:25<44:05,  7.45s/it]
+ 29%|██▉       | 146/500 [19:34<46:11,  7.83s/it]
+ 29%|██▉       | 147/500 [19:41<45:12,  7.68s/it]
+ 30%|██▉       | 148/500 [19:49<44:53,  7.65s/it]
+ 30%|██▉       | 149/500 [19:58<47:11,  8.07s/it]
+ 30%|███       | 150/500 [20:05<46:23,  7.95s/it]{'loss': '-1.788e-08', 'grad_norm': '0', 'learning_rate': '3.56e-06', 'num_tokens': '4.666e+05', 'completions/mean_length': '42.23', 'completions/min_length': '36.8', 'completions/max_length': '46.2', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.23', 'completions/min_terminated_length': '36.8', 'completions/max_terminated_length': '46.2', 'rewards/reward_func/mean': '1.359', 'rewards/reward_func/std': '0.2015', 'reward': '1.359', 'reward_std': '0.2015', 'frac_reward_zero_std': '0.8', 'entropy': '0.2798', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '7.143', 'epoch': '0.04833'}
+[step  150] reward= +2.516 succ= 1.75 calls= 0.88 inv= 0.00 zero= 0.40 ent= 0.345 len=   43 1209s
+
+                                                 
+
+ 30%|███       | 150/500 [20:05<46:23,  7.95s/it]
+ 30%|███       | 151/500 [20:13<45:12,  7.77s/it]
+ 30%|███       | 152/500 [20:20<44:55,  7.74s/it]
+ 31%|███       | 153/500 [20:28<45:18,  7.83s/it]
+ 31%|███       | 154/500 [20:36<45:14,  7.85s/it]
+ 31%|███       | 155/500 [20:43<43:53,  7.63s/it]{'loss': '-4.768e-08', 'grad_norm': '1.265', 'learning_rate': '3.51e-06', 'num_tokens': '4.823e+05', 'completions/mean_length': '43.38', 'completions/min_length': '33.6', 'completions/max_length': '53', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.38', 'completions/min_terminated_length': '33.6', 'completions/max_terminated_length': '53', 'rewards/reward_func/mean': '2.516', 'rewards/reward_func/std': '0.548', 'reward': '2.516', 'reward_std': '0.548', 'frac_reward_zero_std': '0.4', 'entropy': '0.3452', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '7.825', 'epoch': '0.05'}
+[step  155] reward= +1.198 succ= 0.00 calls= 1.00 inv= 0.00 zero= 0.60 ent= 0.312 len=   45 1247s
+
+                                                 
+
+ 31%|███       | 155/500 [20:43<43:53,  7.63s/it]
+ 31%|███       | 156/500 [20:52<45:03,  7.86s/it]
+ 31%|███▏      | 157/500 [20:59<44:04,  7.71s/it]
+ 32%|███▏      | 158/500 [21:10<49:10,  8.63s/it]
+ 32%|███▏      | 159/500 [21:18<47:47,  8.41s/it]
+ 32%|███▏      | 160/500 [21:25<45:48,  8.08s/it]{'loss': '1.132e-07', 'grad_norm': '2.155', 'learning_rate': '3.46e-06', 'num_tokens': '4.981e+05', 'completions/mean_length': '44.92', 'completions/min_length': '36.4', 'completions/max_length': '50', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '44.92', 'completions/min_terminated_length': '36.4', 'completions/max_terminated_length': '50', 'rewards/reward_func/mean': '1.198', 'rewards/reward_func/std': '0.2051', 'reward': '1.198', 'reward_std': '0.2051', 'frac_reward_zero_std': '0.6', 'entropy': '0.3115', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '7.403', 'epoch': '0.05167'}
+[step  160] reward= +1.842 succ= 0.00 calls= 1.00 inv= 0.00 zero= 0.80 ent= 0.310 len=   46 1288s
+
+                                                 
+
+ 32%|███▏      | 160/500 [21:25<45:48,  8.08s/it]
+ 32%|███▏      | 161/500 [21:32<44:06,  7.81s/it]
+ 32%|███▏      | 162/500 [21:40<43:37,  7.74s/it]
+ 33%|███▎      | 163/500 [21:48<43:21,  7.72s/it]
+ 33%|███▎      | 164/500 [21:53<40:08,  7.17s/it]
+ 33%|███▎      | 165/500 [21:59<37:52,  6.78s/it]{'loss': '-1.192e-08', 'grad_norm': '0', 'learning_rate': '3.41e-06', 'num_tokens': '5.14e+05', 'completions/mean_length': '46.23', 'completions/min_length': '39.4', 'completions/max_length': '58.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '46.23', 'completions/min_terminated_length': '39.4', 'completions/max_terminated_length': '58.6', 'rewards/reward_func/mean': '1.842', 'rewards/reward_func/std': '0.1921', 'reward': '1.842', 'reward_std': '0.1921', 'frac_reward_zero_std': '0.8', 'entropy': '0.3104', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.136', 'epoch': '0.05333'}
+[step  165] reward= +2.215 succ= 1.75 calls= 0.88 inv= 0.00 zero= 0.60 ent= 0.342 len=   45 1323s
+
+                                                 
+
+ 33%|███▎      | 165/500 [21:59<37:52,  6.78s/it]
+ 33%|███▎      | 166/500 [22:05<36:12,  6.51s/it]
+ 33%|███▎      | 167/500 [22:39<1:20:45, 14.55s/it]
+ 34%|███▎      | 168/500 [22:46<1:08:57, 12.46s/it]
+ 34%|███▍      | 169/500 [22:53<59:13, 10.74s/it]  
+ 34%|███▍      | 170/500 [22:59<51:42,  9.40s/it]{'loss': '0', 'grad_norm': '1.396', 'learning_rate': '3.36e-06', 'num_tokens': '5.298e+05', 'completions/mean_length': '44.98', 'completions/min_length': '38.4', 'completions/max_length': '49.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '44.98', 'completions/min_terminated_length': '38.4', 'completions/max_terminated_length': '49.8', 'rewards/reward_func/mean': '2.215', 'rewards/reward_func/std': '0.2687', 'reward': '2.215', 'reward_std': '0.2687', 'frac_reward_zero_std': '0.6', 'entropy': '0.3425', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.673', 'epoch': '0.055'}
+[step  170] reward= +1.679 succ= 1.75 calls= 0.88 inv= 0.00 zero= 0.40 ent= 0.430 len=   51 1382s
+
+                                                 
+
+ 34%|███▍      | 170/500 [22:59<51:42,  9.40s/it]
+ 34%|███▍      | 171/500 [23:06<47:46,  8.71s/it]
+ 34%|███▍      | 172/500 [23:14<46:30,  8.51s/it]
+ 35%|███▍      | 173/500 [23:20<42:21,  7.77s/it]
+ 35%|███▍      | 174/500 [23:27<40:37,  7.48s/it]
+ 35%|███▌      | 175/500 [23:34<39:56,  7.37s/it]{'loss': '-2.086e-08', 'grad_norm': '1.979', 'learning_rate': '3.31e-06', 'num_tokens': '5.458e+05', 'completions/mean_length': '51.2', 'completions/min_length': '37.2', 'completions/max_length': '116.6', 'completions/clipped_ratio': '0.025', 'completions/mean_terminated_length': '42.67', 'completions/min_terminated_length': '37.2', 'completions/max_terminated_length': '49.2', 'rewards/reward_func/mean': '1.679', 'rewards/reward_func/std': '0.4844', 'reward': '1.679', 'reward_std': '0.4844', 'frac_reward_zero_std': '0.4', 'entropy': '0.4303', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '11.74', 'epoch': '0.05667'}
+[step  175] reward= +2.690 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.291 len=   44 1418s
+
+                                                 
+
+ 35%|███▌      | 175/500 [23:34<39:56,  7.37s/it]
+ 35%|███▌      | 176/500 [23:41<38:20,  7.10s/it]
+ 35%|███▌      | 177/500 [23:48<38:53,  7.22s/it]
+ 36%|███▌      | 178/500 [23:54<37:15,  6.94s/it]
+ 36%|███▌      | 179/500 [24:01<37:01,  6.92s/it]
+ 36%|███▌      | 180/500 [24:08<36:47,  6.90s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '3.26e-06', 'num_tokens': '5.615e+05', 'completions/mean_length': '43.52', 'completions/min_length': '36.2', 'completions/max_length': '52.4', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.52', 'completions/min_terminated_length': '36.2', 'completions/max_terminated_length': '52.4', 'rewards/reward_func/mean': '2.69', 'rewards/reward_func/std': '0', 'reward': '2.69', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2905', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.828', 'epoch': '0.05833'}
+[step  180] reward= +2.119 succ= 2.00 calls= 1.00 inv= 0.00 zero= 0.80 ent= 0.274 len=   44 1451s
+
+                                                 
+
+ 36%|███▌      | 180/500 [24:08<36:47,  6.90s/it]
+ 36%|███▌      | 181/500 [24:16<37:30,  7.06s/it]
+ 36%|███▋      | 182/500 [24:23<37:21,  7.05s/it]
+ 37%|███▋      | 183/500 [24:29<36:15,  6.86s/it]
+ 37%|███▋      | 184/500 [24:36<35:51,  6.81s/it]
+ 37%|███▋      | 185/500 [24:43<36:02,  6.87s/it]{'loss': '-1.788e-08', 'grad_norm': '0', 'learning_rate': '3.21e-06', 'num_tokens': '5.772e+05', 'completions/mean_length': '44.48', 'completions/min_length': '37.2', 'completions/max_length': '48.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '44.48', 'completions/min_terminated_length': '37.2', 'completions/max_terminated_length': '48.6', 'rewards/reward_func/mean': '2.119', 'rewards/reward_func/std': '0.1998', 'reward': '2.119', 'reward_std': '0.1998', 'frac_reward_zero_std': '0.8', 'entropy': '0.2736', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.613', 'epoch': '0.06'}
+[step  185] reward= +0.810 succ= 0.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.292 len=   43 1486s
+
+                                                 
+
+ 37%|███▋      | 185/500 [24:43<36:02,  6.87s/it]
+ 37%|███▋      | 186/500 [24:49<35:29,  6.78s/it]
+ 37%|███▋      | 187/500 [24:56<35:11,  6.74s/it]
+ 38%|███▊      | 188/500 [25:02<34:39,  6.67s/it]
+ 38%|███▊      | 189/500 [25:09<34:46,  6.71s/it]
+ 38%|███▊      | 190/500 [25:16<35:10,  6.81s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '3.16e-06', 'num_tokens': '5.928e+05', 'completions/mean_length': '42.67', 'completions/min_length': '37.4', 'completions/max_length': '49.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.67', 'completions/min_terminated_length': '37.4', 'completions/max_terminated_length': '49.6', 'rewards/reward_func/mean': '0.81', 'rewards/reward_func/std': '0', 'reward': '0.81', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2924', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.708', 'epoch': '0.06167'}
+[step  190] reward= +1.830 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.280 len=   43 1520s
+
+                                                 
+
+ 38%|███▊      | 190/500 [25:16<35:10,  6.81s/it]
+ 38%|███▊      | 191/500 [25:23<35:08,  6.82s/it]
+ 38%|███▊      | 192/500 [25:31<36:17,  7.07s/it]
+ 39%|███▊      | 193/500 [25:37<35:01,  6.84s/it]
+ 39%|███▉      | 194/500 [25:44<34:51,  6.83s/it]
+ 39%|███▉      | 195/500 [25:51<35:07,  6.91s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '3.11e-06', 'num_tokens': '6.084e+05', 'completions/mean_length': '43.12', 'completions/min_length': '38.6', 'completions/max_length': '49.2', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.12', 'completions/min_terminated_length': '38.6', 'completions/max_terminated_length': '49.2', 'rewards/reward_func/mean': '1.83', 'rewards/reward_func/std': '0', 'reward': '1.83', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2801', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.537', 'epoch': '0.06333'}
+[step  195] reward= +2.210 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.252 len=   43 1554s
+
+                                                 
+
+ 39%|███▉      | 195/500 [25:51<35:07,  6.91s/it]
+ 39%|███▉      | 196/500 [25:58<34:55,  6.89s/it]
+ 39%|███▉      | 197/500 [26:05<34:38,  6.86s/it]
+ 40%|███▉      | 198/500 [26:12<34:33,  6.87s/it]
+ 40%|███▉      | 199/500 [26:18<33:12,  6.62s/it]
+ 40%|████      | 200/500 [26:25<33:42,  6.74s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '3.06e-06', 'num_tokens': '6.241e+05', 'completions/mean_length': '43.48', 'completions/min_length': '38', 'completions/max_length': '50', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.48', 'completions/min_terminated_length': '38', 'completions/max_terminated_length': '50', 'rewards/reward_func/mean': '2.21', 'rewards/reward_func/std': '0', 'reward': '2.21', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.252', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.743', 'epoch': '0.065'}
+[step  200] reward= +1.281 succ= 0.00 calls= 0.88 inv= 0.00 zero= 0.80 ent= 0.245 len=   42 1588s
+
+                                                 
+
+ 40%|████      | 200/500 [26:25<33:42,  6.74s/it]
+ 40%|████      | 201/500 [26:32<33:48,  6.78s/it]
+ 40%|████      | 202/500 [26:38<33:24,  6.73s/it]
+ 41%|████      | 203/500 [26:45<33:21,  6.74s/it]
+ 41%|████      | 204/500 [26:51<32:16,  6.54s/it]
+ 41%|████      | 205/500 [26:59<33:45,  6.87s/it]{'loss': '-5.96e-09', 'grad_norm': '2.808', 'learning_rate': '3.01e-06', 'num_tokens': '6.397e+05', 'completions/mean_length': '42.15', 'completions/min_length': '38.4', 'completions/max_length': '46.4', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.15', 'completions/min_terminated_length': '38.4', 'completions/max_terminated_length': '46.4', 'rewards/reward_func/mean': '1.281', 'rewards/reward_func/std': '0.02475', 'reward': '1.281', 'reward_std': '0.02475', 'frac_reward_zero_std': '0.8', 'entropy': '0.2448', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.512', 'epoch': '0.06667'}
+[step  205] reward= +0.730 succ= 0.00 calls= 0.88 inv= 0.00 zero= 0.60 ent= 0.296 len=   43 1622s
+
+                                                 
+
+ 41%|████      | 205/500 [26:59<33:45,  6.87s/it]
+ 41%|████      | 206/500 [27:05<33:03,  6.75s/it]
+ 41%|████▏     | 207/500 [27:12<32:55,  6.74s/it]
+ 42%|████▏     | 208/500 [27:19<32:58,  6.78s/it]
+ 42%|████▏     | 209/500 [27:26<34:24,  7.10s/it]
+ 42%|████▏     | 210/500 [27:40<43:19,  8.96s/it]{'loss': '-1.788e-08', 'grad_norm': '2.751', 'learning_rate': '2.96e-06', 'num_tokens': '6.553e+05', 'completions/mean_length': '43.25', 'completions/min_length': '38.4', 'completions/max_length': '49.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.25', 'completions/min_terminated_length': '38.4', 'completions/max_terminated_length': '49.6', 'rewards/reward_func/mean': '0.73', 'rewards/reward_func/std': '0.2263', 'reward': '0.73', 'reward_std': '0.2263', 'frac_reward_zero_std': '0.6', 'entropy': '0.2956', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.591', 'epoch': '0.06833'}
+[step  210] reward= +2.161 succ= 1.75 calls= 0.88 inv= 0.00 zero= 0.40 ent= 0.292 len=   46 1663s
+
+                                                 
+
+ 42%|████▏     | 210/500 [27:40<43:19,  8.96s/it]
+ 42%|████▏     | 211/500 [27:47<40:04,  8.32s/it]
+ 42%|████▏     | 212/500 [27:53<37:26,  7.80s/it]
+ 43%|████▎     | 213/500 [28:00<35:46,  7.48s/it]
+ 43%|████▎     | 214/500 [28:06<34:00,  7.13s/it]
+ 43%|████▎     | 215/500 [28:13<33:38,  7.08s/it]{'loss': '-2.742e-07', 'grad_norm': '1.922', 'learning_rate': '2.91e-06', 'num_tokens': '6.711e+05', 'completions/mean_length': '46.08', 'completions/min_length': '35.6', 'completions/max_length': '66.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '46.08', 'completions/min_terminated_length': '35.6', 'completions/max_terminated_length': '66.6', 'rewards/reward_func/mean': '2.161', 'rewards/reward_func/std': '0.4207', 'reward': '2.161', 'reward_std': '0.4207', 'frac_reward_zero_std': '0.4', 'entropy': '0.2916', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.035', 'epoch': '0.07'}
+[step  215] reward= +1.684 succ= 2.00 calls= 1.00 inv= 0.00 zero= 0.80 ent= 0.244 len=   43 1696s
+
+                                                 
+
+ 43%|████▎     | 215/500 [28:13<33:38,  7.08s/it]
+ 43%|████▎     | 216/500 [28:19<32:20,  6.83s/it]
+ 43%|████▎     | 217/500 [28:27<32:55,  6.98s/it]
+ 44%|████▎     | 218/500 [28:33<31:58,  6.80s/it]
+ 44%|████▍     | 219/500 [28:40<32:25,  6.92s/it]
+ 44%|████▍     | 220/500 [28:47<31:47,  6.81s/it]{'loss': '3.725e-09', 'grad_norm': '0', 'learning_rate': '2.86e-06', 'num_tokens': '6.867e+05', 'completions/mean_length': '42.73', 'completions/min_length': '36.4', 'completions/max_length': '47.2', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.73', 'completions/min_terminated_length': '36.4', 'completions/max_terminated_length': '47.2', 'rewards/reward_func/mean': '1.684', 'rewards/reward_func/std': '0.02669', 'reward': '1.684', 'reward_std': '0.02669', 'frac_reward_zero_std': '0.8', 'entropy': '0.2442', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.504', 'epoch': '0.07167'}
+[step  220] reward= +1.770 succ= 0.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.243 len=   43 1730s
+
+                                                 
+
+ 44%|████▍     | 220/500 [28:47<31:47,  6.81s/it]
+ 44%|████▍     | 221/500 [28:54<31:40,  6.81s/it]
+ 44%|████▍     | 222/500 [29:01<31:42,  6.84s/it]
+ 45%|████▍     | 223/500 [29:07<30:59,  6.71s/it]
+ 45%|████▍     | 224/500 [29:15<32:40,  7.10s/it]
+ 45%|████▌     | 225/500 [29:22<32:02,  6.99s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '2.81e-06', 'num_tokens': '7.024e+05', 'completions/mean_length': '43.35', 'completions/min_length': '38.4', 'completions/max_length': '47.4', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.35', 'completions/min_terminated_length': '38.4', 'completions/max_terminated_length': '47.4', 'rewards/reward_func/mean': '1.77', 'rewards/reward_func/std': '0', 'reward': '1.77', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2426', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.553', 'epoch': '0.07333'}
+[step  225] reward= +1.741 succ= 0.00 calls= 1.00 inv= 0.00 zero= 0.80 ent= 0.236 len=   42 1765s
+
+                                                 
+
+ 45%|████▌     | 225/500 [29:22<32:02,  6.99s/it]
+ 45%|████▌     | 226/500 [29:28<31:03,  6.80s/it]
+ 45%|████▌     | 227/500 [29:35<31:21,  6.89s/it]
+ 46%|████▌     | 228/500 [29:42<31:27,  6.94s/it]
+ 46%|████▌     | 229/500 [29:49<30:59,  6.86s/it]
+ 46%|████▌     | 230/500 [29:56<31:10,  6.93s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '2.76e-06', 'num_tokens': '7.181e+05', 'completions/mean_length': '41.62', 'completions/min_length': '35', 'completions/max_length': '49.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '41.62', 'completions/min_terminated_length': '35', 'completions/max_terminated_length': '49.8', 'rewards/reward_func/mean': '1.741', 'rewards/reward_func/std': '0.02475', 'reward': '1.741', 'reward_std': '0.02475', 'frac_reward_zero_std': '0.8', 'entropy': '0.2355', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.775', 'epoch': '0.075'}
+[step  230] reward= +2.210 succ= 0.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.243 len=   44 1799s
+
+                                                 
+
+ 46%|████▌     | 230/500 [29:56<31:10,  6.93s/it]
+ 46%|████▌     | 231/500 [30:03<30:20,  6.77s/it]
+ 46%|████▋     | 232/500 [30:10<30:57,  6.93s/it]
+ 47%|████▋     | 233/500 [30:17<30:59,  6.97s/it]
+ 47%|████▋     | 234/500 [30:23<30:03,  6.78s/it]
+ 47%|████▋     | 235/500 [30:30<29:28,  6.67s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '2.71e-06', 'num_tokens': '7.338e+05', 'completions/mean_length': '44.23', 'completions/min_length': '39.8', 'completions/max_length': '48.4', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '44.23', 'completions/min_terminated_length': '39.8', 'completions/max_terminated_length': '48.4', 'rewards/reward_func/mean': '2.21', 'rewards/reward_func/std': '0', 'reward': '2.21', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2431', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.662', 'epoch': '0.07667'}
+[step  235] reward= +1.710 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.282 len=   43 1833s
+
+                                                 
+
+ 47%|████▋     | 235/500 [30:30<29:28,  6.67s/it]
+ 47%|████▋     | 236/500 [30:36<28:58,  6.58s/it]
+ 47%|████▋     | 237/500 [30:42<28:35,  6.52s/it]
+ 48%|████▊     | 238/500 [30:49<28:20,  6.49s/it]
+ 48%|████▊     | 239/500 [30:56<28:43,  6.60s/it]
+ 48%|████▊     | 240/500 [31:02<28:29,  6.58s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '2.66e-06', 'num_tokens': '7.493e+05', 'completions/mean_length': '42.75', 'completions/min_length': '39.2', 'completions/max_length': '48.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.75', 'completions/min_terminated_length': '39.2', 'completions/max_terminated_length': '48.8', 'rewards/reward_func/mean': '1.71', 'rewards/reward_func/std': '0', 'reward': '1.71', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2823', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.511', 'epoch': '0.07833'}
+[step  240] reward= +2.230 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.196 len=   42 1865s
+
+                                                 
+
+ 48%|████▊     | 240/500 [31:02<28:29,  6.58s/it]
+ 48%|████▊     | 241/500 [31:09<28:14,  6.54s/it]
+ 48%|████▊     | 242/500 [31:15<27:23,  6.37s/it]
+ 49%|████▊     | 243/500 [31:22<28:01,  6.54s/it]
+ 49%|████▉     | 244/500 [31:29<29:06,  6.82s/it]
+ 49%|████▉     | 245/500 [31:37<31:00,  7.29s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '2.61e-06', 'num_tokens': '7.648e+05', 'completions/mean_length': '42.38', 'completions/min_length': '39.2', 'completions/max_length': '45.4', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.38', 'completions/min_terminated_length': '39.2', 'completions/max_terminated_length': '45.4', 'rewards/reward_func/mean': '2.23', 'rewards/reward_func/std': '0', 'reward': '2.23', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.1961', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.321', 'epoch': '0.08'}
+[step  245] reward= +0.950 succ= 0.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.230 len=   41 1901s
+
+                                                 
+
+ 49%|████▉     | 245/500 [31:37<31:00,  7.29s/it]
+ 49%|████▉     | 246/500 [31:46<32:19,  7.64s/it]
+ 49%|████▉     | 247/500 [31:54<32:52,  7.79s/it]
+ 50%|████▉     | 248/500 [32:02<33:20,  7.94s/it]
+ 50%|████▉     | 249/500 [32:11<34:27,  8.24s/it]
+ 50%|█████     | 250/500 [32:20<34:34,  8.30s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '2.56e-06', 'num_tokens': '7.804e+05', 'completions/mean_length': '41.23', 'completions/min_length': '37.4', 'completions/max_length': '44.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '41.23', 'completions/min_terminated_length': '37.4', 'completions/max_terminated_length': '44.6', 'rewards/reward_func/mean': '0.95', 'rewards/reward_func/std': '0', 'reward': '0.95', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2301', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '6.84', 'epoch': '0.08167'}
+[step  250] reward= +1.830 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.249 len=   41 1943s
+
+                                                 
+
+ 50%|█████     | 250/500 [32:20<34:34,  8.30s/it]
+ 50%|█████     | 251/500 [32:29<35:31,  8.56s/it]
+ 50%|█████     | 252/500 [32:38<35:37,  8.62s/it]
+ 51%|█████     | 253/500 [32:46<35:07,  8.53s/it]
+ 51%|█████     | 254/500 [32:54<34:49,  8.49s/it]
+ 51%|█████     | 255/500 [33:03<35:04,  8.59s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '2.51e-06', 'num_tokens': '7.959e+05', 'completions/mean_length': '41.1', 'completions/min_length': '35.4', 'completions/max_length': '45.4', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '41.1', 'completions/min_terminated_length': '35.4', 'completions/max_terminated_length': '45.4', 'rewards/reward_func/mean': '1.83', 'rewards/reward_func/std': '0', 'reward': '1.83', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2491', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.185', 'epoch': '0.08333'}
+[step  255] reward= +1.310 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.211 len=   42 1986s
+
+                                                 
+
+ 51%|█████     | 255/500 [33:03<35:04,  8.59s/it]
+ 51%|█████     | 256/500 [33:12<34:37,  8.51s/it]
+ 51%|█████▏    | 257/500 [33:21<35:20,  8.73s/it]
+ 52%|█████▏    | 258/500 [33:29<34:26,  8.54s/it]
+ 52%|█████▏    | 259/500 [33:37<34:00,  8.47s/it]
+ 52%|█████▏    | 260/500 [33:46<34:55,  8.73s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '2.46e-06', 'num_tokens': '8.115e+05', 'completions/mean_length': '42.02', 'completions/min_length': '34.2', 'completions/max_length': '45.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.02', 'completions/min_terminated_length': '34.2', 'completions/max_terminated_length': '45.6', 'rewards/reward_func/mean': '1.31', 'rewards/reward_func/std': '0', 'reward': '1.31', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2107', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.197', 'epoch': '0.085'}
+[step  260] reward= +0.910 succ= 0.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.242 len=   43 2030s
+
+                                                 
+
+ 52%|█████▏    | 260/500 [33:47<34:55,  8.73s/it]
+ 52%|█████▏    | 261/500 [33:55<34:38,  8.70s/it]
+ 52%|█████▏    | 262/500 [34:03<33:55,  8.55s/it]
+ 53%|█████▎    | 263/500 [34:13<34:32,  8.75s/it]
+ 53%|█████▎    | 264/500 [34:23<35:56,  9.14s/it]
+ 53%|█████▎    | 265/500 [34:32<35:46,  9.13s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '2.41e-06', 'num_tokens': '8.272e+05', 'completions/mean_length': '42.88', 'completions/min_length': '38.2', 'completions/max_length': '46.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.88', 'completions/min_terminated_length': '38.2', 'completions/max_terminated_length': '46.8', 'rewards/reward_func/mean': '0.91', 'rewards/reward_func/std': '0', 'reward': '0.91', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2416', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.384', 'epoch': '0.08667'}
+[step  265] reward= +2.142 succ= 1.75 calls= 1.00 inv= 0.12 zero= 0.80 ent= 0.262 len=   44 2075s
+
+                                                 
+
+ 53%|█████▎    | 265/500 [34:32<35:46,  9.13s/it]
+ 53%|█████▎    | 266/500 [34:41<35:31,  9.11s/it]
+ 53%|█████▎    | 267/500 [34:49<34:24,  8.86s/it]
+ 54%|█████▎    | 268/500 [34:57<33:34,  8.68s/it]
+ 54%|█████▍    | 269/500 [35:06<33:12,  8.62s/it]
+ 54%|█████▍    | 270/500 [35:14<32:41,  8.53s/it]{'loss': '-7.451e-09', 'grad_norm': '1.74', 'learning_rate': '2.36e-06', 'num_tokens': '8.429e+05', 'completions/mean_length': '44.35', 'completions/min_length': '39', 'completions/max_length': '51.2', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '44.35', 'completions/min_terminated_length': '39', 'completions/max_terminated_length': '51.2', 'rewards/reward_func/mean': '2.142', 'rewards/reward_func/std': '0.1927', 'reward': '2.142', 'reward_std': '0.1927', 'frac_reward_zero_std': '0.8', 'entropy': '0.2622', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.767', 'epoch': '0.08833'}
+[step  270] reward= +0.906 succ= 0.00 calls= 0.88 inv= 0.00 zero= 0.80 ent= 0.233 len=   43 2117s
+
+                                                 
+
+ 54%|█████▍    | 270/500 [35:14<32:41,  8.53s/it]
+ 54%|█████▍    | 271/500 [35:22<32:17,  8.46s/it]
+ 54%|█████▍    | 272/500 [35:32<33:30,  8.82s/it]
+ 55%|█████▍    | 273/500 [35:41<33:00,  8.72s/it]
+ 55%|█████▍    | 274/500 [35:49<32:55,  8.74s/it]
+ 55%|█████▌    | 275/500 [35:58<32:38,  8.70s/it]{'loss': '2.086e-08', 'grad_norm': '1.718', 'learning_rate': '2.31e-06', 'num_tokens': '8.585e+05', 'completions/mean_length': '42.83', 'completions/min_length': '38.8', 'completions/max_length': '45.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.83', 'completions/min_terminated_length': '38.8', 'completions/max_terminated_length': '45.8', 'rewards/reward_func/mean': '0.9063', 'rewards/reward_func/std': '0.06718', 'reward': '0.9063', 'reward_std': '0.06718', 'frac_reward_zero_std': '0.8', 'entropy': '0.2328', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.215', 'epoch': '0.09'}
+[step  275] reward= +2.159 succ= 2.00 calls= 1.00 inv= 0.00 zero= 0.80 ent= 0.234 len=   43 2161s
+
+                                                 
+
+ 55%|█████▌    | 275/500 [35:58<32:38,  8.70s/it]
+ 55%|█████▌    | 276/500 [36:08<34:14,  9.17s/it]
+ 55%|█████▌    | 277/500 [36:17<33:37,  9.05s/it]
+ 56%|█████▌    | 278/500 [36:26<33:42,  9.11s/it]
+ 56%|█████▌    | 279/500 [36:35<32:46,  8.90s/it]
+ 56%|█████▌    | 280/500 [36:43<32:34,  8.88s/it]{'loss': '-5.96e-09', 'grad_norm': '0', 'learning_rate': '2.26e-06', 'num_tokens': '8.742e+05', 'completions/mean_length': '42.92', 'completions/min_length': '38.2', 'completions/max_length': '47.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.92', 'completions/min_terminated_length': '38.2', 'completions/max_terminated_length': '47.6', 'rewards/reward_func/mean': '2.159', 'rewards/reward_func/std': '0.2015', 'reward': '2.159', 'reward_std': '0.2015', 'frac_reward_zero_std': '0.8', 'entropy': '0.2343', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.526', 'epoch': '0.09167'}
+[step  280] reward= +1.548 succ= 2.00 calls= 1.00 inv= 0.00 zero= 0.60 ent= 0.246 len=   44 2207s
+
+                                                 
+
+ 56%|█████▌    | 280/500 [36:43<32:34,  8.88s/it]
+ 56%|█████▌    | 281/500 [36:52<31:47,  8.71s/it]
+ 56%|█████▋    | 282/500 [37:00<31:23,  8.64s/it]
+ 57%|█████▋    | 283/500 [37:12<34:58,  9.67s/it]
+ 57%|█████▋    | 284/500 [37:21<33:38,  9.34s/it]
+ 57%|█████▋    | 285/500 [37:30<33:10,  9.26s/it]{'loss': '-1.49e-08', 'grad_norm': '0', 'learning_rate': '2.21e-06', 'num_tokens': '8.898e+05', 'completions/mean_length': '43.6', 'completions/min_length': '37', 'completions/max_length': '51.2', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.6', 'completions/min_terminated_length': '37', 'completions/max_terminated_length': '51.2', 'rewards/reward_func/mean': '1.548', 'rewards/reward_func/std': '0.4031', 'reward': '1.548', 'reward_std': '0.4031', 'frac_reward_zero_std': '0.6', 'entropy': '0.2461', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.821', 'epoch': '0.09333'}
+[step  285] reward= +1.210 succ= 0.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.264 len=   43 2253s
+
+                                                 
+
+ 57%|█████▋    | 285/500 [37:30<33:10,  9.26s/it]
+ 57%|█████▋    | 286/500 [37:39<32:31,  9.12s/it]
+ 57%|█████▋    | 287/500 [37:50<34:40,  9.77s/it]
+ 58%|█████▊    | 288/500 [37:59<33:30,  9.49s/it]
+ 58%|█████▊    | 289/500 [38:07<32:19,  9.19s/it]
+ 58%|█████▊    | 290/500 [38:16<31:26,  8.98s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '2.16e-06', 'num_tokens': '9.055e+05', 'completions/mean_length': '42.95', 'completions/min_length': '37.2', 'completions/max_length': '53.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.95', 'completions/min_terminated_length': '37.2', 'completions/max_terminated_length': '53.6', 'rewards/reward_func/mean': '1.21', 'rewards/reward_func/std': '0', 'reward': '1.21', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2636', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '9.041', 'epoch': '0.095'}
+[step  290] reward= +1.190 succ= 0.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.258 len=   44 2299s
+
+                                                 
+
+ 58%|█████▊    | 290/500 [38:16<31:26,  8.98s/it]
+ 58%|█████▊    | 291/500 [38:24<30:21,  8.71s/it]
+ 58%|█████▊    | 292/500 [38:33<30:37,  8.83s/it]
+ 59%|█████▊    | 293/500 [38:41<29:51,  8.66s/it]
+ 59%|█████▉    | 294/500 [38:51<31:03,  9.05s/it]
+ 59%|█████▉    | 295/500 [39:00<30:12,  8.84s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '2.11e-06', 'num_tokens': '9.212e+05', 'completions/mean_length': '43.98', 'completions/min_length': '35', 'completions/max_length': '52.2', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.98', 'completions/min_terminated_length': '35', 'completions/max_terminated_length': '52.2', 'rewards/reward_func/mean': '1.19', 'rewards/reward_func/std': '0', 'reward': '1.19', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2581', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.913', 'epoch': '0.09667'}
+[step  295] reward= +2.190 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.248 len=   43 2343s
+
+                                                 
+
+ 59%|█████▉    | 295/500 [39:00<30:12,  8.84s/it]
+ 59%|█████▉    | 296/500 [39:08<29:34,  8.70s/it]
+ 59%|█████▉    | 297/500 [39:16<29:12,  8.63s/it]
+ 60%|█████▉    | 298/500 [39:25<29:02,  8.63s/it]
+ 60%|█████▉    | 299/500 [39:34<29:30,  8.81s/it]
+ 60%|██████    | 300/500 [39:43<29:01,  8.71s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '2.06e-06', 'num_tokens': '9.368e+05', 'completions/mean_length': '43.38', 'completions/min_length': '37.4', 'completions/max_length': '48.2', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.38', 'completions/min_terminated_length': '37.4', 'completions/max_terminated_length': '48.2', 'rewards/reward_func/mean': '2.19', 'rewards/reward_func/std': '0', 'reward': '2.19', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2483', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.503', 'epoch': '0.09833'}
+[step  300] reward= +1.448 succ= 2.00 calls= 1.00 inv= 0.00 zero= 0.80 ent= 0.268 len=   44 2386s
+
+                                                 
+
+ 60%|██████    | 300/500 [39:43<29:01,  8.71s/it]
+ 60%|██████    | 301/500 [39:51<28:45,  8.67s/it]
+ 60%|██████    | 302/500 [40:00<28:41,  8.70s/it]
+ 61%|██████    | 303/500 [40:09<28:20,  8.63s/it]
+ 61%|██████    | 304/500 [40:18<28:42,  8.79s/it]
+ 61%|██████    | 305/500 [40:27<28:39,  8.82s/it]{'loss': '1.192e-08', 'grad_norm': '0', 'learning_rate': '2.01e-06', 'num_tokens': '9.525e+05', 'completions/mean_length': '43.83', 'completions/min_length': '39.8', 'completions/max_length': '47.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.83', 'completions/min_terminated_length': '39.8', 'completions/max_terminated_length': '47.6', 'rewards/reward_func/mean': '1.448', 'rewards/reward_func/std': '0.2174', 'reward': '1.448', 'reward_std': '0.2174', 'frac_reward_zero_std': '0.8', 'entropy': '0.2681', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.371', 'epoch': '0.1'}
+[step  305] reward= +1.690 succ= 0.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.236 len=   43 2430s
+
+                                                 
+
+ 61%|██████    | 305/500 [40:27<28:39,  8.82s/it]
+ 61%|██████    | 306/500 [40:35<28:22,  8.78s/it]
+ 61%|██████▏   | 307/500 [40:44<28:03,  8.72s/it]
+ 62%|██████▏   | 308/500 [40:59<34:03, 10.64s/it]
+ 62%|██████▏   | 309/500 [41:10<34:05, 10.71s/it]
+ 62%|██████▏   | 310/500 [41:19<32:05, 10.13s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '1.96e-06', 'num_tokens': '9.681e+05', 'completions/mean_length': '43.3', 'completions/min_length': '38.8', 'completions/max_length': '48.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.3', 'completions/min_terminated_length': '38.8', 'completions/max_terminated_length': '48.6', 'rewards/reward_func/mean': '1.69', 'rewards/reward_func/std': '0', 'reward': '1.69', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2359', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.504', 'epoch': '0.1017'}
+[step  310] reward= +1.460 succ= 0.00 calls= 0.88 inv= 0.00 zero= 0.00 ent= 0.265 len=   46 2482s
+
+                                                 
+
+ 62%|██████▏   | 310/500 [41:19<32:05, 10.13s/it]
+ 62%|██████▏   | 311/500 [41:28<31:07,  9.88s/it]
+ 62%|██████▏   | 312/500 [41:36<29:37,  9.45s/it]
+ 63%|██████▎   | 313/500 [41:45<28:51,  9.26s/it]
+ 63%|██████▎   | 314/500 [41:54<28:01,  9.04s/it]
+ 63%|██████▎   | 315/500 [42:03<27:41,  8.98s/it]{'loss': '-2.98e-08', 'grad_norm': '2.677', 'learning_rate': '1.91e-06', 'num_tokens': '9.838e+05', 'completions/mean_length': '46.08', 'completions/min_length': '38.4', 'completions/max_length': '64.4', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '46.08', 'completions/min_terminated_length': '38.4', 'completions/max_terminated_length': '64.4', 'rewards/reward_func/mean': '1.46', 'rewards/reward_func/std': '0.6517', 'reward': '1.46', 'reward_std': '0.6517', 'frac_reward_zero_std': '0', 'entropy': '0.2647', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '10.15', 'epoch': '0.1033'}
+[step  315] reward= +0.656 succ= 0.00 calls= 1.00 inv= 0.00 zero= 0.80 ent= 0.239 len=   42 2526s
+
+                                                 
+
+ 63%|██████▎   | 315/500 [42:03<27:41,  8.98s/it]
+ 63%|██████▎   | 316/500 [42:11<26:38,  8.69s/it]
+ 63%|██████▎   | 317/500 [42:20<26:39,  8.74s/it]
+ 64%|██████▎   | 318/500 [42:28<26:28,  8.73s/it]
+ 64%|██████▍   | 319/500 [42:37<26:25,  8.76s/it]
+ 64%|██████▍   | 320/500 [42:46<26:15,  8.75s/it]{'loss': '-5.96e-09', 'grad_norm': '0', 'learning_rate': '1.86e-06', 'num_tokens': '9.994e+05', 'completions/mean_length': '42.5', 'completions/min_length': '38.8', 'completions/max_length': '47.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.5', 'completions/min_terminated_length': '38.8', 'completions/max_terminated_length': '47.8', 'rewards/reward_func/mean': '0.6562', 'rewards/reward_func/std': '0.2086', 'reward': '0.6562', 'reward_std': '0.2086', 'frac_reward_zero_std': '0.8', 'entropy': '0.2385', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.52', 'epoch': '0.105'}
+[step  320] reward= +2.330 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.210 len=   43 2569s
+
+                                                 
+
+ 64%|██████▍   | 320/500 [42:46<26:15,  8.75s/it]
+ 64%|██████▍   | 321/500 [42:54<25:43,  8.62s/it]
+ 64%|██████▍   | 322/500 [43:03<25:43,  8.67s/it]
+ 65%|██████▍   | 323/500 [43:12<25:35,  8.68s/it]
+ 65%|██████▍   | 324/500 [43:21<26:21,  8.99s/it]
+ 65%|██████▌   | 325/500 [43:30<25:59,  8.91s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '1.81e-06', 'num_tokens': '1.015e+06', 'completions/mean_length': '42.77', 'completions/min_length': '38.2', 'completions/max_length': '47', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.77', 'completions/min_terminated_length': '38.2', 'completions/max_terminated_length': '47', 'rewards/reward_func/mean': '2.33', 'rewards/reward_func/std': '0', 'reward': '2.33', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2102', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.362', 'epoch': '0.1067'}
+[step  325] reward= +2.147 succ= 2.00 calls= 1.00 inv= 0.00 zero= 0.60 ent= 0.222 len=   43 2613s
+
+                                                 
+
+ 65%|██████▌   | 325/500 [43:30<25:59,  8.91s/it]
+ 65%|██████▌   | 326/500 [43:39<25:45,  8.88s/it]
+ 65%|██████▌   | 327/500 [43:47<25:19,  8.78s/it]
+ 66%|██████▌   | 328/500 [43:56<24:54,  8.69s/it]
+ 66%|██████▌   | 329/500 [44:05<25:02,  8.79s/it]
+ 66%|██████▌   | 330/500 [44:15<25:38,  9.05s/it]{'loss': '-1.788e-08', 'grad_norm': '0', 'learning_rate': '1.76e-06', 'num_tokens': '1.031e+06', 'completions/mean_length': '43.25', 'completions/min_length': '36.2', 'completions/max_length': '48.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.25', 'completions/min_terminated_length': '36.2', 'completions/max_terminated_length': '48.8', 'rewards/reward_func/mean': '2.147', 'rewards/reward_func/std': '0.2333', 'reward': '2.147', 'reward_std': '0.2333', 'frac_reward_zero_std': '0.6', 'entropy': '0.2225', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.572', 'epoch': '0.1083'}
+[step  330] reward= +1.810 succ= 0.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.227 len=   43 2658s
+
+                                                 
+
+ 66%|██████▌   | 330/500 [44:15<25:38,  9.05s/it]
+ 66%|██████▌   | 331/500 [44:23<25:06,  8.92s/it]
+ 66%|██████▋   | 332/500 [44:33<25:46,  9.21s/it]
+ 67%|██████▋   | 333/500 [44:42<25:01,  8.99s/it]
+ 67%|██████▋   | 334/500 [44:50<24:17,  8.78s/it]
+ 67%|██████▋   | 335/500 [44:59<24:32,  8.93s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '1.71e-06', 'num_tokens': '1.046e+06', 'completions/mean_length': '43.3', 'completions/min_length': '39.6', 'completions/max_length': '48.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.3', 'completions/min_terminated_length': '39.6', 'completions/max_terminated_length': '48.6', 'rewards/reward_func/mean': '1.81', 'rewards/reward_func/std': '0', 'reward': '1.81', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2271', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.63', 'epoch': '0.11'}
+[step  335] reward= +1.739 succ= 2.00 calls= 1.00 inv= 0.00 zero= 0.60 ent= 0.231 len=   43 2702s
+
+                                                 
+
+ 67%|██████▋   | 335/500 [44:59<24:32,  8.93s/it]
+ 67%|██████▋   | 336/500 [45:08<24:18,  8.89s/it]
+ 67%|██████▋   | 337/500 [45:16<23:31,  8.66s/it]
+ 68%|██████▊   | 338/500 [45:25<23:19,  8.64s/it]
+ 68%|██████▊   | 339/500 [45:33<23:20,  8.70s/it]
+ 68%|██████▊   | 340/500 [45:42<22:42,  8.52s/it]{'loss': '2.384e-08', 'grad_norm': '0', 'learning_rate': '1.66e-06', 'num_tokens': '1.062e+06', 'completions/mean_length': '43.35', 'completions/min_length': '38.6', 'completions/max_length': '50.2', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.35', 'completions/min_terminated_length': '38.6', 'completions/max_terminated_length': '50.2', 'rewards/reward_func/mean': '1.739', 'rewards/reward_func/std': '0.2569', 'reward': '1.739', 'reward_std': '0.2569', 'frac_reward_zero_std': '0.6', 'entropy': '0.2311', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.652', 'epoch': '0.1117'}
+[step  340] reward= +0.930 succ= 0.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.211 len=   42 2745s
+
+                                                 
+
+ 68%|██████▊   | 340/500 [45:42<22:42,  8.52s/it]
+ 68%|██████▊   | 341/500 [45:50<22:26,  8.47s/it]
+ 68%|██████▊   | 342/500 [45:59<22:29,  8.54s/it]
+ 69%|██████▊   | 343/500 [46:07<22:05,  8.45s/it]
+ 69%|██████▉   | 344/500 [46:15<22:01,  8.47s/it]
+ 69%|██████▉   | 345/500 [46:24<22:21,  8.66s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '1.61e-06', 'num_tokens': '1.078e+06', 'completions/mean_length': '42.05', 'completions/min_length': '37.4', 'completions/max_length': '45.4', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.05', 'completions/min_terminated_length': '37.4', 'completions/max_terminated_length': '45.4', 'rewards/reward_func/mean': '0.93', 'rewards/reward_func/std': '0', 'reward': '0.93', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2112', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.23', 'epoch': '0.1133'}
+[step  345] reward= +1.430 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.243 len=   44 2788s
+
+                                                 
+
+ 69%|██████▉   | 345/500 [46:24<22:21,  8.66s/it]
+ 69%|██████▉   | 346/500 [46:34<22:50,  8.90s/it]
+ 69%|██████▉   | 347/500 [46:44<23:45,  9.31s/it]
+ 70%|██████▉   | 348/500 [46:54<24:07,  9.52s/it]
+ 70%|██████▉   | 349/500 [47:05<24:34,  9.76s/it]
+ 70%|███████   | 350/500 [47:13<23:28,  9.39s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '1.56e-06', 'num_tokens': '1.093e+06', 'completions/mean_length': '43.73', 'completions/min_length': '39', 'completions/max_length': '47', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.73', 'completions/min_terminated_length': '39', 'completions/max_terminated_length': '47', 'rewards/reward_func/mean': '1.43', 'rewards/reward_func/std': '0', 'reward': '1.43', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2433', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.334', 'epoch': '0.115'}
+[step  350] reward= +1.593 succ= 2.00 calls= 1.00 inv= 0.00 zero= 0.60 ent= 0.278 len=   46 2836s
+
+                                                 
+
+ 70%|███████   | 350/500 [47:13<23:28,  9.39s/it]
+ 70%|███████   | 351/500 [47:22<22:53,  9.22s/it]
+ 70%|███████   | 352/500 [47:30<22:12,  9.01s/it]
+ 71%|███████   | 353/500 [47:39<21:35,  8.81s/it]
+ 71%|███████   | 354/500 [47:47<21:19,  8.76s/it]
+ 71%|███████   | 355/500 [47:56<20:55,  8.66s/it]{'loss': '-2.98e-09', 'grad_norm': '0', 'learning_rate': '1.51e-06', 'num_tokens': '1.109e+06', 'completions/mean_length': '45.52', 'completions/min_length': '36.6', 'completions/max_length': '58', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '45.52', 'completions/min_terminated_length': '36.6', 'completions/max_terminated_length': '58', 'rewards/reward_func/mean': '1.593', 'rewards/reward_func/std': '0.2192', 'reward': '1.593', 'reward_std': '0.2192', 'frac_reward_zero_std': '0.6', 'entropy': '0.2779', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '9.461', 'epoch': '0.1167'}
+[step  355] reward= +1.330 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.247 len=   42 2879s
+
+                                                 
+
+ 71%|███████   | 355/500 [47:56<20:55,  8.66s/it]
+ 71%|███████   | 356/500 [48:05<20:59,  8.75s/it]
+ 71%|███████▏  | 357/500 [48:13<20:50,  8.74s/it]
+ 72%|███████▏  | 358/500 [48:22<20:25,  8.63s/it]
+ 72%|███████▏  | 359/500 [48:30<19:53,  8.47s/it]
+ 72%|███████▏  | 360/500 [48:39<19:54,  8.53s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '1.46e-06', 'num_tokens': '1.125e+06', 'completions/mean_length': '41.98', 'completions/min_length': '37.4', 'completions/max_length': '46', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '41.98', 'completions/min_terminated_length': '37.4', 'completions/max_terminated_length': '46', 'rewards/reward_func/mean': '1.33', 'rewards/reward_func/std': '0', 'reward': '1.33', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2472', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.297', 'epoch': '0.1183'}
+[step  360] reward= +1.230 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.225 len=   42 2922s
+
+                                                 
+
+ 72%|███████▏  | 360/500 [48:39<19:54,  8.53s/it]
+ 72%|███████▏  | 361/500 [48:47<19:55,  8.60s/it]
+ 72%|███████▏  | 362/500 [48:56<19:54,  8.66s/it]
+ 73%|███████▎  | 363/500 [49:05<19:48,  8.68s/it]
+ 73%|███████▎  | 364/500 [49:14<19:48,  8.74s/it]
+ 73%|███████▎  | 365/500 [49:23<19:41,  8.75s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '1.41e-06', 'num_tokens': '1.14e+06', 'completions/mean_length': '42.48', 'completions/min_length': '38.2', 'completions/max_length': '46.2', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.48', 'completions/min_terminated_length': '38.2', 'completions/max_terminated_length': '46.2', 'rewards/reward_func/mean': '1.23', 'rewards/reward_func/std': '0', 'reward': '1.23', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2245', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.303', 'epoch': '0.12'}
+[step  365] reward= +1.239 succ= 0.00 calls= 1.00 inv= 0.00 zero= 0.80 ent= 0.250 len=   44 2966s
+
+                                                 
+
+ 73%|███████▎  | 365/500 [49:23<19:41,  8.75s/it]
+ 73%|███████▎  | 366/500 [49:31<19:27,  8.71s/it]
+ 73%|███████▎  | 367/500 [49:39<18:55,  8.54s/it]
+ 74%|███████▎  | 368/500 [49:48<18:56,  8.61s/it]
+ 74%|███████▍  | 369/500 [49:56<18:34,  8.50s/it]
+ 74%|███████▍  | 370/500 [50:05<18:50,  8.69s/it]{'loss': '-5.96e-09', 'grad_norm': '0', 'learning_rate': '1.36e-06', 'num_tokens': '1.156e+06', 'completions/mean_length': '43.52', 'completions/min_length': '36', 'completions/max_length': '48', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.52', 'completions/min_terminated_length': '36', 'completions/max_terminated_length': '48', 'rewards/reward_func/mean': '1.239', 'rewards/reward_func/std': '0.2015', 'reward': '1.239', 'reward_std': '0.2015', 'frac_reward_zero_std': '0.8', 'entropy': '0.25', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.503', 'epoch': '0.1217'}
+[step  370] reward= +0.670 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.252 len=   41 3009s
+
+                                                 
+
+ 74%|███████▍  | 370/500 [50:05<18:50,  8.69s/it]
+ 74%|███████▍  | 371/500 [50:14<18:16,  8.50s/it]
+ 74%|███████▍  | 372/500 [50:23<18:42,  8.77s/it]
+ 75%|███████▍  | 373/500 [50:32<18:58,  8.96s/it]
+ 75%|███████▍  | 374/500 [50:41<18:31,  8.82s/it]
+ 75%|███████▌  | 375/500 [50:49<18:09,  8.72s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '1.31e-06', 'num_tokens': '1.172e+06', 'completions/mean_length': '41.08', 'completions/min_length': '36.6', 'completions/max_length': '46', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '41.08', 'completions/min_terminated_length': '36.6', 'completions/max_terminated_length': '46', 'rewards/reward_func/mean': '0.67', 'rewards/reward_func/std': '0', 'reward': '0.67', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2516', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.304', 'epoch': '0.1233'}
+[step  375] reward= +1.390 succ= 0.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.236 len=   44 3052s
+
+                                                 
+
+ 75%|███████▌  | 375/500 [50:49<18:09,  8.72s/it]
+ 75%|███████▌  | 376/500 [50:58<18:01,  8.72s/it]
+ 75%|███████▌  | 377/500 [51:07<17:59,  8.78s/it]
+ 76%|███████▌  | 378/500 [51:16<17:50,  8.77s/it]
+ 76%|███████▌  | 379/500 [51:24<17:41,  8.77s/it]
+ 76%|███████▌  | 380/500 [51:34<17:42,  8.85s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '1.26e-06', 'num_tokens': '1.187e+06', 'completions/mean_length': '43.85', 'completions/min_length': '37.2', 'completions/max_length': '48.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.85', 'completions/min_terminated_length': '37.2', 'completions/max_terminated_length': '48.8', 'rewards/reward_func/mean': '1.39', 'rewards/reward_func/std': '0', 'reward': '1.39', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2364', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.507', 'epoch': '0.125'}
+[step  380] reward= +0.710 succ= 0.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.219 len=   42 3097s
+
+                                                 
+
+ 76%|███████▌  | 380/500 [51:34<17:42,  8.85s/it]
+ 76%|███████▌  | 381/500 [51:47<20:31, 10.35s/it]
+ 76%|███████▋  | 382/500 [51:57<19:42, 10.02s/it]
+ 77%|███████▋  | 383/500 [52:05<18:42,  9.59s/it]
+ 77%|███████▋  | 384/500 [52:14<18:09,  9.39s/it]
+ 77%|███████▋  | 385/500 [52:22<17:23,  9.07s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '1.21e-06', 'num_tokens': '1.203e+06', 'completions/mean_length': '42.25', 'completions/min_length': '38.6', 'completions/max_length': '47.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.25', 'completions/min_terminated_length': '38.6', 'completions/max_terminated_length': '47.6', 'rewards/reward_func/mean': '0.71', 'rewards/reward_func/std': '0', 'reward': '0.71', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2195', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.567', 'epoch': '0.1267'}
+[step  385] reward= +1.689 succ= 0.00 calls= 1.00 inv= 0.00 zero= 0.80 ent= 0.230 len=   45 3146s
+
+                                                 
+
+ 77%|███████▋  | 385/500 [52:22<17:23,  9.07s/it]
+ 77%|███████▋  | 386/500 [52:31<17:05,  8.99s/it]
+ 77%|███████▋  | 387/500 [52:40<16:42,  8.87s/it]
+ 78%|███████▊  | 388/500 [52:48<16:18,  8.74s/it]
+ 78%|███████▊  | 389/500 [52:57<15:56,  8.62s/it]
+ 78%|███████▊  | 390/500 [53:05<15:41,  8.56s/it]{'loss': '-5.364e-08', 'grad_norm': '0', 'learning_rate': '1.16e-06', 'num_tokens': '1.219e+06', 'completions/mean_length': '45.1', 'completions/min_length': '36', 'completions/max_length': '58.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '45.1', 'completions/min_terminated_length': '36', 'completions/max_terminated_length': '58.8', 'rewards/reward_func/mean': '1.689', 'rewards/reward_func/std': '0.05834', 'reward': '1.689', 'reward_std': '0.05834', 'frac_reward_zero_std': '0.8', 'entropy': '0.2302', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '9.539', 'epoch': '0.1283'}
+[step  390] reward= +1.310 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.222 len=   42 3188s
+
+                                                 
+
+ 78%|███████▊  | 390/500 [53:05<15:41,  8.56s/it]
+ 78%|███████▊  | 391/500 [53:13<15:29,  8.53s/it]
+ 78%|███████▊  | 392/500 [53:22<15:21,  8.53s/it]
+ 79%|███████▊  | 393/500 [53:30<14:55,  8.37s/it]
+ 79%|███████▉  | 394/500 [53:39<15:01,  8.50s/it]
+ 79%|███████▉  | 395/500 [53:47<14:54,  8.52s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '1.11e-06', 'num_tokens': '1.234e+06', 'completions/mean_length': '41.67', 'completions/min_length': '36', 'completions/max_length': '46', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '41.67', 'completions/min_terminated_length': '36', 'completions/max_terminated_length': '46', 'rewards/reward_func/mean': '1.31', 'rewards/reward_func/std': '0', 'reward': '1.31', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2218', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.259', 'epoch': '0.13'}
+[step  395] reward= +0.710 succ= 0.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.232 len=   42 3231s
+
+                                                 
+
+ 79%|███████▉  | 395/500 [53:47<14:54,  8.52s/it]
+ 79%|███████▉  | 396/500 [53:56<14:41,  8.47s/it]
+ 79%|███████▉  | 397/500 [54:05<14:50,  8.64s/it]
+ 80%|███████▉  | 398/500 [54:13<14:37,  8.60s/it]
+ 80%|███████▉  | 399/500 [54:22<14:36,  8.67s/it]
+ 80%|████████  | 400/500 [54:31<14:21,  8.62s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '1.06e-06', 'num_tokens': '1.25e+06', 'completions/mean_length': '42.25', 'completions/min_length': '37.2', 'completions/max_length': '45.4', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.25', 'completions/min_terminated_length': '37.2', 'completions/max_terminated_length': '45.4', 'rewards/reward_func/mean': '0.71', 'rewards/reward_func/std': '0', 'reward': '0.71', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2319', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.211', 'epoch': '0.1317'}
+[step  400] reward= +1.710 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.220 len=   42 3274s
+
+                                                 
+
+ 80%|████████  | 400/500 [54:31<14:21,  8.62s/it]
+ 80%|████████  | 401/500 [54:39<14:16,  8.65s/it]
+ 80%|████████  | 402/500 [54:48<14:03,  8.61s/it]
+ 81%|████████  | 403/500 [54:56<13:47,  8.53s/it]
+ 81%|████████  | 404/500 [55:05<13:35,  8.50s/it]
+ 81%|████████  | 405/500 [55:14<13:48,  8.72s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '1.01e-06', 'num_tokens': '1.266e+06', 'completions/mean_length': '41.92', 'completions/min_length': '35.2', 'completions/max_length': '45.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '41.92', 'completions/min_terminated_length': '35.2', 'completions/max_terminated_length': '45.6', 'rewards/reward_func/mean': '1.71', 'rewards/reward_func/std': '0', 'reward': '1.71', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2202', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.377', 'epoch': '0.1333'}
+[step  405] reward= +1.230 succ= 0.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.230 len=   43 3317s
+
+                                                 
+
+ 81%|████████  | 405/500 [55:14<13:48,  8.72s/it]
+ 81%|████████  | 406/500 [55:22<13:24,  8.56s/it]
+ 81%|████████▏ | 407/500 [55:31<13:28,  8.69s/it]
+ 82%|████████▏ | 408/500 [55:40<13:30,  8.81s/it]
+ 82%|████████▏ | 409/500 [55:49<13:22,  8.82s/it]
+ 82%|████████▏ | 410/500 [55:58<13:12,  8.80s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '9.6e-07', 'num_tokens': '1.281e+06', 'completions/mean_length': '42.67', 'completions/min_length': '36.4', 'completions/max_length': '46.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.67', 'completions/min_terminated_length': '36.4', 'completions/max_terminated_length': '46.8', 'rewards/reward_func/mean': '1.23', 'rewards/reward_func/std': '0', 'reward': '1.23', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2298', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.375', 'epoch': '0.135'}
+[step  410] reward= +1.810 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.202 len=   43 3361s
+
+                                                 
+
+ 82%|████████▏ | 410/500 [55:58<13:12,  8.80s/it]
+ 82%|████████▏ | 411/500 [56:06<12:51,  8.67s/it]
+ 82%|████████▏ | 412/500 [56:15<12:36,  8.60s/it]
+ 83%|████████▎ | 413/500 [56:23<12:30,  8.63s/it]
+ 83%|████████▎ | 414/500 [56:32<12:18,  8.59s/it]
+ 83%|████████▎ | 415/500 [56:41<12:18,  8.68s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '9.1e-07', 'num_tokens': '1.297e+06', 'completions/mean_length': '42.77', 'completions/min_length': '37.6', 'completions/max_length': '47.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.77', 'completions/min_terminated_length': '37.6', 'completions/max_terminated_length': '47.6', 'rewards/reward_func/mean': '1.81', 'rewards/reward_func/std': '0', 'reward': '1.81', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.202', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.516', 'epoch': '0.1367'}
+[step  415] reward= +1.250 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.206 len=   42 3404s
+
+                                                 
+
+ 83%|████████▎ | 415/500 [56:41<12:18,  8.68s/it]
+ 83%|████████▎ | 416/500 [56:49<12:03,  8.61s/it]
+ 83%|████████▎ | 417/500 [56:58<11:52,  8.58s/it]
+ 84%|████████▎ | 418/500 [57:06<11:47,  8.63s/it]
+ 84%|████████▍ | 419/500 [57:16<12:01,  8.91s/it]
+ 84%|████████▍ | 420/500 [57:25<11:51,  8.90s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '8.6e-07', 'num_tokens': '1.313e+06', 'completions/mean_length': '42.35', 'completions/min_length': '36.4', 'completions/max_length': '47.2', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.35', 'completions/min_terminated_length': '36.4', 'completions/max_terminated_length': '47.2', 'rewards/reward_func/mean': '1.25', 'rewards/reward_func/std': '0', 'reward': '1.25', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2063', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.322', 'epoch': '0.1383'}
+[step  420] reward= +1.723 succ= 0.00 calls= 1.00 inv= 0.00 zero= 0.60 ent= 0.210 len=   44 3448s
+
+                                                 
+
+ 84%|████████▍ | 420/500 [57:25<11:51,  8.90s/it]
+ 84%|████████▍ | 421/500 [57:33<11:25,  8.68s/it]
+ 84%|████████▍ | 422/500 [57:41<11:09,  8.59s/it]
+ 85%|████████▍ | 423/500 [57:50<11:05,  8.64s/it]
+ 85%|████████▍ | 424/500 [57:58<10:39,  8.42s/it]
+ 85%|████████▌ | 425/500 [58:06<10:25,  8.34s/it]{'loss': '-4.768e-08', 'grad_norm': '2.65', 'learning_rate': '8.1e-07', 'num_tokens': '1.328e+06', 'completions/mean_length': '43.65', 'completions/min_length': '35', 'completions/max_length': '49.2', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.65', 'completions/min_terminated_length': '35', 'completions/max_terminated_length': '49.2', 'rewards/reward_func/mean': '1.723', 'rewards/reward_func/std': '0.0495', 'reward': '1.723', 'reward_std': '0.0495', 'frac_reward_zero_std': '0.6', 'entropy': '0.21', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.573', 'epoch': '0.14'}
+[step  425] reward= +0.930 succ= 0.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.200 len=   42 3489s
+
+                                                 
+
+ 85%|████████▌ | 425/500 [58:06<10:25,  8.34s/it]
+ 85%|████████▌ | 426/500 [58:14<10:15,  8.32s/it]
+ 85%|████████▌ | 427/500 [58:23<10:17,  8.45s/it]
+ 86%|████████▌ | 428/500 [58:32<10:08,  8.45s/it]
+ 86%|████████▌ | 429/500 [58:40<10:01,  8.47s/it]
+ 86%|████████▌ | 430/500 [58:49<09:56,  8.52s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '7.6e-07', 'num_tokens': '1.344e+06', 'completions/mean_length': '41.5', 'completions/min_length': '37.8', 'completions/max_length': '45.2', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '41.5', 'completions/min_terminated_length': '37.8', 'completions/max_terminated_length': '45.2', 'rewards/reward_func/mean': '0.93', 'rewards/reward_func/std': '0', 'reward': '0.93', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.1998', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.029', 'epoch': '0.1417'}
+[step  430] reward= +1.377 succ= 2.00 calls= 1.00 inv= 0.00 zero= 0.80 ent= 0.227 len=   42 3532s
+
+                                                 
+
+ 86%|████████▌ | 430/500 [58:49<09:56,  8.52s/it]
+ 86%|████████▌ | 431/500 [58:57<09:48,  8.53s/it]
+ 86%|████████▋ | 432/500 [59:06<09:39,  8.52s/it]
+ 87%|████████▋ | 433/500 [59:14<09:29,  8.51s/it]
+ 87%|████████▋ | 434/500 [59:23<09:26,  8.58s/it]
+ 87%|████████▋ | 435/500 [59:32<09:16,  8.57s/it]{'loss': '-8.941e-09', 'grad_norm': '0', 'learning_rate': '7.1e-07', 'num_tokens': '1.359e+06', 'completions/mean_length': '42.15', 'completions/min_length': '37.6', 'completions/max_length': '47', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.15', 'completions/min_terminated_length': '37.6', 'completions/max_terminated_length': '47', 'rewards/reward_func/mean': '1.377', 'rewards/reward_func/std': '0.1485', 'reward': '1.377', 'reward_std': '0.1485', 'frac_reward_zero_std': '0.8', 'entropy': '0.2267', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.265', 'epoch': '0.1433'}
+[step  435] reward= +1.930 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.210 len=   42 3575s
+
+                                                 
+
+ 87%|████████▋ | 435/500 [59:32<09:16,  8.57s/it]
+ 87%|████████▋ | 436/500 [59:40<08:57,  8.40s/it]
+ 87%|████████▋ | 437/500 [59:50<09:18,  8.87s/it]
+ 88%|████████▊ | 438/500 [1:00:00<09:45,  9.45s/it]
+ 88%|████████▊ | 439/500 [1:00:09<09:16,  9.12s/it]
+ 88%|████████▊ | 440/500 [1:00:18<09:01,  9.03s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '6.6e-07', 'num_tokens': '1.375e+06', 'completions/mean_length': '42.45', 'completions/min_length': '38.6', 'completions/max_length': '47.2', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.45', 'completions/min_terminated_length': '38.6', 'completions/max_terminated_length': '47.2', 'rewards/reward_func/mean': '1.93', 'rewards/reward_func/std': '0', 'reward': '1.93', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.2099', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.326', 'epoch': '0.145'}
+[step  440] reward= +1.736 succ= 2.00 calls= 1.00 inv= 0.00 zero= 0.80 ent= 0.213 len=   44 3621s
+
+                                                   
+
+ 88%|████████▊ | 440/500 [1:00:18<09:01,  9.03s/it]
+ 88%|████████▊ | 441/500 [1:00:27<08:52,  9.03s/it]
+ 88%|████████▊ | 442/500 [1:00:35<08:36,  8.90s/it]
+ 89%|████████▊ | 443/500 [1:00:44<08:25,  8.86s/it]
+ 89%|████████▉ | 444/500 [1:00:53<08:14,  8.84s/it]
+ 89%|████████▉ | 445/500 [1:01:01<07:56,  8.66s/it]{'loss': '-1.788e-08', 'grad_norm': '0', 'learning_rate': '6.1e-07', 'num_tokens': '1.391e+06', 'completions/mean_length': '43.7', 'completions/min_length': '36.8', 'completions/max_length': '53', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.7', 'completions/min_terminated_length': '36.8', 'completions/max_terminated_length': '53', 'rewards/reward_func/mean': '1.736', 'rewards/reward_func/std': '0.2086', 'reward': '1.736', 'reward_std': '0.2086', 'frac_reward_zero_std': '0.8', 'entropy': '0.2129', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.93', 'epoch': '0.1467'}
+[step  445] reward= +1.099 succ= 0.00 calls= 1.00 inv= 0.00 zero= 0.80 ent= 0.219 len=   43 3664s
+
+                                                   
+
+ 89%|████████▉ | 445/500 [1:01:01<07:56,  8.66s/it]
+ 89%|████████▉ | 446/500 [1:01:10<07:46,  8.65s/it]
+ 89%|████████▉ | 447/500 [1:01:19<07:43,  8.75s/it]
+ 90%|████████▉ | 448/500 [1:01:27<07:29,  8.64s/it]
+ 90%|████████▉ | 449/500 [1:01:36<07:23,  8.70s/it]
+ 90%|█████████ | 450/500 [1:01:44<07:09,  8.60s/it]{'loss': '-5.96e-09', 'grad_norm': '0', 'learning_rate': '5.6e-07', 'num_tokens': '1.406e+06', 'completions/mean_length': '43.4', 'completions/min_length': '37.8', 'completions/max_length': '48.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.4', 'completions/min_terminated_length': '37.8', 'completions/max_terminated_length': '48.6', 'rewards/reward_func/mean': '1.099', 'rewards/reward_func/std': '0.2015', 'reward': '1.099', 'reward_std': '0.2015', 'frac_reward_zero_std': '0.8', 'entropy': '0.219', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.43', 'epoch': '0.1483'}
+[step  450] reward= +1.671 succ= 0.00 calls= 1.00 inv= 0.00 zero= 0.80 ent= 0.205 len=   44 3707s
+
+                                                   
+
+ 90%|█████████ | 450/500 [1:01:44<07:09,  8.60s/it]
+ 90%|█████████ | 451/500 [1:01:53<06:59,  8.57s/it]
+ 90%|█████████ | 452/500 [1:02:01<06:54,  8.64s/it]
+ 91%|█████████ | 453/500 [1:02:10<06:41,  8.55s/it]
+ 91%|█████████ | 454/500 [1:02:18<06:28,  8.44s/it]
+ 91%|█████████ | 455/500 [1:02:27<06:21,  8.49s/it]{'loss': '3.278e-08', 'grad_norm': '0', 'learning_rate': '5.1e-07', 'num_tokens': '1.422e+06', 'completions/mean_length': '43.5', 'completions/min_length': '40', 'completions/max_length': '47', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '43.5', 'completions/min_terminated_length': '40', 'completions/max_terminated_length': '47', 'rewards/reward_func/mean': '1.671', 'rewards/reward_func/std': '0.0548', 'reward': '1.671', 'reward_std': '0.0548', 'frac_reward_zero_std': '0.8', 'entropy': '0.2045', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.386', 'epoch': '0.15'}
+[step  455] reward= +1.459 succ= 0.00 calls= 1.00 inv= 0.00 zero= 0.80 ent= 0.207 len=   42 3750s
+
+                                                   
+
+ 91%|█████████ | 455/500 [1:02:27<06:21,  8.49s/it]
+ 91%|█████████ | 456/500 [1:02:35<06:14,  8.51s/it]
+ 91%|█████████▏| 457/500 [1:02:44<06:04,  8.49s/it]
+ 92%|█████████▏| 458/500 [1:02:52<05:55,  8.47s/it]
+ 92%|█████████▏| 459/500 [1:03:00<05:45,  8.44s/it]
+ 92%|█████████▏| 460/500 [1:03:09<05:36,  8.42s/it]{'loss': '-5.96e-09', 'grad_norm': '0', 'learning_rate': '4.6e-07', 'num_tokens': '1.437e+06', 'completions/mean_length': '42.4', 'completions/min_length': '36.8', 'completions/max_length': '45.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.4', 'completions/min_terminated_length': '36.8', 'completions/max_terminated_length': '45.8', 'rewards/reward_func/mean': '1.459', 'rewards/reward_func/std': '0.2015', 'reward': '1.459', 'reward_std': '0.2015', 'frac_reward_zero_std': '0.8', 'entropy': '0.2068', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.229', 'epoch': '0.1517'}
+[step  460] reward= +1.221 succ= 2.00 calls= 1.00 inv= 0.00 zero= 0.80 ent= 0.221 len=   42 3792s
+
+                                                   
+
+ 92%|█████████▏| 460/500 [1:03:09<05:36,  8.42s/it]
+ 92%|█████████▏| 461/500 [1:03:18<05:37,  8.66s/it]
+ 92%|█████████▏| 462/500 [1:03:26<05:26,  8.59s/it]
+ 93%|█████████▎| 463/500 [1:03:35<05:18,  8.61s/it]
+ 93%|█████████▎| 464/500 [1:03:43<05:06,  8.51s/it]
+ 93%|█████████▎| 465/500 [1:03:52<05:01,  8.62s/it]{'loss': '-5.96e-09', 'grad_norm': '0', 'learning_rate': '4.1e-07', 'num_tokens': '1.453e+06', 'completions/mean_length': '41.55', 'completions/min_length': '36.4', 'completions/max_length': '45.8', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '41.55', 'completions/min_terminated_length': '36.4', 'completions/max_terminated_length': '45.8', 'rewards/reward_func/mean': '1.221', 'rewards/reward_func/std': '0.02475', 'reward': '1.221', 'reward_std': '0.02475', 'frac_reward_zero_std': '0.8', 'entropy': '0.2214', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.172', 'epoch': '0.1533'}
+[step  465] reward= +1.876 succ= 0.00 calls= 1.00 inv= 0.00 zero= 0.80 ent= 0.216 len=   43 3835s
+
+                                                   
+
+ 93%|█████████▎| 465/500 [1:03:52<05:01,  8.62s/it]
+ 93%|█████████▎| 466/500 [1:04:00<04:48,  8.50s/it]
+ 93%|█████████▎| 467/500 [1:04:09<04:40,  8.49s/it]
+ 94%|█████████▎| 468/500 [1:04:17<04:27,  8.37s/it]
+ 94%|█████████▍| 469/500 [1:04:25<04:18,  8.34s/it]
+ 94%|█████████▍| 470/500 [1:04:34<04:13,  8.45s/it]{'loss': '-1.192e-08', 'grad_norm': '0', 'learning_rate': '3.6e-07', 'num_tokens': '1.469e+06', 'completions/mean_length': '42.52', 'completions/min_length': '39.4', 'completions/max_length': '47.4', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '42.52', 'completions/min_terminated_length': '39.4', 'completions/max_terminated_length': '47.4', 'rewards/reward_func/mean': '1.876', 'rewards/reward_func/std': '0.2086', 'reward': '1.876', 'reward_std': '0.2086', 'frac_reward_zero_std': '0.8', 'entropy': '0.2161', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.409', 'epoch': '0.155'}
+[step  470] reward= +0.890 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.195 len=   41 3877s
+
+                                                   
+
+ 94%|█████████▍| 470/500 [1:04:34<04:13,  8.45s/it]
+ 94%|█████████▍| 471/500 [1:04:42<04:05,  8.46s/it]
+ 94%|█████████▍| 472/500 [1:04:51<04:01,  8.61s/it]
+ 95%|█████████▍| 473/500 [1:04:59<03:48,  8.46s/it]
+ 95%|█████████▍| 474/500 [1:05:08<03:41,  8.52s/it]
+ 95%|█████████▌| 475/500 [1:05:17<03:38,  8.72s/it]{'loss': '0', 'grad_norm': '0', 'learning_rate': '3.1e-07', 'num_tokens': '1.484e+06', 'completions/mean_length': '40.95', 'completions/min_length': '38.2', 'completions/max_length': '44.6', 'completions/clipped_ratio': '0', 'completions/mean_terminated_length': '40.95', 'completions/min_terminated_length': '38.2', 'completions/max_terminated_length': '44.6', 'rewards/reward_func/mean': '0.89', 'rewards/reward_func/std': '0', 'reward': '0.89', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.1945', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '8.097', 'epoch': '0.1567'}
+[step  475] reward= +1.790 succ= 2.00 calls= 1.00 inv= 0.00 zero= 1.00 ent= 0.239 len=   44 3920s
+
+                                                   
+
+ 95%|█████████▌| 475/500 [1:05:17<03:38,  8.72s/it]
+ 95%|█████████▌| 476/500 [1:05:25<03:24,  8.54s/it]
+ 95%|█████████▌| 477/500 [1:05:34<03:16,  8.53s/it]
+ 96%|█████████▌| 478/500 [1:05:42<03:07,  8.50s/it]
+ 96%|█████████▌| 479/500 [1:05:51<02:58,  8.48s/it]

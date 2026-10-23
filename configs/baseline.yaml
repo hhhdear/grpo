@@ -38,6 +38,7 @@ reward:
   invalid_action: -0.2
   redundant_calls: -0.2
   execution_cost: -0.05
+  progress_credit: 0.5
   # Partial credit for protocol compliance. Exists to break reward ties inside a
   # GRPO group; it never replaces the grounded, environment-verified terms.
   # Capped at 0.2 total so it stays a tie-breaker.

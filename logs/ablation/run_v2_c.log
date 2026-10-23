@@ -1,0 +1,5 @@
+nohup: ignoring input
+>>> /root/.pyenv/versions/3.11.1/bin/python training/train_grpo.py --config configs/ablations/dynamic_sampling.yaml (log: /workspace/logs/ablation/train_dynamic_sampling.log)
+>>> /root/.pyenv/versions/3.11.1/bin/python evaluation/evaluate.py --config configs/ablations/dynamic_sampling.yaml --samples 8 --tag ablation_dynamic_sampling --limit 200 (log: /workspace/logs/ablation/eval_dynamic_sampling.log)
+>>> /root/.pyenv/versions/3.11.1/bin/python training/train_grpo.py --config configs/ablations/dapo_full.yaml (log: /workspace/logs/ablation/train_dapo_full.log)
+>>> /root/.pyenv/versions/3.11.1/bin/python evaluation/evaluate.py --config configs/ablations/dapo_full.yaml --samples 8 --tag ablation_dapo_full --limit 200 (log: /workspace/logs/ablation/eval_dapo_full.log)

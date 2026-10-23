@@ -5,7 +5,8 @@ from pathlib import Path
 from typing import Any, Iterable
 
 REWARD_TERM_KEYS = ("task_success", "rule_compliance", "verification", "invalid_action",
-                    "redundant_calls", "execution_cost", "format_credit", "overlong_penalty")
+                    "redundant_calls", "execution_cost", "progress_credit", "format_credit",
+                    "overlong_penalty")
 
 # TRL log key -> canonical name used by every ablation run, so that six runs stay comparable.
 TRL_FIELD_MAP = {

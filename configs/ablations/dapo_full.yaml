@@ -18,13 +18,18 @@ training:
   output_dir: checkpoints/ablation_dapo_full
   learning_rate: 0.000005
   max_steps: 500
-  per_device_train_batch_size: 1
+  # Batch geometry: 2 x 8 = 16 sequences per step (was 1 x 4 = 4), so the fixed per-step
+  # Python overhead is amortized over four times as much work. generation_batch_size =
+  # 2 x 4 = 8 stays divisible by num_generations=8, which TRL requires.
+  per_device_train_batch_size: 2
   gradient_accumulation_steps: 4
-  num_generations: 4
+  # A wider group is also part of the fix for all-identical samples: zero variance inside
+  # a group means zero advantage, and 4 samples hit that state more often than 8.
+  num_generations: 8
   max_prompt_length: 768
   max_completion_length: 384
-  save_steps: 250
-  logging_steps: 1
+  save_steps: 100
+  logging_steps: 5
   temperature: 1.0
   vllm_gpu_memory_utilization: 0.15
   beta: 0.0
@@ -49,6 +54,10 @@ reward:
   invalid_action: -0.2
   redundant_calls: -0.2
   execution_cost: -0.05
+  # Breaks the dead zone where every sample in a group fails a multi-step task: identical
+  # failures mean zero variance and therefore zero gradient, so the longer path can never
+  # be discovered. Credit the intermediate steps that were actually completed.
+  progress_credit: 0.5
   # Format credit is a tie-breaker only (0.2 max), never a stand-in for the grounded terms.
   format:
     structure: 0.1

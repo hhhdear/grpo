@@ -1,0 +1,15 @@
+nohup: ignoring input
+>>> /root/.pyenv/versions/3.11.1/bin/python training/train_grpo.py --config configs/ablations/token_level.yaml (log: /workspace/logs/ablation/train_token_level.log)
+>>> /root/.pyenv/versions/3.11.1/bin/python evaluation/evaluate.py --config configs/ablations/token_level.yaml --samples 8 --tag ablation_token_level --limit 200 (log: /workspace/logs/ablation/eval_token_level.log)
+>>> /root/.pyenv/versions/3.11.1/bin/python training/train_grpo.py --config configs/ablations/overlong.yaml (log: /workspace/logs/ablation/train_overlong.log)
+Traceback (most recent call last):
+  File "/workspace/scripts/run_ablation.py", line 61, in <module>
+    for arm in args.arms:
+    ^^^^^^
+  File "/workspace/scripts/run_ablation.py", line 47, in main
+    def main() -> None:
+                ^^^^^^^
+  File "/workspace/scripts/run_ablation.py", line 25, in run
+    env = {**os.environ, **(extra_env or {})}
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: command failed (-15): /root/.pyenv/versions/3.11.1/bin/python training/train_grpo.py --config configs/ablations/overlong.yaml; see /workspace/logs/ablation/train_overlong.log

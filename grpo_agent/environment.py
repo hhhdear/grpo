@@ -101,6 +101,19 @@ class OrderEnvironment:
         self.verified = matches
         return ToolResult(True, "verify_order", {**deepcopy(order), "matches_requested_quantity": matches})
 
+    def _progress(self) -> dict[str, bool]:
+        """Which intermediate steps were actually completed, regardless of the final outcome.
+
+        Needed because a group where every sample fails a multi-step task is all-identical
+        and therefore produces zero advantage: the policy can never discover the longer path
+        from "all wrong" alone. Credit for partial progress gives that group a gradient.
+        Only *successful* tool results count, so spamming calls earns nothing.
+        """
+        succeeded = [item for item in self.history if item["result"]["ok"]]
+        tools = {item["tool"] for item in succeeded}
+        return {"queried_order": "query_order" in tools, "queried_stock": "query_stock" in tools,
+                "modified_ok": "modify_order" in tools, "verified_called": "verify_order" in tools}
+
     def verify_task(self) -> dict[str, Any]:
         expected = self.task["expected_outcome"]
         requested_id = self.task["order_id"]
@@ -136,4 +149,5 @@ class OrderEnvironment:
         redundant = len(calls) - len({repr(item) for item in calls})
         return {"task_success": success, "rule_compliance": compliant, "verification": self.verified,
                 "invalid_actions": self.invalid_actions, "redundant_calls": max(0, redundant),
-                "tool_calls": len(self.history), "changed": changed, "expected_outcome": expected}
+                "tool_calls": len(self.history), "changed": changed, "expected_outcome": expected,
+                "progress": self._progress()}

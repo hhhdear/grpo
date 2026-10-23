@@ -44,6 +44,18 @@ def truncate_prompt_text(text: str, tokenizer: Any, limit: int) -> tuple[str, bo
     return tokenizer.decode(ids[:limit]), True
 
 
+def latest_checkpoint(output_dir: str) -> str | None:
+    """Newest checkpoint directory, so a run killed by an environment restart can continue.
+
+    Training costs hours and the machine hosting it can go away without warning, so the
+    work already done should not be silently repeated.
+    """
+    candidates = sorted((path for path in Path(output_dir).glob("checkpoint-*")
+                         if path.name.split("-")[-1].isdigit()),
+                        key=lambda path: int(path.name.split("-")[-1]))
+    return str(candidates[-1]) if candidates else None
+
+
 def dependency_api():
     try:
         from datasets import Dataset
@@ -70,6 +82,8 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", default="configs/baseline.yaml")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--resume", nargs="?", const="auto", default=None,
+                        help="continue from a checkpoint: give a path, or omit it for the newest one")
     args = parser.parse_args()
     cfg = load_config(args.config)
     tasks = read_jsonl(cfg["data"]["train_path"])
@@ -113,7 +127,12 @@ def main() -> None:
     soft_limit = int(overlong.get("soft_limit", 10 ** 9))
     penalty_per_token = float(overlong.get("penalty_per_token", 0.0))
     max_penalty = float(overlong.get("max_penalty", 0.0))
+    # Imported here rather than at module scope: transformers is a heavy optional dependency
+    # and --dry-run has to keep working without it.
+    from training.live_metrics import LiveMetricsCallback
+
     ledger = RewardLedger()
+    live = LiveMetricsCallback(ledger, Path(tc["output_dir"]) / "metrics" / "live_metrics.jsonl")
 
     def reward_func(completions, task_json, **kwargs):
         scores = []
@@ -148,6 +167,19 @@ def main() -> None:
     for key in ("loss_type", "epsilon_high", "mask_truncated_completions"):
         if key in dapo and key in accepted:
             candidates[key] = dapo[key]
+    # Generation backend. These keys existed in the YAML but were never forwarded, so
+    # vllm_gpu_memory_utilization: 0.15 was dead configuration and generation always ran
+    # through plain HF model.generate.
+    if tc.get("use_vllm") and "use_vllm" in accepted:
+        candidates["use_vllm"] = True
+        for key in ("vllm_mode", "vllm_gpu_memory_utilization", "vllm_tensor_parallel_size",
+                    "vllm_enable_sleep_mode"):
+            if key in tc and key in accepted:
+                candidates[key] = tc[key]
+    for key in ("use_liger_kernel", "use_transformers_continuous_batching", "torch_compile",
+                "gradient_checkpointing", "steps_per_generation"):
+        if key in tc and key in accepted:
+            candidates[key] = tc[key]
     if prompt_length_mode == "trl_max_prompt_length":
         candidates["max_prompt_length"] = prompt_limit
     unsupported = sorted(key for key in candidates if key not in accepted)
@@ -169,6 +201,9 @@ def main() -> None:
         trainer_cls = ZeroVarianceFilteringGRPOTrainer
         trainer_kwargs = {"filter_zero_variance_groups": True,
                           "zero_variance_eps": float(sampling.get("zero_variance_eps", 1e-6))}
+    # Without this the metrics only exist in the final file, hours after a collapse became
+    # visible in the numbers.
+    trainer_kwargs["callbacks"] = [live]
     print(f"trainer={trainer_cls.__name__} zero_variance_filter={filter_zero_var} "
           f"beta={candidates.get('beta', 'unset')}")
     trainer = trainer_cls(model=source, reward_funcs=reward_func, args=train_args, train_dataset=dataset,
@@ -179,7 +214,14 @@ def main() -> None:
     before = trainable_signature()
     if not before:
         raise RuntimeError("Model has no trainable parameters")
-    result = trainer.train()
+    resume_from = None
+    if args.resume:
+        # A resumed run can end on a partial batch that no longer divides by num_generations,
+        # which TRL rejects, so allow naming an earlier checkpoint explicitly.
+        resume_from = latest_checkpoint(tc["output_dir"]) if args.resume == "auto" else args.resume
+    if resume_from:
+        print(f"resuming from {resume_from}", flush=True)
+    result = trainer.train(resume_from_checkpoint=resume_from)
     after = trainable_signature()
     changed = any(before[name] != after[name] for name in before)
     if not changed:

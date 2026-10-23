@@ -1,3 +1,14 @@
 nohup: ignoring input
 >>> /root/.pyenv/versions/3.11.1/bin/python training/train_grpo.py --config configs/ablations/vanilla.yaml (log: /workspace/logs/ablation/train_vanilla.log)
 >>> /root/.pyenv/versions/3.11.1/bin/python evaluation/evaluate.py --config configs/ablations/vanilla.yaml --samples 8 --tag ablation_vanilla --limit 200 (log: /workspace/logs/ablation/eval_vanilla.log)
+>>> /root/.pyenv/versions/3.11.1/bin/python training/train_grpo.py --config configs/ablations/clip_higher.yaml (log: /workspace/logs/ablation/train_clip_higher.log)
+Traceback (most recent call last):
+  File "/workspace/scripts/run_ablation.py", line 61, in <module>
+    print("all requested arms finished", flush=True)
+    ^^^^^^
+  File "/workspace/scripts/run_ablation.py", line 47, in main
+    config = f"configs/ablations/{arm}.yaml"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scripts/run_ablation.py", line 25, in run
+    raise RuntimeError(f"command failed ({result.returncode}): {' '.join(command)}; see {log_path}")
+RuntimeError: command failed (-15): /root/.pyenv/versions/3.11.1/bin/python training/train_grpo.py --config configs/ablations/clip_higher.yaml; see /workspace/logs/ablation/train_clip_higher.log
